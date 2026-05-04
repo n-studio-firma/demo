@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRICA — フォント比較プレビュー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Noto+Sans+JP:wght@200;300;400&family=Shippori+Mincho:wght@300;400;500&family=Noto+Serif+JP:wght@200;300;400;500&family=Zen+Old+Mincho:wght@400;500;700&family=Hina+Mincho&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0B0B0B;
+      --bg-card: #111111;
+      --gold: #C4A265;
+      --gold-dim: rgba(196, 162, 101, 0.15);
+      --white: #F5F0E8;
+      --gray: #888888;
+      --gray-dark: #444444;
+      --font-en: 'Cinzel', serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      padding: 80px 40px;
+    }
+
+    /* ---- Header ---- */
+    .page-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .page-header-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-en);
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 400;
+      letter-spacing: 6px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--gray);
+      letter-spacing: 2px;
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 24px auto;
+    }
+
+    /* ---- Grid ---- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ---- Card ---- */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid rgba(196, 162, 101, 0.12);
+      padding: 48px 40px 52px;
+      position: relative;
+      transition: border-color 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(196, 162, 101, 0.4);
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--gray-dark);
+    }
+
+    .card-font-name {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--gold);
+    }
+
+    .card-tag {
+      font-family: var(--font-en);
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--gray);
+      border: 1px solid var(--gray-dark);
+      padding: 3px 10px;
+    }
+
+    /* ---- Sample Text ---- */
+    .sample-catch {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+
+    .sample-body {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 2.1;
+      letter-spacing: 0.05em;
+      color: rgba(245, 240, 232, 0.7);
+      margin-bottom: 40px;
+    }
+
+    /* ---- Weight Comparison ---- */
+    .weight-section {
+      border-top: 1px solid var(--gray-dark);
+      padding-top: 28px;
+    }
+
+    .weight-label {
+      font-family: var(--font-en);
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .weight-row {
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .weight-item {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .weight-tag {
+      font-family: var(--font-en);
+      font-size: 9px;
+      color: var(--gray-dark);
+      letter-spacing: 1px;
+      width: 52px;
+      flex-shrink: 0;
+    }
+
+    .weight-text {
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: var(--white);
+    }
+
+    /* ---- Current font highlight ---- */
+    .card-current {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .current-badge {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background: var(--gray-dark);
+      color: var(--white);
+      font-family: var(--font-en);
+      font-size: 8px;
+      letter-spacing: 2px;
+      padding: 4px 12px;
+    }
+
+    /* ---- Font-specific ---- */
+    .font-shippori .sample-catch,
+    .font-shippori .sample-body,
+    .font-shippori .weight-text { font-family: 'Shippori Mincho', serif; }
+
+    .font-shippori .w-light .weight-text  { font-weight: 300; }
+    .font-shippori .w-regular .weight-text { font-weight: 400; }
+    .font-shippori .w-medium .weight-text  { font-weight: 500; }
+
+    .font-noto-serif .sample-catch,
+    .font-noto-serif .sample-body,
+    .font-noto-serif .weight-text { font-family: 'Noto Serif JP', serif; }
+
+    .font-noto-serif .w-light .weight-text  { font-weight: 200; }
+    .font-noto-serif .w-regular .weight-text { font-weight: 300; }
+    .font-noto-serif .w-medium .weight-text  { font-weight: 400; }
+
+    .font-zen .sample-catch,
+    .font-zen .sample-body,
+    .font-zen .weight-text { font-family: 'Zen Old Mincho', serif; }
+
+    .font-zen .w-light .weight-text  { font-weight: 400; }
+    .font-zen .w-regular .weight-text { font-weight: 500; }
+    .font-zen .w-medium .weight-text  { font-weight: 700; }
+
+    .font-hina .sample-catch,
+    .font-hina .sample-body,
+    .font-hina .weight-text { font-family: 'Hina Mincho', serif; }
+
+    .font-hina .w-light .weight-text,
+    .font-hina .w-regular .weight-text,
+    .font-hina .w-medium .weight-text { font-weight: 400; }
+
+    .font-noto-sans .sample-catch,
+    .font-noto-sans .sample-body,
+    .font-noto-sans .weight-text { font-family: 'Noto Sans JP', sans-serif; }
+
+    .font-noto-sans .w-light .weight-text  { font-weight: 200; }
+    .font-noto-sans .w-regular .weight-text { font-weight: 300; }
+    .font-noto-sans .w-medium .weight-text  { font-weight: 400; }
+
+    /* ---- Recommendation badge ---- */
+    .recommended-badge {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background: var(--gold);
+      color: var(--bg);
+      font-family: var(--font-en);
+      font-size: 8px;
+      letter-spacing: 2px;
+      padding: 4px 12px;
+    }
+
+    /* ---- Footer note ---- */
+    .page-footer {
+      text-align: center;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .page-footer p {
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--gray-dark);
+      letter-spacing: 2px;
+      line-height: 2;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 48px 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 36px 28px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <p class="page-header-label">NOIRICA — FONT COMPARISON</p>
+    <h1>Body Font Preview</h1>
+    <div class="gold-divider"></div>
+    <p>見出し以外のテキストに適用するフォントの比較プレビュー</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- Card 0: Current (Noto Sans JP) -->
+    <div class="card card-current font-noto-sans">
+      <div class="current-badge">CURRENT</div>
+      <div class="card-meta">
+        <span class="card-font-name">Noto Sans JP</span>
+        <span class="card-tag">現在使用中 / サンセリフ</span>
+      </div>
+      <p class="sample-catch">地球の奥底から、<br>美しさを解き放つ。</p>
+      <p class="sample-body">
+        北海道の大地に、数億年の時をかけて生まれたブラックシリカ。<br>
+        遠赤外線放射率99.9%、その圧倒的なエネルギーが、<br>
+        あなたの細胞の奥まで届き、身体の内側から変える。<br>
+        科学で証明された自然の力が、美容の常識を覆します。
+      </p>
+      <div class="weight-section">
+        <p class="weight-label">WEIGHT COMPARISON</p>
+        <div class="weight-row">
+          <div class="weight-item w-light">
+            <span class="weight-tag">EXTRALIGHT</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-regular">
+            <span class="weight-tag">LIGHT</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-medium">
+            <span class="weight-tag">REGULAR</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 1: Shippori Mincho -->
+    <div class="card font-shippori">
+      <div class="recommended-badge">RECOMMENDED</div>
+      <div class="card-meta">
+        <span class="card-font-name">Shippori Mincho</span>
+        <span class="card-tag">ボディ / キャッチ両用</span>
+      </div>
+      <p class="sample-catch">地球の奥底から、<br>美しさを解き放つ。</p>
+      <p class="sample-body">
+        北海道の大地に、数億年の時をかけて生まれたブラックシリカ。<br>
+        遠赤外線放射率99.9%、その圧倒的なエネルギーが、<br>
+        あなたの細胞の奥まで届き、身体の内側から変える。<br>
+        科学で証明された自然の力が、美容の常識を覆します。
+      </p>
+      <div class="weight-section">
+        <p class="weight-label">WEIGHT COMPARISON</p>
+        <div class="weight-row">
+          <div class="weight-item w-light">
+            <span class="weight-tag">LIGHT</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-regular">
+            <span class="weight-tag">REGULAR</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-medium">
+            <span class="weight-tag">MEDIUM</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Noto Serif JP -->
+    <div class="card font-noto-serif">
+      <div class="card-meta">
+        <span class="card-font-name">Noto Serif JP</span>
+        <span class="card-tag">本文 / 読みやすさ重視</span>
+      </div>
+      <p class="sample-catch">地球の奥底から、<br>美しさを解き放つ。</p>
+      <p class="sample-body">
+        北海道の大地に、数億年の時をかけて生まれたブラックシリカ。<br>
+        遠赤外線放射率99.9%、その圧倒的なエネルギーが、<br>
+        あなたの細胞の奥まで届き、身体の内側から変える。<br>
+        科学で証明された自然の力が、美容の常識を覆します。
+      </p>
+      <div class="weight-section">
+        <p class="weight-label">WEIGHT COMPARISON</p>
+        <div class="weight-row">
+          <div class="weight-item w-light">
+            <span class="weight-tag">EXTRALIGHT</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-regular">
+            <span class="weight-tag">LIGHT</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-medium">
+            <span class="weight-tag">REGULAR</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Zen Old Mincho -->
+    <div class="card font-zen">
+      <div class="card-meta">
+        <span class="card-font-name">Zen Old Mincho</span>
+        <span class="card-tag">伝統 / 格式 重視</span>
+      </div>
+      <p class="sample-catch">地球の奥底から、<br>美しさを解き放つ。</p>
+      <p class="sample-body">
+        北海道の大地に、数億年の時をかけて生まれたブラックシリカ。<br>
+        遠赤外線放射率99.9%、その圧倒的なエネルギーが、<br>
+        あなたの細胞の奥まで届き、身体の内側から変える。<br>
+        科学で証明された自然の力が、美容の常識を覆します。
+      </p>
+      <div class="weight-section">
+        <p class="weight-label">WEIGHT COMPARISON</p>
+        <div class="weight-row">
+          <div class="weight-item w-light">
+            <span class="weight-tag">REGULAR</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-regular">
+            <span class="weight-tag">MEDIUM</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-medium">
+            <span class="weight-tag">BOLD</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Hina Mincho -->
+    <div class="card font-hina">
+      <div class="card-meta">
+        <span class="card-font-name">Hina Mincho</span>
+        <span class="card-tag">繊細 / キャッチ向き</span>
+      </div>
+      <p class="sample-catch">地球の奥底から、<br>美しさを解き放つ。</p>
+      <p class="sample-body">
+        北海道の大地に、数億年の時をかけて生まれたブラックシリカ。<br>
+        遠赤外線放射率99.9%、その圧倒的なエネルギーが、<br>
+        あなたの細胞の奥まで届き、身体の内側から変える。<br>
+        科学で証明された自然の力が、美容の常識を覆します。
+      </p>
+      <div class="weight-section">
+        <p class="weight-label">WEIGHT COMPARISON</p>
+        <div class="weight-row">
+          <div class="weight-item w-light">
+            <span class="weight-tag">※単一</span>
+            <span class="weight-text">このフォントはウェイトが1種類のみです。</span>
+          </div>
+          <div class="weight-item w-regular">
+            <span class="weight-tag">REGULAR</span>
+            <span class="weight-text">地球の奥底から生まれた、奇跡の鉱石。</span>
+          </div>
+          <div class="weight-item w-medium">
+            <span class="weight-tag">—</span>
+            <span class="weight-text" style="color: var(--gray-dark);">（ウェイトバリエーションなし）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">
+    <p>このファイルはフォント選定のみを目的としたプレビューです。</p>
+    <p>NOIRICA LP — font-preview.html</p>
+  </footer>
+
+</body>
+</html>

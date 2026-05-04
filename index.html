@@ -1,0 +1,3983 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRICA | Black Silica Ritual Clay - 北海道・上ノ国の希少鉱石から生まれた次世代ミネラル美容</title>
+  <meta name="description" content="NOIRICAは北海道・上ノ国産の希少鉱石「ブラックシリカ」の自然エネルギーを美容へ昇華した、高級SPA向けミネラルビューティーブランドです。">
+  <meta property="og:title" content="NOIRICA | Black Silica Ritual Clay">
+  <meta property="og:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Shippori+Mincho:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ========================================
+       RESET & BASE
+    ======================================== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0B0B0B;
+      color: #E8E8E8;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 300;
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       DESIGN TOKENS
+    ======================================== */
+    :root {
+      --color-bg: #0B0B0B;
+      --color-bg-light: #111111;
+      --color-bg-lighter: #0D0D0D;
+      --color-gold: #C4A265;
+      --color-gold-accent: #D4AF37;
+      --color-white: #FFFFFF;
+      --color-text: #E8E8E8;
+      --color-gray: #888888;
+      --color-gray-dark: #666666;
+      --color-border: #222222;
+      --font-en: 'Cinzel', serif;
+      --font-jp: 'Shippori Mincho', serif;
+    }
+
+    /* ========================================
+       CONTAINER
+    ======================================== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 40px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 60px;
+        max-width: 1100px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .container {
+        max-width: 1200px;
+      }
+    }
+
+    /* ========================================
+       ANIMATIONS
+    ======================================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .stagger-1 {
+      transition-delay: 0.1s;
+    }
+
+    .stagger-2 {
+      transition-delay: 0.2s;
+    }
+
+    .stagger-3 {
+      transition-delay: 0.3s;
+    }
+
+    .stagger-4 {
+      transition-delay: 0.4s;
+    }
+
+    .stagger-5 {
+      transition-delay: 0.5s;
+    }
+
+    .stagger-6 {
+      transition-delay: 0.6s;
+    }
+
+    .stagger-7 {
+      transition-delay: 0.7s;
+    }
+
+    .stagger-8 {
+      transition-delay: 0.8s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10px);
+      }
+    }
+
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(196, 162, 101, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 20px 5px rgba(196, 162, 101, 0.15);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      33% {
+        transform: translateY(-5px) rotate(0.5deg);
+      }
+
+      66% {
+        transform: translateY(3px) rotate(-0.5deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ========================================
+       HEADER
+    ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: rgba(11, 11, 11, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.3s ease;
+    }
+
+    .header-logo {
+      display: inline-flex;
+      align-items: center;
+      height: 36px;
+    }
+
+    .header-logo img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .header-logo {
+        height: 44px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .header {
+        padding: 12px 60px;
+      }
+      .header-logo {
+        height: 52px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .header-logo {
+        height: 58px;
+      }
+    }
+
+    /* ========================================
+       SECTION 1: HERO
+    ======================================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+      background: var(--color-bg);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: brightness(0.96) saturate(0.95) contrast(1.03);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 26% 76%, rgba(174, 128, 48, 0.18), transparent 22%),
+        radial-gradient(ellipse at 38% 15%, rgba(174, 128, 48, 0.13), transparent 20%),
+        linear-gradient(90deg,
+          rgba(4, 4, 4, 0.98) 0%,
+          rgba(5, 5, 5, 0.96) 27%,
+          rgba(5, 5, 5, 0.9) 38%,
+          rgba(5, 5, 5, 0.35) 46%,
+          rgba(5, 5, 5, 0) 52%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 48% 16%, rgba(196, 162, 101, 0.18), transparent 22%),
+        radial-gradient(circle at 47% 79%, rgba(196, 162, 101, 0.13), transparent 24%),
+        linear-gradient(to bottom,
+          rgba(11,11,11,0.08) 0%,
+          rgba(11,11,11,0)   36%,
+          rgba(11,11,11,0.18) 77%,
+          rgba(11,11,11,0.94) 100%),
+        linear-gradient(to right,
+          rgba(11,11,11,0.12) 0%,
+          rgba(11,11,11,0) 42%,
+          rgba(11,11,11,0.08) 100%);
+    }
+
+    .hero-overlay-mobile {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background:
+        linear-gradient(180deg,
+          rgba(11, 11, 11, 0.08) 0%,
+          rgba(11, 11, 11, 0.18) 48%,
+          rgba(11, 11, 11, 0.62) 100%);
+    }
+
+    .hero-overlay-desktop,
+    .hero-blur-edge {
+      display: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: min(48%, 700px);
+      height: 100%;
+      padding: 88px 24px 96px clamp(24px, 8.4vw, 150px);
+      text-align: left;
+    }
+
+    .hero-logo {
+      font-family: var(--font-en);
+      font-size: clamp(42px, 4.7vw, 66px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: clamp(8px, 0.95vw, 14px);
+      color: var(--color-gold);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 0.3s forwards;
+      text-shadow: 0 0 26px rgba(196, 162, 101, 0.18);
+    }
+
+    .hero-logo::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 1px;
+      margin-top: 28px;
+      background: var(--color-gold);
+    }
+
+    .hero-product-name {
+      font-family: var(--font-en);
+      font-size: clamp(10px, 0.86vw, 12px);
+      letter-spacing: clamp(3px, 0.45vw, 6px);
+      color: var(--color-gold);
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 0.6s forwards;
+    }
+
+    .hero-main-copy {
+      font-family: var(--font-jp);
+      font-size: clamp(21px, 2.02vw, 32px);
+      font-weight: 300;
+      line-height: 1.85;
+      letter-spacing: clamp(2.5px, 0.28vw, 4.5px);
+      color: var(--color-white);
+      margin-bottom: 26px;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 0.9s forwards;
+      text-shadow: 0 0 24px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-sub-copy {
+      font-family: var(--font-jp);
+      font-size: clamp(12px, 1.03vw, 15px);
+      font-weight: 300;
+      line-height: 2.05;
+      letter-spacing: clamp(1.6px, 0.19vw, 3px);
+      color: var(--color-text);
+      margin-bottom: 0;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 1.2s forwards;
+      text-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-divider {
+      width: 58px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 0 0 28px;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 1.0s forwards;
+    }
+
+    /* スクロールインジケーター（常に画面中央固定） */
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: fit-content;
+      z-index: 10;
+      text-align: center;
+      opacity: 0;
+      animation: heroFadeIn 1s ease 1.8s forwards;
+    }
+
+    .hero-scroll span {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--color-gray);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .hero-scroll-arrow {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--color-gold), transparent);
+      margin: 0 auto;
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% {
+        opacity: 0.5;
+        transform: scaleY(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scaleY(1.2);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero-overlay-mobile {
+        display: none;
+      }
+
+      .hero-overlay-desktop {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 44% 12%, rgba(196, 162, 101, 0.14), transparent 17%),
+          radial-gradient(circle at 46% 79%, rgba(196, 162, 101, 0.13), transparent 19%),
+          linear-gradient(to right,
+            rgba(11, 11, 11, 0.18) 0%,
+            rgba(11, 11, 11, 0.04) 34%,
+            rgba(11, 11, 11, 0) 66%,
+            rgba(11, 11, 11, 0.12) 100%);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        min-height: 680px;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        min-height: 660px;
+      }
+
+      .hero-image img {
+        object-position: 67% center;
+      }
+
+      .hero::before {
+        background:
+          radial-gradient(ellipse at 24% 70%, rgba(174, 128, 48, 0.18), transparent 28%),
+          linear-gradient(180deg,
+            rgba(5, 5, 5, 0.8) 0%,
+            rgba(5, 5, 5, 0.72) 58%,
+            rgba(5, 5, 5, 0.96) 100%),
+          linear-gradient(90deg,
+            rgba(5, 5, 5, 0.95) 0%,
+            rgba(5, 5, 5, 0.86) 58%,
+            rgba(5, 5, 5, 0.18) 100%);
+      }
+
+      .hero-content {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 0 24px 112px;
+      }
+
+      .hero-logo {
+        font-size: 36px;
+        letter-spacing: 7px;
+        margin-bottom: 18px;
+      }
+
+      .hero-product-name {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 24px;
+      }
+
+      .hero-main-copy {
+        font-size: 18px;
+        line-height: 1.85;
+        letter-spacing: 2px;
+        margin-bottom: 22px;
+      }
+
+      .hero-sub-copy {
+        font-size: 12px;
+        line-height: 1.9;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .hero-content {
+        padding-left: 122px;
+      }
+    }
+
+
+    /* ========================================
+       SECTION COMMON
+    ======================================== */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .section-title-jp {
+      font-family: var(--font-jp);
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 24px;
+    }
+
+    .section-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 60px auto;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-label {
+        font-size: 11px;
+      }
+
+      .section-title-jp {
+        font-size: 28px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section {
+        padding: 140px 0;
+      }
+
+      .section-label {
+        font-size: 12px;
+      }
+
+      .section-title-jp {
+        font-size: 32px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-title-jp {
+        font-size: 36px;
+      }
+
+      .section-label {
+        font-size: 13px;
+      }
+    }
+
+    /* ========================================
+       SECTION 2: BRAND STORY
+    ======================================== */
+    .story {
+      background: var(--color-bg);
+    }
+
+    .story-grid {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+
+    .story-text {
+      flex: 1;
+    }
+
+    .story-text .section-title-jp {
+      margin-bottom: 32px;
+    }
+
+    .story-body p {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 2;
+      color: var(--color-gray);
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .story-image {
+      flex: 1;
+      position: relative;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .story-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 48px;
+    }
+
+    .story-thumbnails img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: brightness(0.8);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .story-thumbnails img:hover {
+      filter: brightness(1);
+      transform: scale(1.02);
+    }
+
+    @media (min-width: 768px) {
+      .story-grid {
+        flex-direction: row;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .story-text {
+        flex: 1;
+      }
+
+      .story-image {
+        flex: 1;
+      }
+
+      .story-image img {
+        height: 400px;
+      }
+
+      .story-body p {
+        font-size: 14px;
+      }
+
+      .story-thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .story-thumbnails img {
+        height: 140px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .story-text {
+        flex: 0.45;
+      }
+
+      .story-image {
+        flex: 0.55;
+      }
+
+      .story-image img {
+        height: 480px;
+      }
+
+      .story-body p {
+        font-size: 15px;
+        line-height: 2.2;
+      }
+
+      .story-thumbnails img {
+        height: 160px;
+      }
+    }
+
+    /* ========================================
+       SECTION 3: WHY NOIRICA
+    ======================================== */
+    .why {
+      background: var(--color-bg-light);
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .why .section-label,
+    .why .section-title-jp {
+      text-align: center;
+    }
+
+    .why-lead {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-gray);
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 2;
+    }
+
+    .why-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .why-col {
+      text-align: center;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .why-col:hover .why-icon-circle {
+      box-shadow: 0 0 30px rgba(196, 162, 101, 0.2);
+    }
+
+    .why-icon-circle {
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .why-icon-circle svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .why-number {
+      font-family: var(--font-en);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--color-white);
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .why-col:hover .why-number {
+      text-shadow: 0 0 20px rgba(196, 162, 101, 0.5);
+    }
+
+    .why-keyword {
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .why-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+
+    .why-features {
+      text-align: center;
+      margin-top: 72px;
+      padding: 56px 0 64px;
+      border-top: 1px solid rgba(196, 162, 101, 0.2);
+      border-bottom: 1px solid rgba(196, 162, 101, 0.2);
+    }
+
+    .why-circles {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 52px;
+    }
+
+    .why-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 162, 101, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-shrink: 0;
+      background: radial-gradient(circle at center, rgba(196, 162, 101, 0.05) 0%, transparent 70%);
+      box-shadow: 0 0 20px rgba(196, 162, 101, 0.08), inset 0 0 20px rgba(196, 162, 101, 0.03);
+    }
+
+    .why-circle:not(:first-child) {
+      margin-left: -28px;
+    }
+
+    .why-circle-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      margin: 0;
+    }
+
+    .why-circle-text {
+      font-family: var(--font-jp);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #B8B8B8;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .why-features-copy {
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      line-height: 2.4;
+    }
+
+    @media (min-width: 768px) {
+      .why-circle {
+        width: 240px;
+        height: 240px;
+        gap: 12px;
+      }
+
+      .why-circle:not(:first-child) {
+        margin-left: -56px;
+      }
+
+      .why-circle-label {
+        font-size: 14px;
+        letter-spacing: 4px;
+      }
+
+      .why-circle-text {
+        font-size: 13px;
+      }
+    }
+
+    .why-keyphrase {
+      text-align: center;
+      margin-top: 40px;
+      font-family: var(--font-jp);
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: #E8E8E8;
+    }
+
+    @media (min-width: 768px) {
+      .why-columns {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .why-col {
+        flex: 1;
+      }
+
+      .why-icon-circle {
+        width: 70px;
+        height: 70px;
+      }
+
+      .why-number {
+        font-size: 48px;
+      }
+
+      .why-keyword {
+        font-size: 14px;
+      }
+
+      .why-desc {
+        font-size: 13px;
+      }
+
+      .why-lead {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .why-columns {
+        gap: 60px;
+      }
+
+      .why-icon-circle {
+        width: 80px;
+        height: 80px;
+      }
+
+      .why-icon-circle svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .why-number {
+        font-size: 56px;
+      }
+
+      .why-keyword {
+        font-size: 15px;
+      }
+
+      .why-desc {
+        font-size: 14px;
+      }
+    }
+
+    /* ========================================
+       SECTION 4-5: RITUAL
+    ======================================== */
+    .ritual {
+      background: var(--color-bg);
+    }
+
+    .ritual-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .ritual-catchcopy {
+      font-family: var(--font-jp);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 2;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .ritual-sub {
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 200;
+      color: var(--color-gold);
+      letter-spacing: 1px;
+    }
+
+    .ritual-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .ritual-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .ritual-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .ritual-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .ritual-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    }
+
+    .ritual-card-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .ritual-card-jp {
+      font-family: var(--font-jp);
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+    }
+
+    .ritual-texture {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .ritual-texture p {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--color-gray);
+      line-height: 2.2;
+      letter-spacing: 0.5px;
+    }
+
+    @media (min-width: 768px) {
+      .ritual-cards {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .ritual-card {
+        flex: 1;
+      }
+
+      .ritual-card img {
+        height: 280px;
+      }
+
+      .ritual-catchcopy {
+        font-size: 24px;
+      }
+
+      .ritual-texture p {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .ritual-cards {
+        gap: 30px;
+      }
+
+      .ritual-card img {
+        height: 350px;
+      }
+
+      .ritual-catchcopy {
+        font-size: 28px;
+      }
+
+      .ritual-card-en {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       SECTION 6: PRODUCT
+    ======================================== */
+    .product {
+      background: var(--color-bg-lighter);
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .product .section-label,
+    .product .section-title-jp {
+      text-align: center;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .product-item {
+      text-align: center;
+    }
+
+    .product-item img {
+      width: 240px;
+      height: 320px;
+      object-fit: contain;
+      margin: 0 auto 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .product-grid--single {
+      justify-content: center;
+    }
+
+    .product-item:hover img {
+      transform: translateY(-5px);
+    }
+
+    .product-name {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .product-spec {
+      font-size: 11px;
+      color: var(--color-gray);
+    }
+
+    .product-info {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .product-info p {
+      font-size: 12px;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    .product-origin {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gray-dark);
+      margin-top: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .product-grid {
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+      }
+
+      .product-item img {
+        width: 280px;
+        height: 360px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .product-item img {
+        width: 320px;
+        height: 420px;
+      }
+
+      .product-name {
+        font-size: 13px;
+      }
+
+      .product-info p {
+        font-size: 14px;
+      }
+    }
+
+    /* ========================================
+       SECTION 7: FOUNDER
+    ======================================== */
+    .founder {
+      background: var(--color-bg);
+    }
+
+    .founder-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .founder-image {
+      flex: 1;
+    }
+
+    .founder-image img {
+      width: 70%;
+      max-width: 300px;
+      margin: 0 auto;
+      height: auto;
+      object-fit: cover;
+      filter: brightness(0.95);
+      border-radius: 2px;
+    }
+
+    .founder-text {
+      flex: 1;
+    }
+
+    .founder-text .section-label {
+      margin-bottom: 12px;
+    }
+
+    .founder-name {
+      font-family: var(--font-jp);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-gray);
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+    }
+
+    .founder-name span {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-gray-dark);
+      margin-left: 8px;
+    }
+
+    .founder-body p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 2;
+      color: var(--color-gray);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .founder-highlight {
+      font-family: var(--font-jp);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--color-white);
+      letter-spacing: 3px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      text-shadow: 0 0 30px rgba(196, 162, 101, 0.15);
+    }
+
+    .founder-body .emphasis {
+      color: var(--color-white);
+      font-weight: 400;
+    }
+
+    @media (min-width: 768px) {
+      .founder-grid {
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
+      }
+
+      .founder-image {
+        flex: 0.4;
+      }
+
+      .founder-image img {
+        width: 100%;
+        max-width: none;
+      }
+
+      .founder-text {
+        flex: 0.6;
+      }
+
+      .founder-body p {
+        font-size: 12px;
+      }
+
+      .founder-highlight {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .founder-image {
+        flex: 0.45;
+      }
+
+      .founder-text {
+        flex: 0.55;
+      }
+
+      .founder-body p {
+        font-size: 12px;
+        line-height: 2.2;
+      }
+
+      .founder-highlight {
+        font-size: 28px;
+      }
+    }
+
+    /* ========================================
+       SECTION 8: FOR PROFESSIONALS
+    ======================================== */
+    .professionals {
+      background: var(--color-bg-light);
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .professionals .section-label,
+    .professionals .section-title-jp {
+      text-align: center;
+    }
+
+    .pro-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pro-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .pro-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-gold);
+      box-shadow: 0 10px 30px rgba(196, 162, 101, 0.1);
+    }
+
+    .pro-card-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pro-card-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--color-gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .pro-card-en {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+
+    .pro-card-jp {
+      font-family: var(--font-jp);
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .pro-card-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+
+    .pro-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--color-gray-dark);
+    }
+
+    @media (min-width: 768px) {
+      .pro-cards {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .pro-card {
+        flex: 1;
+        padding: 35px 25px;
+      }
+
+      .pro-card-en {
+        font-size: 12px;
+      }
+
+      .pro-card-jp {
+        font-size: 18px;
+      }
+
+      .pro-card-desc {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .pro-cards {
+        gap: 30px;
+      }
+
+      .pro-card {
+        padding: 40px 30px;
+      }
+
+      .pro-card-en {
+        font-size: 13px;
+      }
+
+      .pro-card-jp {
+        font-size: 20px;
+      }
+
+      .pro-card-desc {
+        font-size: 14px;
+      }
+    }
+
+    /* ========================================
+       SECTION 9: CTA / FOOTER
+    ======================================== */
+    .cta-section {
+      background: var(--color-bg);
+      padding: 120px 0 100px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-logo {
+      font-family: var(--font-en);
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 10px;
+      color: var(--color-gold);
+      margin-bottom: 32px;
+    }
+
+    .cta-heading {
+      font-family: var(--font-jp);
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--color-gray);
+      letter-spacing: 0.06em;
+      line-height: 2;
+      margin-bottom: 0;
+    }
+
+    .cta-button-wrap {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-main-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      font-family: var(--font-jp);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--color-bg);
+      background: var(--color-gold);
+      padding: 22px 64px;
+      text-decoration: none;
+      position: relative;
+      transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid var(--color-gold);
+    }
+
+    .cta-main-button:hover {
+      background: transparent;
+      color: var(--color-gold);
+      box-shadow: 0 0 32px rgba(196, 162, 101, 0.18);
+    }
+
+    .cta-main-button-arrow {
+      font-size: 16px;
+      transition: transform 0.3s ease;
+      font-style: normal;
+    }
+
+    .cta-main-button:hover .cta-main-button-arrow {
+      transform: translateX(6px);
+    }
+
+    .cta-note {
+      font-size: 11px;
+      color: var(--color-gray-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer p {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gray-dark);
+    }
+
+    @media (min-width: 768px) {
+      .cta-logo {
+        font-size: 36px;
+        letter-spacing: 12px;
+      }
+
+      .cta-heading {
+        font-size: 16px;
+      }
+
+      .cta-main-button {
+        font-size: 14px;
+        padding: 18px 52px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cta-section {
+        padding: 140px 0 80px;
+      }
+
+      .cta-logo {
+        font-size: 48px;
+        letter-spacing: 16px;
+      }
+
+      .cta-heading {
+        font-size: 18px;
+      }
+
+      .cta-main-button {
+        font-size: 15px;
+        padding: 22px 72px;
+      }
+    }
+
+    /* ========================================
+       INLINE CTA BUTTONS
+    ======================================== */
+    .inline-cta {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .inline-cta-button {
+      display: inline-block;
+      font-family: var(--font-jp);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--color-bg);
+      background: var(--color-gold);
+      border: 1px solid var(--color-gold);
+      padding: 12px 36px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .inline-cta-button:hover {
+      background: #111111;
+      color: var(--color-gold);
+    }
+
+    /* ========================================
+       MOBILE FIXED CTA BAR
+    ======================================== */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(196, 162, 101, 0.2);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-cta-bar.show {
+      transform: translateY(0);
+    }
+
+    .mobile-cta-bar button,
+    .mobile-cta-bar a {
+      width: 100%;
+      height: 44px;
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--color-bg);
+      background: var(--color-gold);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-cta-bar {
+        display: block;
+      }
+    }
+
+    /* ========================================
+       SECTION: EMPATHY (共感)
+    ======================================== */
+    .section.empathy {
+      padding: 100px 0;
+      background-color: var(--color-bg);
+      text-align: center;
+    }
+    .empathy-label { margin-bottom: 48px; }
+    .empathy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+    .empathy-item {
+      border: 1px solid rgba(196, 162, 101, 0.25);
+      background: rgba(196, 162, 101, 0.03);
+      padding: 28px 16px;
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: var(--color-text);
+      transition: border-color 0.4s ease, background 0.4s ease;
+    }
+    .empathy-item:hover {
+      border-color: rgba(196, 162, 101, 0.5);
+      background: rgba(196, 162, 101, 0.06);
+    }
+    .empathy-catch {
+      font-family: var(--font-jp);
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.9;
+      letter-spacing: 3px;
+      color: var(--color-white);
+      margin-top: 24px;
+    }
+    .empathy-catch strong {
+      color: var(--color-gold);
+      font-weight: 400;
+      border-bottom: 1px solid rgba(196, 162, 101, 0.4);
+      padding-bottom: 4px;
+    }
+    .sp-only { display: inline; }
+    @media (min-width: 768px) {
+      .section.empathy { padding: 140px 0; }
+      .empathy-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 960px;
+      }
+      .empathy-item { font-size: 16px; padding: 36px 20px; }
+      .empathy-catch { font-size: 28px; }
+      .sp-only { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .empathy-catch { font-size: 32px; }
+    }
+
+    /* ========================================
+       SECTION: CONCEPT (マイナス美容)
+    ======================================== */
+    .section.concept {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+      text-align: center;
+    }
+    .concept-arrow {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--color-gray);
+      margin-bottom: 24px;
+    }
+    .concept-headline {
+      font-family: var(--font-jp);
+      font-size: 26px;
+      font-weight: 200;
+      line-height: 1.7;
+      letter-spacing: 4px;
+      color: var(--color-white);
+      margin-bottom: 40px;
+    }
+    .concept-headline strong {
+      color: var(--color-gold);
+      font-weight: 300;
+    }
+    .concept-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 0 auto 40px;
+    }
+    .concept-body {
+      font-size: 15px;
+      line-height: 2.2;
+      letter-spacing: 2px;
+      color: var(--color-text);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .section.concept { padding: 160px 0; }
+      .concept-headline { font-size: 38px; }
+      .concept-body { font-size: 17px; }
+    }
+    @media (min-width: 1024px) {
+      .concept-headline { font-size: 44px; }
+    }
+
+    /* ========================================
+       SECTION: DIFFERENCE (差別化)
+    ======================================== */
+    .section.difference {
+      padding: 120px 0;
+      background-color: var(--color-bg-light);
+    }
+    .difference-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .difference-comparison {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .difference-card {
+      border: 1px solid var(--color-border);
+      padding: 40px 28px;
+      background: var(--color-bg-lighter);
+    }
+    .difference-card.highlight {
+      border-color: rgba(196, 162, 101, 0.5);
+      background: rgba(196, 162, 101, 0.04);
+    }
+    .difference-card-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--color-gray);
+      margin-bottom: 16px;
+    }
+    .difference-card.highlight .difference-card-label { color: var(--color-gold); }
+    .difference-card-title {
+      font-family: var(--font-jp);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    .difference-card-list { list-style: none; padding: 0; }
+    .difference-card-list li {
+      font-size: 14px;
+      line-height: 2;
+      color: var(--color-text);
+      padding-left: 16px;
+      position: relative;
+      letter-spacing: 1px;
+    }
+    .difference-card-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+    }
+    @media (min-width: 768px) {
+      .difference-comparison {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .difference-card { padding: 56px 40px; }
+      .difference-card-title { font-size: 22px; }
+      .difference-card-list li { font-size: 15px; }
+    }
+
+    /* ========================================
+       SECTION: BEFORE / AFTER
+    ======================================== */
+    .section.beforeafter {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+    }
+    .ba-header { text-align: center; margin-bottom: 64px; }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ba-item { text-align: center; }
+    .ba-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .ba-image-wrap {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+    }
+    .ba-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%) brightness(0.95);
+    }
+    .ba-image-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 4px 10px;
+      backdrop-filter: blur(4px);
+    }
+    .ba-image-label.after {
+      color: var(--color-gold);
+      border: 1px solid rgba(196, 162, 101, 0.5);
+    }
+    .ba-title {
+      font-family: var(--font-jp);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-white);
+      letter-spacing: 3px;
+      margin-top: 16px;
+    }
+    .ba-desc {
+      font-size: 12px;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+    .ba-note {
+      text-align: center;
+      font-size: 11px;
+      color: var(--color-gray-dark);
+      margin-top: 48px;
+      letter-spacing: 1px;
+    }
+    @media (min-width: 768px) {
+      .ba-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .ba-title { font-size: 18px; }
+      .ba-desc { font-size: 13px; }
+    }
+
+    /* ========================================
+       SECTION: EVIDENCE (信頼)
+    ======================================== */
+    .section.evidence {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+    }
+    .evidence-header { text-align: center; margin-bottom: 64px; }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .evidence-card {
+      border: 1px solid var(--color-border);
+      padding: 40px 28px;
+      text-align: center;
+      background: var(--color-bg-lighter);
+      transition: border-color 0.4s ease;
+    }
+    .evidence-card:hover { border-color: rgba(196, 162, 101, 0.4); }
+    .evidence-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 20px;
+      color: var(--color-gold);
+    }
+    .evidence-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.2;
+    }
+    .evidence-title {
+      font-family: var(--font-jp);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-white);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .evidence-desc {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+    }
+    @media (min-width: 768px) {
+      .evidence-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .evidence-card { padding: 56px 32px; }
+    }
+
+    /* ========================================
+       SECTION: HOW TO USE (使用方法)
+    ======================================== */
+    .section.howto {
+      padding: 120px 0;
+      background-color: var(--color-bg-light);
+    }
+    .howto-header { text-align: center; margin-bottom: 64px; }
+    .howto-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .howto-step {
+      text-align: center;
+      position: relative;
+    }
+    .howto-step-num {
+      font-family: var(--font-en);
+      font-size: 14px;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+    .howto-step-circle {
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(196, 162, 101, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--color-gold);
+    }
+    .howto-step-circle svg {
+      width: 36px;
+      height: 36px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.2;
+    }
+    .howto-step-title {
+      font-family: var(--font-jp);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-white);
+      letter-spacing: 3px;
+    }
+    .howto-step-time {
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+    @media (min-width: 768px) {
+      .howto-steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .howto-step-circle { width: 110px; height: 110px; }
+    }
+
+    /* ========================================
+       SECTION: SALON PAIN (サロンの悩み)
+    ======================================== */
+    .section.salonpain {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+      text-align: center;
+    }
+    .salonpain-list {
+      max-width: 700px;
+      margin: 56px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .salonpain-item {
+      border-left: 2px solid rgba(196, 162, 101, 0.4);
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 15px;
+      color: var(--color-text);
+      background: var(--color-bg-lighter);
+      letter-spacing: 1px;
+    }
+    .salonpain-item::before {
+      content: '"';
+      font-family: var(--font-en);
+      color: var(--color-gold);
+      font-size: 24px;
+      margin-right: 8px;
+    }
+    @media (min-width: 768px) {
+      .salonpain-item { font-size: 17px; padding: 24px 32px; }
+    }
+
+    /* ========================================
+       SECTION: SOLUTION (橋渡し)
+    ======================================== */
+    .section.solution {
+      padding: 120px 0;
+      background-color: var(--color-bg-light);
+      text-align: center;
+    }
+    .solution-headline {
+      font-family: var(--font-jp);
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 1.9;
+      letter-spacing: 3px;
+      color: var(--color-white);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .solution-headline strong {
+      color: var(--color-gold);
+      font-weight: 300;
+    }
+    @media (min-width: 768px) {
+      .solution-headline { font-size: 30px; }
+    }
+    @media (min-width: 1024px) {
+      .solution-headline { font-size: 36px; }
+    }
+
+    /* ========================================
+       SECTION: SALON RITUAL (メニュー展開)
+    ======================================== */
+    .section.salonritual {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+    }
+    .salonritual-header { text-align: center; margin-bottom: 64px; }
+    .salonritual-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .salonritual-card {
+      border: 1px solid var(--color-border);
+      padding: 40px 28px;
+      text-align: center;
+      background: var(--color-bg-lighter);
+    }
+    .salonritual-card-en {
+      font-family: var(--font-en);
+      font-size: 16px;
+      letter-spacing: 4px;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+    .salonritual-card-jp {
+      font-family: var(--font-jp);
+      font-size: 14px;
+      color: var(--color-white);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .salonritual-card-desc {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+    }
+    @media (min-width: 768px) {
+      .salonritual-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+    }
+
+    /* ========================================
+       SECTION: PRO SPEC (プロ向けスペック)
+    ======================================== */
+    .section.prospec {
+      padding: 120px 0;
+      background-color: var(--color-bg-light);
+    }
+    .prospec-header { text-align: center; margin-bottom: 64px; }
+    .prospec-table {
+      max-width: 720px;
+      margin: 0 auto;
+      border-top: 1px solid var(--color-border);
+    }
+    .prospec-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px 16px;
+    }
+    .prospec-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      align-self: center;
+    }
+    .prospec-value {
+      font-size: 14px;
+      color: var(--color-text);
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+    @media (min-width: 768px) {
+      .prospec-row { padding: 28px 24px; }
+      .prospec-label { font-size: 12px; }
+      .prospec-value { font-size: 15px; }
+    }
+
+    /* ========================================
+       SECTION: FLOW (導入の流れ)
+    ======================================== */
+    .section.flow {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+    }
+    .flow-header { text-align: center; margin-bottom: 64px; }
+    .flow-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .flow-step {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-lighter);
+    }
+    .flow-step-num {
+      font-family: var(--font-en);
+      font-size: 24px;
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .flow-step-title {
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--color-white);
+      letter-spacing: 2px;
+    }
+    @media (min-width: 768px) {
+      .flow-steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+    }
+
+    /* ========================================
+       SECTION: FAQ
+    ======================================== */
+    .section.faq {
+      padding: 120px 0;
+      background-color: var(--color-bg);
+    }
+    .faq-header { text-align: center; margin-bottom: 64px; }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-item {
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-lighter);
+      padding: 28px 24px;
+      transition: border-color 0.4s ease;
+    }
+    .faq-item:hover { border-color: rgba(196, 162, 101, 0.3); }
+    .faq-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 15px;
+      color: var(--color-white);
+      letter-spacing: 1px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .faq-q::before {
+      content: 'Q';
+      font-family: var(--font-en);
+      color: var(--color-gold);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .faq-a {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--color-text);
+      letter-spacing: 1px;
+      line-height: 1.9;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border);
+    }
+    .faq-a::before {
+      content: 'A';
+      font-family: var(--font-en);
+      color: var(--color-gray);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    @media (min-width: 768px) {
+      .faq-item { padding: 36px 40px; }
+      .faq-q { font-size: 16px; }
+    }
+
+    /* ========================================
+       SECTION: CONTACT FORM (フォーム一体型)
+    ======================================== */
+    .section.contactform {
+      padding: 0 0 100px;
+      background-color: var(--color-bg);
+    }
+    .contactform-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .contactform-link-button {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: var(--color-bg);
+      background: var(--color-gold);
+      padding: 20px 64px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+    .contactform-link-button:hover {
+      opacity: 0.8;
+    }
+    .contactform-row { margin-bottom: 24px; }
+    .contactform-label {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+    .contactform-input,
+    .contactform-textarea,
+    .contactform-select {
+      width: 100%;
+      background: var(--color-bg-lighter);
+      border: 1px solid var(--color-border);
+      color: var(--color-white);
+      font-family: var(--font-jp);
+      font-size: 14px;
+      padding: 14px 16px;
+      letter-spacing: 1px;
+      transition: border-color 0.3s ease;
+    }
+    .contactform-input:focus,
+    .contactform-textarea:focus,
+    .contactform-select:focus {
+      outline: none;
+      border-color: var(--color-gold);
+    }
+    .contactform-textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contactform-submit {
+      display: block;
+      width: 100%;
+      padding: 18px 32px;
+      background: transparent;
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 4px;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: all 0.4s ease;
+    }
+    .contactform-submit:hover {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    .contactform-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    @media (min-width: 768px) {
+      .contactform-row.split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .contactform-buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ========================================
+       HERO CTA BUTTONS
+    ======================================== */
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 40px;
+      align-items: center;
+    }
+    .hero-cta-primary,
+    .hero-cta-secondary {
+      display: inline-block;
+      padding: 16px 40px;
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 3px;
+      transition: all 0.4s ease;
+      min-width: 240px;
+      text-align: center;
+    }
+    .hero-cta-primary {
+      background: var(--color-gold);
+      color: var(--color-bg);
+      border: 1px solid var(--color-gold);
+    }
+    .hero-cta-primary:hover {
+      background: transparent;
+      color: var(--color-gold);
+    }
+    .hero-cta-secondary {
+      background: transparent;
+      color: var(--color-white);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .hero-cta-secondary:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+    }
+    @media (min-width: 768px) {
+      .hero-cta-group {
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    /* ========================================
+       HEADER NAV (2ボタン・サイズ統一・スマホ非表示)
+    ======================================== */
+    .header-nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    /* 両ボタン共通の統一スタイル */
+    .header-cta,
+    .header-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-jp);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      min-width: 120px;
+      height: 34px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    /* Primary: ゴールド塗り */
+    .header-cta-primary {
+      background: var(--color-gold);
+      color: var(--color-bg);
+      border: 1px solid var(--color-gold);
+    }
+    .header-cta-primary:hover {
+      background: transparent;
+      color: var(--color-gold);
+    }
+    /* Secondary: アウトライン */
+    .header-cta {
+      background: transparent;
+      color: var(--color-gold);
+      border: 1px solid var(--color-gold);
+    }
+    .header-cta:hover {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    @media (min-width: 1024px) {
+      .header-cta,
+      .header-cta-primary {
+        font-size: 13px;
+        padding: 9px 22px;
+        min-width: 140px;
+        height: 38px;
+      }
+    }
+    /* スマホ時はヘッダーのCTAを非表示 */
+    @media (max-width: 767px) {
+      .header-nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       MOBILE CTA BAR (2ボタン化・サイズ統一)
+    ======================================== */
+    .mobile-cta-bar.dual {
+      display: none;
+      gap: 0;
+      padding: 0;
+    }
+    .mobile-cta-bar.dual button {
+      flex: 1;
+      border-radius: 0;
+      margin: 0;
+      height: 48px;
+      font-size: 13px;
+    }
+    .mobile-cta-bar.dual .cta-buy {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    .mobile-cta-bar.dual .cta-salon {
+      background: var(--color-bg-lighter);
+      color: var(--color-white);
+      border-left: 1px solid var(--color-gold);
+    }
+    /* スマホ時のみモバイルCTAバーを表示 */
+    @media (max-width: 767px) {
+      .mobile-cta-bar.dual {
+        display: flex;
+      }
+    }
+    /* PC時はモバイルCTAバーを完全非表示 */
+    @media (min-width: 768px) {
+      .mobile-cta-bar,
+      .mobile-cta-bar.dual {
+        display: none !important;
+      }
+    }
+
+    /* ========================================
+       SECTION DIVIDER LINES
+    ======================================== */
+    .gold-line {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(196, 162, 101, 0.3), transparent);
+    }
+
+/* ========================================
+   PLACEHOLDER NOTICE
+======================================== */
+.placeholder-banner {
+  background: rgba(196, 162, 101, 0.12);
+  border: 2px dashed #C4A265;
+  color: #C4A265;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  font-family: var(--font-jp);
+}
+
+.placeholder-text {
+  color: #C4A265;
+  border-bottom: 1px dashed #C4A265;
+  display: inline-block;
+}
+
+/* ========================================
+   DIGITAL DETOX
+======================================== */
+.section.digitaldetox {
+  padding: 120px 0;
+  background: var(--color-bg-light);
+}
+.digitaldetox-body {
+  max-width: 600px;
+  margin: 32px auto;
+  text-align: center;
+  line-height: 2.2;
+  color: var(--color-text);
+}
+.digitaldetox-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+.digitaldetox-stat {
+  text-align: center;
+  border: 1px solid var(--color-border);
+  padding: 24px 32px;
+  min-width: 200px;
+}
+.digitaldetox-stat-num {
+  font-family: var(--font-en);
+  font-size: 28px;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+.digitaldetox-stat-desc {
+  font-size: 12px;
+  color: var(--color-gray);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   RARITY（希少性）
+======================================== */
+.section.rarity {
+  padding: 120px 0;
+  background: var(--color-bg-light);
+}
+.rarity-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rarity-number { text-align: center; flex-shrink: 0; }
+.rarity-num {
+  font-family: var(--font-en);
+  font-size: 72px;
+  color: var(--color-gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.rarity-num span {
+  font-size: 28px;
+  color: var(--color-gray);
+}
+.rarity-num-desc {
+  font-size: 12px;
+  color: var(--color-gray);
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+.rarity-text {
+  max-width: 400px;
+  line-height: 2.2;
+  color: var(--color-text);
+}
+
+/* ========================================
+   PROOF（生命力の証明）
+======================================== */
+.section.proof {
+  padding: 120px 0;
+  background: var(--color-bg);
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+.proof-image-placeholder {
+  background: var(--color-bg-lighter);
+  border: 1px dashed var(--color-border);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-gray);
+  font-size: 13px;
+  padding: 16px;
+}
+.proof-label {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-gray);
+  margin-top: 12px;
+  letter-spacing: 0.05em;
+}
+.proof-desc {
+  text-align: center;
+  margin-top: 48px;
+  color: var(--color-text);
+  line-height: 2.2;
+  font-size: 15px;
+}
+
+/* ========================================
+   BLOOD VIDEO（血液改善動画）
+======================================== */
+.section.bloodvideo {
+  padding: 120px 0;
+  background: var(--color-bg-light);
+}
+.bloodvideo-wrap { margin-top: 48px; }
+.bloodvideo-placeholder {
+  background: var(--color-bg-lighter);
+  border: 1px dashed var(--color-border);
+  aspect-ratio: 16/9;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-gray);
+  font-size: 14px;
+  gap: 8px;
+}
+.bloodvideo-caption {
+  text-align: center;
+  margin-top: 32px;
+  color: var(--color-text);
+  line-height: 2.2;
+  font-size: 15px;
+}
+
+/* ========================================
+   TESTIMONIALS（社会的証明）
+======================================== */
+.section.testimonials {
+  padding: 120px 0;
+  background: var(--color-bg);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.testimonial-card {
+  border: 1px solid var(--color-border);
+  padding: 32px 24px;
+}
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.testimonial-author {
+  font-size: 12px;
+  color: var(--color-gray);
+  letter-spacing: 0.05em;
+}
+.salon-count {
+  text-align: center;
+  margin-top: 64px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 40px;
+}
+.salon-count-num {
+  font-family: var(--font-en);
+  font-size: 60px;
+  color: var(--color-gold);
+  line-height: 1;
+}
+.salon-count-num span {
+  font-size: 20px;
+  font-family: var(--font-jp);
+  color: var(--color-gray);
+  margin-left: 8px;
+}
+.salon-count-desc {
+  font-size: 13px;
+  color: var(--color-gray);
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+/* ========================================
+   SCHOOL（スクール紹介）
+======================================== */
+.section.school {
+  padding: 120px 0;
+  background: var(--color-bg);
+}
+.school-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+.school-card {
+  border: 1px solid var(--color-border);
+  padding: 40px 32px;
+  text-align: center;
+}
+.school-card-level {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+.school-card-name {
+  font-size: 18px;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+.school-card-duration {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.school-card-desc {
+  font-size: 13px;
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+.school-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--color-gray);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   EVIDENCE BADGES
+======================================== */
+.evidence-badges {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+.evidence-badge {
+  border: 1px solid var(--color-gold);
+  padding: 20px 32px;
+  text-align: center;
+  min-width: 160px;
+}
+.evidence-badge-title {
+  font-size: 11px;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.evidence-badge-num {
+  font-family: var(--font-en);
+  font-size: 16px;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   PRODUCT PRICE
+======================================== */
+.product-price {
+  font-family: var(--font-en);
+  font-size: 18px;
+  color: var(--color-gold);
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .proof-grid,
+  .school-grid { grid-template-columns: 1fr; }
+  .rarity-content { flex-direction: column; gap: 32px; text-align: center; }
+  .rarity-num { font-size: 52px; }
+}
+    .section.product {
+      background: var(--color-bg-light);
+    }
+
+    .section.story {
+      background: var(--color-bg);
+    }
+
+    .section.why {
+      background: var(--color-bg-light);
+    }
+
+    .section.ritual {
+      background: var(--color-bg-light);
+    }
+
+    .section.professionals {
+      background: var(--color-bg-light);
+    }
+
+    .section.founder {
+      background: var(--color-bg-light);
+    }
+
+
+/* ========================================
+   SAFETYPROOF（飲めるほど安全な品質証明）
+======================================== */
+.section.safetyproof {
+  padding: 120px 0;
+  background: var(--color-bg-light);
+}
+.safetyproof-body {
+  max-width: 620px;
+  margin: 32px auto 48px;
+  text-align: center;
+  line-height: 2.2;
+  color: var(--color-text);
+}
+.safetyproof-badges {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.safetyproof-badge {
+  border: 1px solid var(--color-gold);
+  padding: 24px 36px;
+  text-align: center;
+  min-width: 180px;
+}
+.safetyproof-badge-label {
+  font-size: 11px;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.safetyproof-badge-value {
+  font-family: var(--font-en);
+  font-size: 15px;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <a href="#" class="header-logo">
+      <img src="images/noirica-logo.png" alt="NOIRICA">
+    </a>
+    <div class="header-nav">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="header-cta-primary">お問い合わせ</a>
+    </div>
+  </header>
+
+  <!-- ============ SECTION 1: HERO (2カラム+オーバーレイ) ============ -->
+  <section class="hero" id="hero">
+    <!-- 背景画像レイヤー -->
+    <div class="hero-image">
+      <img src="images/hero-main-visual.png" alt="NOIRICA メインビジュアル">
+    </div>
+
+    <!-- モバイル用オーバーレイ（全面暗幕） -->
+    <div class="hero-overlay-mobile"></div>
+
+    <!-- PC用オーバーレイ（左からのグラデーション） -->
+    <div class="hero-overlay-desktop"></div>
+
+    <!-- PC用ブラー境界（画像の左端を溶かす） -->
+    <div class="hero-blur-edge"></div>
+
+    <!-- コンテンツ: 左カラム -->
+    <div class="hero-content">
+      <h1 class="hero-logo">NOIRICA</h1>
+      <p class="hero-product-name">Black Silica Ritual Clay</p>
+      <p class="hero-main-copy">北海道産ブラックシリカ配合<br>"整える美容"の新習慣</p>
+      <div class="hero-divider"></div>
+      <p class="hero-sub-copy">毛穴・くすみ・巡りに<br>塗るだけ10分のリチュアルケア</p>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="hero-scroll-arrow"></div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: EMPATHY (共感) ============ -->
+  <section class="section empathy" id="empathy">
+    <div class="container">
+      <p class="section-label fade-in empathy-label">Your Concerns</p>
+      <div class="empathy-grid">
+        <div class="empathy-item fade-in stagger-1">毛穴</div>
+        <div class="empathy-item fade-in stagger-2">くすみ</div>
+        <div class="empathy-item fade-in stagger-3">冷え</div>
+        <div class="empathy-item fade-in stagger-4">スキンケア迷子</div>
+      </div>
+      <p class="empathy-catch fade-in stagger-5">
+        それ、<strong>"足しすぎ美容"</strong>が<br class="sp-only">原因かもしれません。
+      </p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION 3: WHY NOIRICA ============ -->
+  <section class="section why" id="why">
+    <div class="container">
+      <p class="section-label fade-in">Why NOIRICA</p>
+      <h2 class="section-title-jp fade-in stagger-1" style="text-align: center;">なぜ、特別なのか</h2>
+      <p class="why-lead fade-in stagger-2">一般的なクレイは「汚れを落とす」ことが目的ですが、<br>NOIRICAはそれに加えて、<strong
+          style="color: var(--color-white); font-weight: 400;">整える機能</strong>を持っています。</p>
+      <div class="why-columns">
+        <!-- Column 1: 98% -->
+        <div class="why-col fade-in stagger-3">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="M4.93 4.93l1.41 1.41" />
+              <path d="M17.66 17.66l1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="M6.34 17.66l-1.41 1.41" />
+              <path d="M19.07 4.93l-1.41 1.41" />
+            </svg>
+          </div>
+          <div class="why-number" data-count="98">98%</div>
+          <p class="why-keyword">遠赤外線放射率</p>
+          <p class="why-desc">天然鉱石による<br>98%の遠赤外線放射率で、<br>身体の芯から温めます</p>
+        </div>
+        <!-- Column 2: 循環 -->
+        <div class="why-col fade-in stagger-5">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 12a9 9 0 1 1-6.22-8.56" />
+              <path d="M21 3v6h-6" />
+            </svg>
+          </div>
+          <div class="why-number">循環</div>
+          <p class="why-keyword">自然の循環力</p>
+          <p class="why-desc">黒鉛珪石によるミネラルの力が、<br>肌と身体の巡りをサポート</p>
+        </div>
+        <!-- Column 3: 唯一 -->
+        <div class="why-col fade-in stagger-7">
+          <div class="why-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01z" />
+            </svg>
+          </div>
+          <div class="why-number">唯一</div>
+          <p class="why-keyword">世界唯一の産地</p>
+          <p class="why-desc">北海道・上ノ国でのみ産出される、<br>世界でも極めて希少な鉱石</p>
+        </div>
+      </div>
+      <div class="why-features fade-in">
+        <div class="why-circles">
+          <div class="why-circle">
+            <p class="why-circle-label">吸着</p>
+            <p class="why-circle-text">クレイによる<br>吸着ケア</p>
+          </div>
+          <div class="why-circle">
+            <p class="why-circle-label">活性</p>
+            <p class="why-circle-text">黒鉛珪石による<br>細胞活性サポート</p>
+          </div>
+          <div class="why-circle">
+            <p class="why-circle-label">巡り</p>
+            <p class="why-circle-text">肌と身体の巡りに<br>着目した設計</p>
+          </div>
+        </div>
+        <p class="why-features-copy">これを同時に叶える、<br>新しいミネラル美容です。</p>
+      </div>
+      <p class="why-keyphrase fade-in">デトックス × 巡らせる × 整える</p>
+    </div>
+
+    <!-- Inline CTA -->
+    <div class="inline-cta fade-in">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: CONCEPT (マイナス美容) ============ -->
+  <section class="section concept" id="concept">
+    <div class="container">
+      <p class="section-label fade-in">Concept</p>
+      <p class="concept-arrow fade-in stagger-1">— MINUS BEAUTY —</p>
+      <h2 class="concept-headline fade-in stagger-2">
+        足す美容から、<br><strong>整える美容</strong>へ。
+      </h2>
+      <div class="concept-divider fade-in stagger-3"></div>
+      <p class="concept-body fade-in stagger-4">
+        余分なものを取り除き、<br>
+        肌本来の力を引き出す。<br><br>
+        NOIRICAが提案するのは、<br>
+        引き算から始まる新しい美容習慣です。
+      </p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: DIGITAL DETOX ============ -->
+  <section class="section digitaldetox" id="digitaldetox">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】このセクションのコピー・統計データが必要です ― 仮実装</div>
+      <p class="section-label fade-in">Digital Detox</p>
+      <h2 class="section-title-jp fade-in stagger-1">現代人の、見えない疲労。</h2>
+      <div class="digitaldetox-body fade-in stagger-2">
+        <p>スマートフォン、パソコン、Wi-Fi——</p>
+        <p>私たちの身体は、毎日見えない電磁波にさらされています。</p>
+        <p>その蓄積が、肌荒れ・冷え・くすみ・慢性疲労の<br>一因になっているとしたら？</p>
+      </div>
+      <div class="digitaldetox-stats fade-in stagger-3">
+        <div class="digitaldetox-stat">
+          <p class="digitaldetox-stat-num placeholder-text">【統計データ】</p>
+          <p class="digitaldetox-stat-desc">現代人の電磁波曝露に関するデータ</p>
+        </div>
+        <div class="digitaldetox-stat">
+          <p class="digitaldetox-stat-num placeholder-text">【統計データ】</p>
+          <p class="digitaldetox-stat-desc">肌荒れ・冷えとの関連性データ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: BEFORE / AFTER ============ -->
+  <section class="section beforeafter" id="beforeafter">
+    <div class="container">
+      <div class="ba-header">
+        <p class="section-label fade-in">Before / After</p>
+        <h2 class="section-title-jp fade-in stagger-1">変化を、目で確かめる</h2>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-item fade-in stagger-2">
+          <div class="ba-images">
+            <div class="ba-image-wrap">
+              <span class="ba-image-label">BEFORE</span>
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=540&fit=crop&q=80" alt="毛穴 Before">
+            </div>
+            <div class="ba-image-wrap">
+              <span class="ba-image-label after">AFTER</span>
+              <img src="https://images.unsplash.com/photo-1614108538523-93f73a3ce4ad?w=400&h=540&fit=crop&q=80" alt="毛穴 After">
+            </div>
+          </div>
+          <p class="ba-title">毛穴</p>
+          <p class="ba-desc">引き締まり、なめらかな質感へ</p>
+        </div>
+        <div class="ba-item fade-in stagger-3">
+          <div class="ba-images">
+            <div class="ba-image-wrap">
+              <span class="ba-image-label">BEFORE</span>
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=540&fit=crop&q=80" alt="トーンアップ Before">
+            </div>
+            <div class="ba-image-wrap">
+              <span class="ba-image-label after">AFTER</span>
+              <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=400&h=540&fit=crop&q=80" alt="トーンアップ After">
+            </div>
+          </div>
+          <p class="ba-title">トーンアップ</p>
+          <p class="ba-desc">くすみが抜け、透明感のある肌へ</p>
+        </div>
+        <div class="ba-item fade-in stagger-4">
+          <div class="ba-images">
+            <div class="ba-image-wrap">
+              <span class="ba-image-label">BEFORE</span>
+              <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=540&fit=crop&q=80" alt="血流 Before">
+            </div>
+            <div class="ba-image-wrap">
+              <span class="ba-image-label after">AFTER</span>
+              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=540&fit=crop&q=80" alt="血流 After">
+            </div>
+          </div>
+          <p class="ba-title">血流</p>
+          <p class="ba-desc">巡りが整い、内側から温まる</p>
+        </div>
+      </div>
+      <p class="ba-note fade-in">※ 個人差があります / Image for illustration purposes</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: 血液改善動画 ============ -->
+  <section class="section bloodvideo" id="bloodvideo">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】顕微鏡映像の動画ファイルが必要です ― 仮実装</div>
+      <p class="section-label fade-in">血液改善動画</p>
+      <h2 class="section-title-jp fade-in stagger-1">血流の変化を、<br>顕微鏡で確かめる。</h2>
+      <div class="bloodvideo-wrap fade-in stagger-2">
+        <div class="bloodvideo-placeholder">
+          <p>【顕微鏡映像 動画プレースホルダー】</p>
+          <p>使用前・使用後の血流比較映像</p>
+        </div>
+      </div>
+      <p class="bloodvideo-caption fade-in stagger-3">施術前後の末梢血流を顕微鏡で撮影。<br>NOIRICAを使用した直後から、血流の改善が映像で確認できます。</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION 2: BRAND STORY ============ -->
+  <section class="section story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="section-label fade-in">Origin Story</p>
+          <h2 class="section-title-jp fade-in stagger-1">北海道 上ノ国<br>数億年の時をかけて<br>孕まれた黒色鉱石</h2>
+          <div class="story-body">
+            <p class="fade-in stagger-2">北海道・上ノ国町。</p>
+            <p class="fade-in stagger-3">数億年という長い年月をかけて形成された、世界でも極めて希少な黒色鉱石。</p>
+            <p class="fade-in stagger-4">自然のエネルギーを蓄えたこの鉱石は、古くから特別な土地として知られてきました。</p>
+            <p class="fade-in stagger-5">NOIRICAは、この日本由来の希少素材を活かし、現代の美容に再構築したミネラルブランドです。</p>
+          </div>
+        </div>
+        <div class="story-image slide-right">
+          <img src="images/S__221528108.jpg" alt="北海道・上ノ国の黒色鉱石 ブラックシリカ">
+        </div>
+      </div>
+      <div class="story-thumbnails">
+        <img class="fade-in stagger-1"
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&q=80" alt="北海道の大自然">
+        <img class="fade-in stagger-2"
+          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=300&fit=crop&q=80" alt="鉱石の表面">
+        <img class="fade-in stagger-3"
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop&q=80" alt="自然の岩場">
+        <img class="fade-in stagger-4"
+          src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=300&fit=crop&q=80" alt="清流">
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: 希少性 ============ -->
+  <section class="section rarity" id="rarity">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】採掘量・産地データの確認が必要です ― 仮実装</div>
+      <p class="section-label fade-in">希少性</p>
+      <h2 class="section-title-jp fade-in stagger-1">世界で、ここだけ。</h2>
+      <div class="rarity-content">
+        <div class="rarity-number fade-in stagger-2">
+          <p class="rarity-num">2,000<span>トン</span></p>
+          <p class="rarity-num-desc">年間採掘可能量の上限</p>
+        </div>
+        <div class="rarity-text fade-in stagger-3">
+          <p>北海道・上ノ国町でのみ産出されるブラックシリカ。</p>
+          <p>その年間採掘可能量はわずか2,000トン。</p>
+          <p>希少性と品質を守るため、採掘量は厳しく管理されています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: 生命力の証明 ============ -->
+  <section class="section proof" id="proof">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】植物試験の写真・データが必要です ― 仮実装</div>
+      <p class="section-label fade-in">生命力の証明</p>
+      <h2 class="section-title-jp fade-in stagger-1">植物試験が証明する、生命力。</h2>
+      <div class="proof-grid fade-in stagger-2">
+        <div class="proof-item">
+          <div class="proof-image-placeholder"><p>【植物試験 Before 写真】</p></div>
+          <p class="proof-label">通常の土壌</p>
+        </div>
+        <div class="proof-item">
+          <div class="proof-image-placeholder"><p>【植物試験 After 写真】</p></div>
+          <p class="proof-label">ブラックシリカ配合土壌</p>
+        </div>
+      </div>
+      <p class="proof-desc fade-in stagger-3">ブラックシリカを混入した土壌では、植物の成長が顕著に促進されることが確認されました。<br>この「生命力を引き出す力」が、肌へのアプローチにも活かされています。</p>
+    </div>
+  </section>
+
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: DIFFERENCE (差別化) ============ -->
+  <section class="section difference" id="difference">
+    <div class="container">
+      <div class="difference-header">
+        <p class="section-label fade-in">Unique Position</p>
+        <h2 class="section-title-jp fade-in stagger-1">一般的なクレイとの違い</h2>
+      </div>
+      <div class="difference-comparison">
+        <div class="difference-card fade-in stagger-2">
+          <p class="difference-card-label">GENERAL CLAY</p>
+          <p class="difference-card-title">一般的なクレイ</p>
+          <ul class="difference-card-list">
+            <li>汚れの吸着が中心</li>
+            <li>単一機能</li>
+            <li>表層へのアプローチ</li>
+          </ul>
+        </div>
+        <div class="difference-card highlight fade-in stagger-3">
+          <p class="difference-card-label">NOIRICA</p>
+          <p class="difference-card-title">ブラックシリカ配合 NOIRICA</p>
+          <ul class="difference-card-list">
+            <li>北海道・上ノ国産の希少な天然鉱石</li>
+            <li>常温で遠赤外線を放射</li>
+            <li>巡り・温感・デトックスを同時に</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: EVIDENCE (信頼) ============ -->
+  <section class="section evidence" id="evidence">
+    <div class="container">
+      <div class="evidence-header">
+        <p class="section-label fade-in">Safety &amp; Patent</p>
+        <h2 class="section-title-jp fade-in stagger-1">NOIRICAが信頼される理由。</h2>
+      </div>
+      <div class="evidence-grid">
+        <div class="evidence-card fade-in stagger-2">
+          <div class="evidence-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/>
+            </svg>
+          </div>
+          <p class="evidence-title">天然ミネラル</p>
+          <p class="evidence-desc">北海道・上ノ国産の<br>希少鉱石由来の<br>豊富なミネラル成分</p>
+        </div>
+        <div class="evidence-card fade-in stagger-3">
+          <div class="evidence-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+          </div>
+          <p class="evidence-title">遠赤外線</p>
+          <p class="evidence-desc">98%の遠赤外線放射率<br>常温で身体の芯から<br>やさしく温める</p>
+        </div>
+        <div class="evidence-card fade-in stagger-4">
+          <div class="evidence-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 3v18h18"/>
+              <path d="M7 14l4-4 4 4 5-5"/>
+            </svg>
+          </div>
+          <p class="evidence-title">データあり</p>
+          <p class="evidence-desc">第三者機関による<br>成分・機能性の<br>検証データ完備</p>
+        </div>
+      </div>
+      <div class="evidence-badges fade-in">
+        <div class="evidence-badge">
+          <p class="evidence-badge-title">特許取得</p>
+          <p class="evidence-badge-num">第2736038号</p>
+        </div>
+        <div class="evidence-badge">
+          <p class="evidence-badge-title">食品衛生法</p>
+          <p class="evidence-badge-num">安全基準クリア</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: 安全性証明 ============ -->
+  <section class="section safetyproof" id="safetyproof">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】安全性証明書・認証詳細が必要です ― 仮実装</div>
+      <p class="section-label fade-in">安全性証明</p>
+      <h2 class="section-title-jp fade-in stagger-1">「飲めるほど安全」な品質。</h2>
+      <div class="safetyproof-body fade-in stagger-2">
+        <p>NOIRICAのブラックシリカは、食品衛生法の安全基準をクリアした<br>高い安全性を持つ天然鉱石です。</p>
+        <p>一般的な工業用鉱石とは異なり、<br>人体に安全な基準を満たした原料のみを使用しています。</p>
+      </div>
+      <div class="safetyproof-badges fade-in stagger-3">
+        <div class="safetyproof-badge">
+          <p class="safetyproof-badge-label">食品衛生法</p>
+          <p class="safetyproof-badge-value">安全基準クリア</p>
+        </div>
+        <div class="safetyproof-badge">
+          <p class="safetyproof-badge-label placeholder-text">【認証名】</p>
+          <p class="safetyproof-badge-value placeholder-text">【認証番号・詳細】</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: 社会的証明 ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】顧客の声・サロン導入実績が必要です ― 仮実装</div>
+      <p class="section-label fade-in">社会的証明</p>
+      <h2 class="section-title-jp fade-in stagger-1">使った人の声</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in stagger-2">
+          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
+          <p class="testimonial-author">【お客様名・年齢・属性】</p>
+        </div>
+        <div class="testimonial-card fade-in stagger-3">
+          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
+          <p class="testimonial-author">【お客様名・年齢・属性】</p>
+        </div>
+        <div class="testimonial-card fade-in stagger-4">
+          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
+          <p class="testimonial-author">【お客様名・年齢・属性】</p>
+        </div>
+      </div>
+      <div class="salon-count fade-in stagger-5">
+        <p class="salon-count-num placeholder-text">【導入サロン数】<span>店舗</span></p>
+        <p class="salon-count-desc">全国のサロンに導入いただいています</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION 4-5: RITUAL ============ -->
+  <section class="section ritual" id="ritual">
+    <div class="container">
+      <div class="ritual-header">
+        <p class="section-label fade-in">Experience / Ritual</p>
+        <h2 class="ritual-catchcopy fade-in stagger-1">単なるスキンケアではありません。<br>NOIRICAは、肌と心を整える"リチュアル"です。</h2>
+        <p class="ritual-sub fade-in stagger-2">日常の中に、"整える時間"を生み出します。</p>
+      </div>
+
+      <div class="ritual-cards">
+        <!-- Card 1: Facial Ritual -->
+        <div class="ritual-card fade-in stagger-2">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=600&fit=crop&q=80"
+            alt="Facial Ritual - フェイシャルトリートメント">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Facial Ritual</p>
+            <p class="ritual-card-jp">フェイシャルトリートメント</p>
+          </div>
+        </div>
+        <!-- Card 2: Foot Bath -->
+        <div class="ritual-card fade-in stagger-4">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=600&fit=crop&q=80"
+            alt="Foot Bath - フットバス">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Foot Bath</p>
+            <p class="ritual-card-jp">フットバス</p>
+          </div>
+        </div>
+        <!-- Card 3: Bath Ritual -->
+        <div class="ritual-card fade-in stagger-6">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&h=600&fit=crop&q=80"
+            alt="Bath Ritual - 入浴">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Bath Ritual</p>
+            <p class="ritual-card-jp">入浴</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ritual-texture fade-in">
+        <p>肌に触れた瞬間に感じる、やさしい温もりと密着感。<br>施術後は、透明感・なめらかさ・引き締まりを実感。<br>テクスチャーは繊細なめらかで、サロン施術にも最適な設計。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: スクール紹介 ============ -->
+  <section class="section school" id="school">
+    <div class="container">
+      <div class="placeholder-banner">⚠️ 【要クライアント素材】スクール・資格制度の詳細が必要です ― 仮実装</div>
+      <p class="section-label fade-in">スクール紹介</p>
+      <h2 class="section-title-jp fade-in stagger-1">セラピスト認定資格制度</h2>
+      <div class="school-grid fade-in stagger-2">
+        <div class="school-card">
+          <p class="school-card-level">BASIC</p>
+          <p class="school-card-name">基礎認定講習</p>
+          <p class="school-card-duration placeholder-text">【期間・回数を記載】</p>
+          <p class="school-card-desc">NOIRICAの基本知識と施術の基礎を習得</p>
+        </div>
+        <div class="school-card">
+          <p class="school-card-level">ADVANCED</p>
+          <p class="school-card-name">技術認定講習</p>
+          <p class="school-card-duration placeholder-text">【期間・回数を記載】</p>
+          <p class="school-card-desc">フェイシャル・ボディを含む本格施術スキルを習得</p>
+        </div>
+      </div>
+      <p class="school-note fade-in stagger-3">修了後はNOIRICA認定セラピストとして活動できます</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION 6: PRODUCT ============ -->
+  <section class="section product" id="product">
+    <div class="container">
+      <p class="section-label fade-in">Product</p>
+      <h2 class="section-title-jp fade-in stagger-1" style="text-align: center;">Black Silica Ritual Clay</h2>
+      <div class="product-grid" style="margin-top: 48px;">
+        <div class="product-item fade-in stagger-2">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
+            alt="NOIRICA 100g お試しサイズ">
+          <p class="product-name">Trial Size</p>
+          <p class="product-spec">100g / お試し</p>
+          <p class="product-price placeholder-text">¥【価格未定】</p>
+        </div>
+        <div class="product-item fade-in stagger-3">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
+            alt="NOIRICA 800g ホームケア">
+          <p class="product-name">Home Care</p>
+          <p class="product-spec">800g / ホームケア</p>
+          <p class="product-price placeholder-text">¥【価格未定】</p>
+        </div>
+        <div class="product-item fade-in stagger-4">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
+            alt="NOIRICA 1kg サロン用">
+          <p class="product-name">Professional</p>
+          <p class="product-spec">1kg / サロン用</p>
+          <p class="product-price placeholder-text">¥【価格未定】</p>
+        </div>
+      </div>
+      <div class="product-info fade-in">
+        <p>北海道・上ノ国産ブラックシリカ配合<br>ご自宅用からサロン専売まで、用途に合わせて選べる3サイズ展開</p>
+        <p class="product-origin">From Kaminokuni, Hokkaido, Japan</p>
+      </div>
+    </div>
+
+    <!-- Inline CTA -->
+    <div class="inline-cta fade-in" style="margin-top: 40px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: SALON PAIN (サロンの悩み) ============ -->
+  <section class="section salonpain" id="salonpain">
+    <div class="container">
+      <p class="section-label fade-in">For Salon Owners</p>
+      <h2 class="section-title-jp fade-in stagger-1">こんなお悩み、ありませんか？</h2>
+      <div class="salonpain-list">
+        <div class="salonpain-item fade-in stagger-2">高単価メニューを作りたいが、差別化できる技術が見つからない</div>
+        <div class="salonpain-item fade-in stagger-3">他店との差別化を図り、選ばれるサロンになりたい</div>
+        <div class="salonpain-item fade-in stagger-4">リピートが続かず、新規集客に追われ続けている</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION 8: FOR PROFESSIONALS ============ -->
+  <section class="section professionals" id="professionals">
+    <div class="container">
+      <p class="section-label fade-in">For Salon Owners</p>
+      <h2 class="section-title-jp fade-in stagger-1" style="text-align: center;">導入メリット</h2>
+      <div class="pro-cards" style="margin-top: 48px;">
+        <!-- Card 1 -->
+        <div class="pro-card fade-in stagger-2">
+          <div class="pro-card-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 3h12l4 6-10 13L2 9z" />
+              <path d="M2 9h20" />
+              <path d="M10 3l-4 6 6 13 6-13-4-6" />
+            </svg>
+          </div>
+          <p class="pro-card-en">High Price Menu</p>
+          <p class="pro-card-jp">高単価メニュー化</p>
+          <p class="pro-card-desc">付加価値が高く、<br>価格競争になりにくい</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="pro-card fade-in stagger-4">
+          <div class="pro-card-icon">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <p class="pro-card-en">Unique Treatment</p>
+          <p class="pro-card-jp">明確な差別化</p>
+          <p class="pro-card-desc">北海道希少鉱石 × ミネラル美容の<br>独自ポジション</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="pro-card fade-in stagger-6">
+          <div class="pro-card-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+          </div>
+          <p class="pro-card-en">Repeat Business</p>
+          <p class="pro-card-jp">リピート性</p>
+          <p class="pro-card-desc">体感しやすく、<br>習慣化につながる</p>
+        </div>
+      </div>
+      <p class="pro-note fade-in">※ 技術導入・教育対応（施術指導・スクール展開）も可能</p>
+    </div>
+
+    <!-- Inline CTA -->
+    <div class="inline-cta fade-in" style="margin-top: 20px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: SALON RITUAL (メニュー展開) ============ -->
+  <section class="section salonritual" id="salonritual">
+    <div class="container">
+      <div class="salonritual-header">
+        <p class="section-label fade-in">Ritual Menu</p>
+        <h2 class="section-title-jp fade-in stagger-1">3つのメニュー展開</h2>
+      </div>
+      <div class="salonritual-grid">
+        <div class="salonritual-card fade-in stagger-2">
+          <p class="salonritual-card-en">Facial</p>
+          <p class="salonritual-card-jp">フェイシャルメニュー</p>
+          <p class="salonritual-card-desc">顔・デコルテへの<br>本格リチュアルケア。<br>客単価アップに直結</p>
+        </div>
+        <div class="salonritual-card fade-in stagger-3">
+          <p class="salonritual-card-en">Body</p>
+          <p class="salonritual-card-jp">ボディメニュー</p>
+          <p class="salonritual-card-desc">背中・お腹・脚など<br>幅広い部位に対応する<br>トリートメント設計</p>
+        </div>
+        <div class="salonritual-card fade-in stagger-4">
+          <p class="salonritual-card-en">Bath</p>
+          <p class="salonritual-card-jp">バス・フットバス</p>
+          <p class="salonritual-card-desc">入浴・フットバスとして<br>付帯サービス化が可能。<br>滞在時間と満足度を向上</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: PRO SPEC (プロ向けスペック) ============ -->
+  <section class="section prospec" id="prospec">
+    <div class="container">
+      <div class="prospec-header">
+        <p class="section-label fade-in">Product Spec</p>
+        <h2 class="section-title-jp fade-in stagger-1">サロン向け 商品スペック</h2>
+      </div>
+      <div class="prospec-table fade-in stagger-2">
+        <div class="prospec-row">
+          <div class="prospec-label">SIZE</div>
+          <div class="prospec-value">業務用 1kg</div>
+        </div>
+        <div class="prospec-row">
+          <div class="prospec-label">USAGE</div>
+          <div class="prospec-value">フェイシャル / ボディ / フットバス / 入浴</div>
+        </div>
+        <div class="prospec-row">
+          <div class="prospec-label">TREATMENT</div>
+          <div class="prospec-value">サロン施術対応 / 全身利用可</div>
+        </div>
+        <div class="prospec-row">
+          <div class="prospec-label">TRAINING</div>
+          <div class="prospec-value">基礎講習(1DAY) / 技術講習(4日間〜) ご用意</div>
+        </div>
+        <div class="prospec-row">
+          <div class="prospec-label">CAPACITY</div>
+          <div class="prospec-value">サロン施術 約10回分(目安)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: FLOW (導入の流れ) ============ -->
+  <section class="section flow" id="flow">
+    <div class="container">
+      <div class="flow-header">
+        <p class="section-label fade-in">Flow</p>
+        <h2 class="section-title-jp fade-in stagger-1">導入までの流れ</h2>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-step fade-in stagger-2">
+          <p class="flow-step-num">01</p>
+          <p class="flow-step-title">お問い合わせ</p>
+        </div>
+        <div class="flow-step fade-in stagger-3">
+          <p class="flow-step-num">02</p>
+          <p class="flow-step-title">資料ご送付</p>
+        </div>
+        <div class="flow-step fade-in stagger-4">
+          <p class="flow-step-num">03</p>
+          <p class="flow-step-title">ご説明・面談</p>
+        </div>
+        <div class="flow-step fade-in stagger-5">
+          <p class="flow-step-num">04</p>
+          <p class="flow-step-title">ご導入</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: FOUNDER ============ -->
+  <section class="section founder" id="founder">
+    <div class="container">
+      <div class="founder-grid">
+        <div class="founder-image slide-left">
+          <img src="images/S__221536269.jpg" alt="戸田美咲 - NOIRICA 開発者">
+        </div>
+        <div class="founder-text">
+          <p class="section-label fade-in">Founder's Message</p>
+          <h2 class="section-title-jp fade-in stagger-1">開発者の想い</h2>
+          <p class="founder-name fade-in stagger-2">戸田美咲 <span>Misaki Toda</span></p>
+          <div class="founder-body">
+            <p class="fade-in stagger-3">美容業に9年間携わり、エステサロンを運営する中で、<br>多くの美容法や製品に触れてきました。</p>
+
+            <p class="fade-in stagger-4">その中で感じたのは、<br>「与える美容」だけでは、本来の肌状態に向き合うことの難しさでした。</p>
+
+            <p class="fade-in stagger-5">そんな中で出会ったのが、<br>天然ミネラルを含むクレイによる"整えるケア"です。</p>
+
+            <p class="fade-in stagger-6">余分なものを取り除き、<br>肌本来のバランスへと導くという考え方に可能性を感じ、<br>NOIRICAの開発が始まりました。</p>
+
+            <p class="fade-in stagger-7">北海道・上ノ国の希少鉱石とクレイを掛け合わせ、<br>肌だけでなく、心地よさや巡りの体感まで含めた<br>"リチュアルケア"として設計しています。</p>
+
+            <p class="fade-in stagger-8">NOIRICAは、<br>日々のケアを「整える時間」へと変えていくためのブランドです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <p class="section-label fade-in">FAQ</p>
+        <h2 class="section-title-jp fade-in stagger-1">よくあるご質問</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-in stagger-2">
+          <p class="faq-q">未経験でも導入できますか？</p>
+          <p class="faq-a">はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。</p>
+        </div>
+        <div class="faq-item fade-in stagger-3">
+          <p class="faq-q">どれくらいの量で何回使用できますか？</p>
+          <p class="faq-a">目安として、100gご自宅用で1回15g〜20gほどで5〜6回分可能、1kgで約10回分(サロン施術の場合)が可能です。使用方法や部位によって前後しますが、フェイシャル・ボディ・フットバスなど幅広くご活用いただけます。</p>
+        </div>
+        <div class="faq-item fade-in stagger-4">
+          <p class="faq-q">講習はどのような内容ですか？</p>
+          <p class="faq-a">導入講習では、基本的な使用方法やメニュー化の考え方をお伝えします。技術講習では、フェイシャルやデコルテを含めた実践的な施術スキルを習得いただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: HOW TO USE (使用方法) ============ -->
+  <section class="section howto" id="howto">
+    <div class="container">
+      <div class="howto-header">
+        <p class="section-label fade-in">How to Use</p>
+        <h2 class="section-title-jp fade-in stagger-1">4つのステップ</h2>
+      </div>
+      <div class="howto-steps">
+        <div class="howto-step fade-in stagger-2">
+          <p class="howto-step-num">STEP 01</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 3v6a6 6 0 0 0 12 0V3"/>
+              <path d="M6 21h12"/>
+            </svg>
+          </div>
+          <p class="howto-step-title">混ぜる</p>
+        </div>
+        <div class="howto-step fade-in stagger-3">
+          <p class="howto-step-num">STEP 02</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/>
+            </svg>
+          </div>
+          <p class="howto-step-title">塗る</p>
+        </div>
+        <div class="howto-step fade-in stagger-4">
+          <p class="howto-step-num">STEP 03</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <p class="howto-step-title">10分待つ</p>
+        </div>
+        <div class="howto-step fade-in stagger-5">
+          <p class="howto-step-num">STEP 04</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12c3-4 6-4 9 0s6 4 9 0"/>
+              <path d="M3 18c3-4 6-4 9 0s6 4 9 0"/>
+            </svg>
+          </div>
+          <p class="howto-step-title">流す</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ============ SECTION: CTA ============ -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <p class="cta-logo fade-in">NOIRICA</p>
+      <p class="cta-heading fade-in stagger-1">まずは、お気軽にご相談ください。</p>
+      <p class="cta-sub fade-in stagger-2">導入のご相談 / サンプル請求 / ご不明点など、どんなことでもお問い合わせください。</p>
+      <div class="cta-button-wrap fade-in stagger-3">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-main-button"
+        >
+          <span class="cta-main-button-text">お問い合わせ</span>
+          <span class="cta-main-button-arrow">→</span>
+        </a>
+        <p class="cta-note">無料・返信は3営業日以内を目安にしております</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE FIXED CTA BAR ============ -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="cta-buy">お問い合わせ</a>
+  </div>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile CTA bar show/hide
+    const mobileCta = document.getElementById('mobileCta');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 300) {
+        mobileCta.classList.add('show');
+      } else {
+        mobileCta.classList.remove('show');
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // Counter animation for 98%
+    const counterEl = document.querySelector('[data-count]');
+    if (counterEl) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-count'));
+            let current = 0;
+            const duration = 2000;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              entry.target.textContent = Math.floor(current) + '%';
+            }, 16);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      counterObserver.observe(counterEl);
+    }
+
+    // Header background on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.style.background = 'rgba(11, 11, 11, 0.95)';
+      } else {
+        header.style.background = 'rgba(11, 11, 11, 0.85)';
+      }
+    }, { passive: true });
+  </script>
+</body>
+
+</html>
