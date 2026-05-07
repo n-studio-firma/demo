@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOIRICA | Black Silica Ritual Clay - 北海道・上ノ国の希少鉱石から生まれた次世代ミネラル美容</title>
-  <meta name="description" content="NOIRICAは北海道・上ノ国産の希少鉱石「ブラックシリカ」の自然エネルギーを美容へ昇華した、高級SPA向けミネラルビューティーブランドです。">
-  <meta property="og:title" content="NOIRICA | Black Silica Ritual Clay">
+  <title>NOIRICA | Silica Black Ritual Clay - 北海道・上ノ国の希少鉱石から生まれた次世代ミネラル美容</title>
+  <meta name="description" content="NOIRICAは北海道・上ノ国産の希少鉱石「シリカブラック」の自然エネルギーを美容へ昇華した、高級SPA向けミネラルビューティーブランドです。">
+  <meta property="og:title" content="NOIRICA | Silica Black Ritual Clay">
   <meta property="og:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,9 @@
     }
 
     @media (min-width: 768px) {
-      .loader-logo { height: 68px; }
+      .loader-logo {
+        height: 68px;
+      }
     }
 
     .loader-bar-wrap {
@@ -74,13 +76,26 @@
     }
 
     @keyframes loaderFadeIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes loaderBarSweep {
-      0%   { width: 0%; opacity: 1; }
-      70%  { width: 100%; opacity: 1; }
-      100% { width: 100%; opacity: 0; }
+      0% {
+        width: 0%;
+        opacity: 1;
+      }
+
+      70% {
+        width: 100%;
+        opacity: 1;
+      }
+
+      100% {
+        width: 100%;
+        opacity: 0;
+      }
     }
 
     /* ========================================
@@ -355,6 +370,7 @@
       .header {
         padding: 12px 60px;
       }
+
       .header-logo {
         height: 52px;
       }
@@ -422,14 +438,14 @@
         radial-gradient(circle at 48% 16%, rgba(196, 162, 101, 0.18), transparent 22%),
         radial-gradient(circle at 47% 79%, rgba(196, 162, 101, 0.13), transparent 24%),
         linear-gradient(to bottom,
-          rgba(11,11,11,0.08) 0%,
-          rgba(11,11,11,0)   36%,
-          rgba(11,11,11,0.18) 77%,
-          rgba(11,11,11,0.94) 100%),
+          rgba(11, 11, 11, 0.08) 0%,
+          rgba(11, 11, 11, 0) 36%,
+          rgba(11, 11, 11, 0.18) 77%,
+          rgba(11, 11, 11, 0.94) 100%),
         linear-gradient(to right,
-          rgba(11,11,11,0.12) 0%,
-          rgba(11,11,11,0) 42%,
-          rgba(11,11,11,0.08) 100%);
+          rgba(11, 11, 11, 0.12) 0%,
+          rgba(11, 11, 11, 0) 42%,
+          rgba(11, 11, 11, 0.08) 100%);
     }
 
     .hero-overlay-mobile {
@@ -565,6 +581,7 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -572,10 +589,13 @@
     }
 
     @keyframes scrollPulse {
-      0%, 100% {
+
+      0%,
+      100% {
         opacity: 0.5;
         transform: scaleY(1);
       }
+
       50% {
         opacity: 1;
         transform: scaleY(1.2);
@@ -1810,7 +1830,11 @@
       background-color: var(--color-bg);
       text-align: center;
     }
-    .empathy-label { margin-bottom: 48px; }
+
+    .empathy-label {
+      margin-bottom: 48px;
+    }
+
     .empathy-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1818,6 +1842,7 @@
       max-width: 720px;
       margin: 0 auto 56px;
     }
+
     .empathy-item {
       border: 1px solid rgba(196, 162, 101, 0.25);
       background: rgba(196, 162, 101, 0.03);
@@ -1829,10 +1854,12 @@
       color: var(--color-text);
       transition: border-color 0.4s ease, background 0.4s ease;
     }
+
     .empathy-item:hover {
       border-color: rgba(196, 162, 101, 0.5);
       background: rgba(196, 162, 101, 0.06);
     }
+
     .empathy-catch {
       font-family: var(--font-jp);
       font-size: 22px;
@@ -1842,26 +1869,47 @@
       color: var(--color-white);
       margin-top: 24px;
     }
+
     .empathy-catch strong {
       color: var(--color-gold);
       font-weight: 400;
       border-bottom: 1px solid rgba(196, 162, 101, 0.4);
       padding-bottom: 4px;
     }
-    .sp-only { display: inline; }
+
+    .sp-only {
+      display: inline;
+    }
+
     @media (min-width: 768px) {
-      .section.empathy { padding: 140px 0; }
+      .section.empathy {
+        padding: 140px 0;
+      }
+
       .empathy-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         max-width: 960px;
       }
-      .empathy-item { font-size: 16px; padding: 36px 20px; }
-      .empathy-catch { font-size: 28px; }
-      .sp-only { display: none; }
+
+      .empathy-item {
+        font-size: 16px;
+        padding: 36px 20px;
+      }
+
+      .empathy-catch {
+        font-size: 28px;
+      }
+
+      .sp-only {
+        display: none;
+      }
     }
+
     @media (min-width: 1024px) {
-      .empathy-catch { font-size: 32px; }
+      .empathy-catch {
+        font-size: 32px;
+      }
     }
 
     /* ========================================
@@ -1872,6 +1920,7 @@
       background-color: var(--color-bg);
       text-align: center;
     }
+
     .concept-arrow {
       font-family: var(--font-en);
       font-size: 12px;
@@ -1879,6 +1928,7 @@
       color: var(--color-gray);
       margin-bottom: 24px;
     }
+
     .concept-headline {
       font-family: var(--font-jp);
       font-size: 26px;
@@ -1888,16 +1938,19 @@
       color: var(--color-white);
       margin-bottom: 40px;
     }
+
     .concept-headline strong {
       color: var(--color-gold);
       font-weight: 300;
     }
+
     .concept-divider {
       width: 40px;
       height: 1px;
       background: var(--color-gold);
       margin: 0 auto 40px;
     }
+
     .concept-body {
       font-size: 15px;
       line-height: 2.2;
@@ -1906,13 +1959,25 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
     @media (min-width: 768px) {
-      .section.concept { padding: 160px 0; }
-      .concept-headline { font-size: 38px; }
-      .concept-body { font-size: 17px; }
+      .section.concept {
+        padding: 160px 0;
+      }
+
+      .concept-headline {
+        font-size: 38px;
+      }
+
+      .concept-body {
+        font-size: 17px;
+      }
     }
+
     @media (min-width: 1024px) {
-      .concept-headline { font-size: 44px; }
+      .concept-headline {
+        font-size: 44px;
+      }
     }
 
     /* ========================================
@@ -1922,10 +1987,12 @@
       padding: 120px 0;
       background-color: var(--color-bg-light);
     }
+
     .difference-header {
       text-align: center;
       margin-bottom: 64px;
     }
+
     .difference-comparison {
       display: grid;
       grid-template-columns: 1fr;
@@ -1933,15 +2000,18 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
     .difference-card {
       border: 1px solid var(--color-border);
       padding: 40px 28px;
       background: var(--color-bg-lighter);
     }
+
     .difference-card.highlight {
       border-color: rgba(196, 162, 101, 0.5);
       background: rgba(196, 162, 101, 0.04);
     }
+
     .difference-card-label {
       font-family: var(--font-en);
       font-size: 11px;
@@ -1949,7 +2019,11 @@
       color: var(--color-gray);
       margin-bottom: 16px;
     }
-    .difference-card.highlight .difference-card-label { color: var(--color-gold); }
+
+    .difference-card.highlight .difference-card-label {
+      color: var(--color-gold);
+    }
+
     .difference-card-title {
       font-family: var(--font-jp);
       font-size: 18px;
@@ -1958,7 +2032,12 @@
       margin-bottom: 20px;
       letter-spacing: 2px;
     }
-    .difference-card-list { list-style: none; padding: 0; }
+
+    .difference-card-list {
+      list-style: none;
+      padding: 0;
+    }
+
     .difference-card-list li {
       font-size: 14px;
       line-height: 2;
@@ -1967,20 +2046,31 @@
       position: relative;
       letter-spacing: 1px;
     }
+
     .difference-card-list li::before {
       content: '—';
       position: absolute;
       left: 0;
       color: var(--color-gold);
     }
+
     @media (min-width: 768px) {
       .difference-comparison {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
       }
-      .difference-card { padding: 56px 40px; }
-      .difference-card-title { font-size: 22px; }
-      .difference-card-list li { font-size: 15px; }
+
+      .difference-card {
+        padding: 56px 40px;
+      }
+
+      .difference-card-title {
+        font-size: 22px;
+      }
+
+      .difference-card-list li {
+        font-size: 15px;
+      }
     }
 
     /* ========================================
@@ -1990,7 +2080,12 @@
       padding: 120px 0;
       background-color: var(--color-bg);
     }
-    .ba-header { text-align: center; margin-bottom: 64px; }
+
+    .ba-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .ba-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1998,7 +2093,11 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .ba-item { text-align: center; }
+
+    .ba-item {
+      text-align: center;
+    }
+
     .ba-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -2006,6 +2105,7 @@
       margin-bottom: 20px;
       position: relative;
     }
+
     .ba-image-wrap {
       position: relative;
       aspect-ratio: 3 / 4;
@@ -2013,12 +2113,14 @@
       background: var(--color-bg);
       border: 1px solid var(--color-border);
     }
+
     .ba-image-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       filter: grayscale(20%) brightness(0.95);
     }
+
     .ba-image-label {
       position: absolute;
       top: 12px;
@@ -2031,10 +2133,12 @@
       padding: 4px 10px;
       backdrop-filter: blur(4px);
     }
+
     .ba-image-label.after {
       color: var(--color-gold);
       border: 1px solid rgba(196, 162, 101, 0.5);
     }
+
     .ba-title {
       font-family: var(--font-jp);
       font-size: 16px;
@@ -2043,12 +2147,14 @@
       letter-spacing: 3px;
       margin-top: 16px;
     }
+
     .ba-desc {
       font-size: 12px;
       color: var(--color-gray);
       letter-spacing: 1px;
       margin-top: 8px;
     }
+
     .ba-note {
       text-align: center;
       font-size: 11px;
@@ -2056,13 +2162,20 @@
       margin-top: 48px;
       letter-spacing: 1px;
     }
+
     @media (min-width: 768px) {
       .ba-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
       }
-      .ba-title { font-size: 18px; }
-      .ba-desc { font-size: 13px; }
+
+      .ba-title {
+        font-size: 18px;
+      }
+
+      .ba-desc {
+        font-size: 13px;
+      }
     }
 
     /* ========================================
@@ -2072,7 +2185,12 @@
       padding: 120px 0;
       background-color: var(--color-bg);
     }
-    .evidence-header { text-align: center; margin-bottom: 64px; }
+
+    .evidence-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .evidence-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -2080,6 +2198,7 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
     .evidence-card {
       border: 1px solid var(--color-border);
       padding: 40px 28px;
@@ -2087,13 +2206,18 @@
       background: var(--color-bg-lighter);
       transition: border-color 0.4s ease;
     }
-    .evidence-card:hover { border-color: rgba(196, 162, 101, 0.4); }
+
+    .evidence-card:hover {
+      border-color: rgba(196, 162, 101, 0.4);
+    }
+
     .evidence-icon {
       width: 48px;
       height: 48px;
       margin: 0 auto 20px;
       color: var(--color-gold);
     }
+
     .evidence-icon svg {
       width: 100%;
       height: 100%;
@@ -2101,6 +2225,7 @@
       stroke: currentColor;
       stroke-width: 1.2;
     }
+
     .evidence-title {
       font-family: var(--font-jp);
       font-size: 16px;
@@ -2109,18 +2234,23 @@
       letter-spacing: 2px;
       margin-bottom: 12px;
     }
+
     .evidence-desc {
       font-size: 13px;
       line-height: 1.9;
       color: var(--color-gray);
       letter-spacing: 1px;
     }
+
     @media (min-width: 768px) {
       .evidence-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
       }
-      .evidence-card { padding: 56px 32px; }
+
+      .evidence-card {
+        padding: 56px 32px;
+      }
     }
 
     /* ========================================
@@ -2130,7 +2260,12 @@
       padding: 120px 0;
       background-color: var(--color-bg-light);
     }
-    .howto-header { text-align: center; margin-bottom: 64px; }
+
+    .howto-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .howto-steps {
       display: grid;
       grid-template-columns: 1fr;
@@ -2138,10 +2273,12 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .howto-step {
       text-align: center;
       position: relative;
     }
+
     .howto-step-num {
       font-family: var(--font-en);
       font-size: 14px;
@@ -2149,6 +2286,7 @@
       color: var(--color-gold);
       margin-bottom: 16px;
     }
+
     .howto-step-circle {
       width: 100px;
       height: 100px;
@@ -2160,6 +2298,7 @@
       margin: 0 auto 20px;
       color: var(--color-gold);
     }
+
     .howto-step-circle svg {
       width: 36px;
       height: 36px;
@@ -2167,6 +2306,7 @@
       stroke: currentColor;
       stroke-width: 1.2;
     }
+
     .howto-step-title {
       font-family: var(--font-jp);
       font-size: 16px;
@@ -2174,18 +2314,24 @@
       color: var(--color-white);
       letter-spacing: 3px;
     }
+
     .howto-step-time {
       font-size: 12px;
       color: var(--color-gray);
       margin-top: 6px;
       letter-spacing: 1px;
     }
+
     @media (min-width: 768px) {
       .howto-steps {
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
       }
-      .howto-step-circle { width: 110px; height: 110px; }
+
+      .howto-step-circle {
+        width: 110px;
+        height: 110px;
+      }
     }
 
     /* ========================================
@@ -2196,6 +2342,7 @@
       background-color: var(--color-bg);
       text-align: center;
     }
+
     .salonpain-list {
       max-width: 700px;
       margin: 56px auto 0;
@@ -2203,6 +2350,7 @@
       flex-direction: column;
       gap: 20px;
     }
+
     .salonpain-item {
       border-left: 2px solid rgba(196, 162, 101, 0.4);
       padding: 20px 24px;
@@ -2212,6 +2360,7 @@
       background: var(--color-bg-lighter);
       letter-spacing: 1px;
     }
+
     .salonpain-item::before {
       content: '"';
       font-family: var(--font-en);
@@ -2219,8 +2368,12 @@
       font-size: 24px;
       margin-right: 8px;
     }
+
     @media (min-width: 768px) {
-      .salonpain-item { font-size: 17px; padding: 24px 32px; }
+      .salonpain-item {
+        font-size: 17px;
+        padding: 24px 32px;
+      }
     }
 
     /* ========================================
@@ -2231,6 +2384,7 @@
       background-color: var(--color-bg-light);
       text-align: center;
     }
+
     .solution-headline {
       font-family: var(--font-jp);
       font-size: 22px;
@@ -2241,15 +2395,22 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
     .solution-headline strong {
       color: var(--color-gold);
       font-weight: 300;
     }
+
     @media (min-width: 768px) {
-      .solution-headline { font-size: 30px; }
+      .solution-headline {
+        font-size: 30px;
+      }
     }
+
     @media (min-width: 1024px) {
-      .solution-headline { font-size: 36px; }
+      .solution-headline {
+        font-size: 36px;
+      }
     }
 
     /* ========================================
@@ -2259,7 +2420,12 @@
       padding: 120px 0;
       background-color: var(--color-bg);
     }
-    .salonritual-header { text-align: center; margin-bottom: 64px; }
+
+    .salonritual-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .salonritual-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -2267,12 +2433,14 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .salonritual-card {
       border: 1px solid var(--color-border);
       padding: 40px 28px;
       text-align: center;
       background: var(--color-bg-lighter);
     }
+
     .salonritual-card-en {
       font-family: var(--font-en);
       font-size: 16px;
@@ -2280,6 +2448,7 @@
       color: var(--color-gold);
       margin-bottom: 8px;
     }
+
     .salonritual-card-jp {
       font-family: var(--font-jp);
       font-size: 14px;
@@ -2287,12 +2456,14 @@
       letter-spacing: 2px;
       margin-bottom: 20px;
     }
+
     .salonritual-card-desc {
       font-size: 13px;
       line-height: 1.9;
       color: var(--color-gray);
       letter-spacing: 1px;
     }
+
     @media (min-width: 768px) {
       .salonritual-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -2307,18 +2478,25 @@
       padding: 120px 0;
       background-color: var(--color-bg-light);
     }
-    .prospec-header { text-align: center; margin-bottom: 64px; }
+
+    .prospec-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .prospec-table {
       max-width: 720px;
       margin: 0 auto;
       border-top: 1px solid var(--color-border);
     }
+
     .prospec-row {
       display: grid;
       grid-template-columns: 1fr 2fr;
       border-bottom: 1px solid var(--color-border);
       padding: 24px 16px;
     }
+
     .prospec-label {
       font-family: var(--font-en);
       font-size: 11px;
@@ -2326,16 +2504,26 @@
       color: var(--color-gold);
       align-self: center;
     }
+
     .prospec-value {
       font-size: 14px;
       color: var(--color-text);
       letter-spacing: 1px;
       line-height: 1.8;
     }
+
     @media (min-width: 768px) {
-      .prospec-row { padding: 28px 24px; }
-      .prospec-label { font-size: 12px; }
-      .prospec-value { font-size: 15px; }
+      .prospec-row {
+        padding: 28px 24px;
+      }
+
+      .prospec-label {
+        font-size: 12px;
+      }
+
+      .prospec-value {
+        font-size: 15px;
+      }
     }
 
     /* ========================================
@@ -2345,7 +2533,12 @@
       padding: 120px 0;
       background-color: var(--color-bg);
     }
-    .flow-header { text-align: center; margin-bottom: 64px; }
+
+    .flow-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .flow-steps {
       display: grid;
       grid-template-columns: 1fr;
@@ -2353,12 +2546,14 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .flow-step {
       text-align: center;
       padding: 32px 20px;
       border: 1px solid var(--color-border);
       background: var(--color-bg-lighter);
     }
+
     .flow-step-num {
       font-family: var(--font-en);
       font-size: 24px;
@@ -2366,6 +2561,7 @@
       letter-spacing: 2px;
       margin-bottom: 12px;
     }
+
     .flow-step-title {
       font-family: var(--font-jp);
       font-size: 15px;
@@ -2373,6 +2569,7 @@
       color: var(--color-white);
       letter-spacing: 2px;
     }
+
     @media (min-width: 768px) {
       .flow-steps {
         grid-template-columns: repeat(4, 1fr);
@@ -2387,7 +2584,12 @@
       padding: 120px 0;
       background-color: var(--color-bg);
     }
-    .faq-header { text-align: center; margin-bottom: 64px; }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
     .faq-list {
       max-width: 800px;
       margin: 0 auto;
@@ -2395,13 +2597,18 @@
       flex-direction: column;
       gap: 16px;
     }
+
     .faq-item {
       border: 1px solid var(--color-border);
       background: var(--color-bg-lighter);
       padding: 28px 24px;
       transition: border-color 0.4s ease;
     }
-    .faq-item:hover { border-color: rgba(196, 162, 101, 0.3); }
+
+    .faq-item:hover {
+      border-color: rgba(196, 162, 101, 0.3);
+    }
+
     .faq-q {
       display: flex;
       align-items: flex-start;
@@ -2412,6 +2619,7 @@
       line-height: 1.7;
       margin-bottom: 16px;
     }
+
     .faq-q::before {
       content: 'Q';
       font-family: var(--font-en);
@@ -2419,6 +2627,7 @@
       font-size: 16px;
       flex-shrink: 0;
     }
+
     .faq-a {
       display: flex;
       align-items: flex-start;
@@ -2430,6 +2639,7 @@
       padding-top: 16px;
       border-top: 1px solid var(--color-border);
     }
+
     .faq-a::before {
       content: 'A';
       font-family: var(--font-en);
@@ -2437,9 +2647,15 @@
       font-size: 16px;
       flex-shrink: 0;
     }
+
     @media (min-width: 768px) {
-      .faq-item { padding: 36px 40px; }
-      .faq-q { font-size: 16px; }
+      .faq-item {
+        padding: 36px 40px;
+      }
+
+      .faq-q {
+        font-size: 16px;
+      }
     }
 
     /* ========================================
@@ -2449,10 +2665,12 @@
       padding: 0 0 100px;
       background-color: var(--color-bg);
     }
+
     .contactform-wrap {
       display: flex;
       justify-content: center;
     }
+
     .contactform-link-button {
       display: inline-block;
       font-family: var(--font-en);
@@ -2464,10 +2682,15 @@
       text-decoration: none;
       transition: opacity 0.3s ease;
     }
+
     .contactform-link-button:hover {
       opacity: 0.8;
     }
-    .contactform-row { margin-bottom: 24px; }
+
+    .contactform-row {
+      margin-bottom: 24px;
+    }
+
     .contactform-label {
       display: block;
       font-family: var(--font-en);
@@ -2476,6 +2699,7 @@
       color: var(--color-gold);
       margin-bottom: 8px;
     }
+
     .contactform-input,
     .contactform-textarea,
     .contactform-select {
@@ -2489,16 +2713,19 @@
       letter-spacing: 1px;
       transition: border-color 0.3s ease;
     }
+
     .contactform-input:focus,
     .contactform-textarea:focus,
     .contactform-select:focus {
       outline: none;
       border-color: var(--color-gold);
     }
+
     .contactform-textarea {
       min-height: 140px;
       resize: vertical;
     }
+
     .contactform-submit {
       display: block;
       width: 100%;
@@ -2513,22 +2740,26 @@
       margin-top: 24px;
       transition: all 0.4s ease;
     }
+
     .contactform-submit:hover {
       background: var(--color-gold);
       color: var(--color-bg);
     }
+
     .contactform-buttons {
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
       margin-top: 32px;
     }
+
     @media (min-width: 768px) {
       .contactform-row.split {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       .contactform-buttons {
         grid-template-columns: 1fr 1fr;
       }
@@ -2544,6 +2775,7 @@
       margin-top: 40px;
       align-items: center;
     }
+
     .hero-cta-primary,
     .hero-cta-secondary {
       display: inline-block;
@@ -2555,24 +2787,29 @@
       min-width: 240px;
       text-align: center;
     }
+
     .hero-cta-primary {
       background: var(--color-gold);
       color: var(--color-bg);
       border: 1px solid var(--color-gold);
     }
+
     .hero-cta-primary:hover {
       background: transparent;
       color: var(--color-gold);
     }
+
     .hero-cta-secondary {
       background: transparent;
       color: var(--color-white);
       border: 1px solid rgba(255, 255, 255, 0.4);
     }
+
     .hero-cta-secondary:hover {
       border-color: var(--color-gold);
       color: var(--color-gold);
     }
+
     @media (min-width: 768px) {
       .hero-cta-group {
         flex-direction: row;
@@ -2588,6 +2825,7 @@
       gap: 10px;
       align-items: center;
     }
+
     /* 両ボタン共通の統一スタイル */
     .header-cta,
     .header-cta-primary {
@@ -2606,27 +2844,33 @@
       transition: all 0.3s ease;
       cursor: pointer;
     }
+
     /* Primary: ゴールド塗り */
     .header-cta-primary {
       background: var(--color-gold);
       color: var(--color-bg);
       border: 1px solid var(--color-gold);
     }
+
     .header-cta-primary:hover {
       background: transparent;
       color: var(--color-gold);
     }
+
     /* Secondary: アウトライン */
     .header-cta {
       background: transparent;
       color: var(--color-gold);
       border: 1px solid var(--color-gold);
     }
+
     .header-cta:hover {
       background: var(--color-gold);
       color: var(--color-bg);
     }
+
     @media (min-width: 1024px) {
+
       .header-cta,
       .header-cta-primary {
         font-size: 13px;
@@ -2635,6 +2879,7 @@
         height: 38px;
       }
     }
+
     /* スマホ時はヘッダーのCTAを非表示 */
     @media (max-width: 767px) {
       .header-nav {
@@ -2650,6 +2895,7 @@
       gap: 0;
       padding: 0;
     }
+
     .mobile-cta-bar.dual button {
       flex: 1;
       border-radius: 0;
@@ -2657,23 +2903,28 @@
       height: 48px;
       font-size: 13px;
     }
+
     .mobile-cta-bar.dual .cta-buy {
       background: var(--color-gold);
       color: var(--color-bg);
     }
+
     .mobile-cta-bar.dual .cta-salon {
       background: var(--color-bg-lighter);
       color: var(--color-white);
       border-left: 1px solid var(--color-gold);
     }
+
     /* スマホ時のみモバイルCTAバーを表示 */
     @media (max-width: 767px) {
       .mobile-cta-bar.dual {
         display: flex;
       }
     }
+
     /* PC時はモバイルCTAバーを完全非表示 */
     @media (min-width: 768px) {
+
       .mobile-cta-bar,
       .mobile-cta-bar.dual {
         display: none !important;
@@ -2691,325 +2942,378 @@
       background: linear-gradient(to right, transparent, rgba(196, 162, 101, 0.3), transparent);
     }
 
-/* ========================================
+    /* ========================================
    PLACEHOLDER NOTICE
 ======================================== */
-.placeholder-banner {
-  background: rgba(196, 162, 101, 0.12);
-  border: 2px dashed #C4A265;
-  color: #C4A265;
-  text-align: center;
-  padding: 12px 20px;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  margin-bottom: 40px;
-  font-family: var(--font-jp);
-}
+    .placeholder-banner {
+      background: rgba(196, 162, 101, 0.12);
+      border: 2px dashed #C4A265;
+      color: #C4A265;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      margin-bottom: 40px;
+      font-family: var(--font-jp);
+    }
 
-.placeholder-text {
-  color: #C4A265;
-  border-bottom: 1px dashed #C4A265;
-  display: inline-block;
-}
+    .placeholder-text {
+      color: #C4A265;
+      border-bottom: 1px dashed #C4A265;
+      display: inline-block;
+    }
 
-/* ========================================
+    /* ========================================
    DIGITAL DETOX
 ======================================== */
-.section.digitaldetox {
-  padding: 120px 0;
-  background: var(--color-bg-light);
-}
-.digitaldetox-body {
-  max-width: 600px;
-  margin: 32px auto;
-  text-align: center;
-  line-height: 2.2;
-  color: var(--color-text);
-}
-.digitaldetox-stats {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 48px;
-  flex-wrap: wrap;
-}
-.digitaldetox-stat {
-  text-align: center;
-  border: 1px solid var(--color-border);
-  padding: 24px 32px;
-  min-width: 200px;
-}
-.digitaldetox-stat-num {
-  font-family: var(--font-en);
-  font-size: 28px;
-  color: var(--color-gold);
-  margin-bottom: 8px;
-}
-.digitaldetox-stat-desc {
-  font-size: 12px;
-  color: var(--color-gray);
-  letter-spacing: 0.05em;
-}
+    .section.digitaldetox {
+      padding: 120px 0;
+      background: var(--color-bg-light);
+    }
 
-/* ========================================
+    .digitaldetox-body {
+      max-width: 600px;
+      margin: 32px auto;
+      text-align: center;
+      line-height: 2.2;
+      color: var(--color-text);
+    }
+
+    .digitaldetox-stats {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .digitaldetox-stat {
+      text-align: center;
+      border: 1px solid var(--color-border);
+      padding: 24px 32px;
+      min-width: 200px;
+    }
+
+    .digitaldetox-stat-num {
+      font-family: var(--font-en);
+      font-size: 28px;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+
+    .digitaldetox-stat-desc {
+      font-size: 12px;
+      color: var(--color-gray);
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================
    RARITY（希少性）
 ======================================== */
-.section.rarity {
-  padding: 120px 0;
-  background: var(--color-bg-light);
-}
-.rarity-content {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-  margin-top: 48px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.rarity-number { text-align: center; flex-shrink: 0; }
-.rarity-num {
-  font-family: var(--font-en);
-  font-size: 72px;
-  color: var(--color-gold);
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-.rarity-num span {
-  font-size: 28px;
-  color: var(--color-gray);
-}
-.rarity-num-desc {
-  font-size: 12px;
-  color: var(--color-gray);
-  margin-top: 8px;
-  letter-spacing: 0.1em;
-}
-.rarity-text {
-  max-width: 400px;
-  line-height: 2.2;
-  color: var(--color-text);
-}
+    .section.rarity {
+      padding: 120px 0;
+      background: var(--color-bg-light);
+    }
 
-/* ========================================
+    .rarity-content {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .rarity-number {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .rarity-num {
+      font-family: var(--font-en);
+      font-size: 72px;
+      color: var(--color-gold);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .rarity-num span {
+      font-size: 28px;
+      color: var(--color-gray);
+    }
+
+    .rarity-num-desc {
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-top: 8px;
+      letter-spacing: 0.1em;
+    }
+
+    .rarity-text {
+      max-width: 400px;
+      line-height: 2.2;
+      color: var(--color-text);
+    }
+
+    /* ========================================
    PROOF（生命力の証明）
 ======================================== */
-.section.proof {
-  padding: 120px 0;
-  background: var(--color-bg);
-}
-.proof-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 700px;
-  margin: 48px auto 0;
-}
-.proof-image-placeholder {
-  background: var(--color-bg-lighter);
-  border: 1px dashed var(--color-border);
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-gray);
-  font-size: 13px;
-  padding: 16px;
-}
-.proof-label {
-  text-align: center;
-  font-size: 13px;
-  color: var(--color-gray);
-  margin-top: 12px;
-  letter-spacing: 0.05em;
-}
-.proof-desc {
-  text-align: center;
-  margin-top: 48px;
-  color: var(--color-text);
-  line-height: 2.2;
-  font-size: 15px;
-}
+    .section.proof {
+      padding: 120px 0;
+      background: var(--color-bg);
+    }
 
-/* ========================================
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 700px;
+      margin: 48px auto 0;
+    }
+
+    .proof-image-placeholder {
+      background: var(--color-bg-lighter);
+      border: 1px dashed var(--color-border);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-gray);
+      font-size: 13px;
+      padding: 16px;
+    }
+
+    .proof-label {
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-gray);
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .proof-desc {
+      text-align: center;
+      margin-top: 48px;
+      color: var(--color-text);
+      line-height: 2.2;
+      font-size: 15px;
+    }
+
+    /* ========================================
    BLOOD VIDEO（血液改善動画）
 ======================================== */
-.section.bloodvideo {
-  padding: 120px 0;
-  background: var(--color-bg-light);
-}
-.bloodvideo-wrap { margin-top: 48px; }
-.bloodvideo-placeholder {
-  background: var(--color-bg-lighter);
-  border: 1px dashed var(--color-border);
-  aspect-ratio: 16/9;
-  max-width: 760px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-gray);
-  font-size: 14px;
-  gap: 8px;
-}
-.bloodvideo-caption {
-  text-align: center;
-  margin-top: 32px;
-  color: var(--color-text);
-  line-height: 2.2;
-  font-size: 15px;
-}
+    .section.bloodvideo {
+      padding: 120px 0;
+      background: var(--color-bg-light);
+    }
 
-/* ========================================
+    .bloodvideo-wrap {
+      margin-top: 48px;
+    }
+
+    .bloodvideo-placeholder {
+      background: var(--color-bg-lighter);
+      border: 1px dashed var(--color-border);
+      aspect-ratio: 16/9;
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-gray);
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .bloodvideo-caption {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--color-text);
+      line-height: 2.2;
+      font-size: 15px;
+    }
+
+    /* ========================================
    TESTIMONIALS（社会的証明）
 ======================================== */
-.section.testimonials {
-  padding: 120px 0;
-  background: var(--color-bg);
-}
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 48px;
-}
-.testimonial-card {
-  border: 1px solid var(--color-border);
-  padding: 32px 24px;
-}
-.testimonial-text {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--color-text);
-  margin-bottom: 16px;
-  font-style: italic;
-}
-.testimonial-author {
-  font-size: 12px;
-  color: var(--color-gray);
-  letter-spacing: 0.05em;
-}
-.salon-count {
-  text-align: center;
-  margin-top: 64px;
-  border-top: 1px solid var(--color-border);
-  padding-top: 40px;
-}
-.salon-count-num {
-  font-family: var(--font-en);
-  font-size: 60px;
-  color: var(--color-gold);
-  line-height: 1;
-}
-.salon-count-num span {
-  font-size: 20px;
-  font-family: var(--font-jp);
-  color: var(--color-gray);
-  margin-left: 8px;
-}
-.salon-count-desc {
-  font-size: 13px;
-  color: var(--color-gray);
-  margin-top: 8px;
-  letter-spacing: 0.08em;
-}
+    .section.testimonials {
+      padding: 120px 0;
+      background: var(--color-bg);
+    }
 
-/* ========================================
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      border: 1px solid var(--color-border);
+      padding: 32px 24px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 12px;
+      color: var(--color-gray);
+      letter-spacing: 0.05em;
+    }
+
+    .salon-count {
+      text-align: center;
+      margin-top: 64px;
+      border-top: 1px solid var(--color-border);
+      padding-top: 40px;
+    }
+
+    .salon-count-num {
+      font-family: var(--font-en);
+      font-size: 60px;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+
+    .salon-count-num span {
+      font-size: 20px;
+      font-family: var(--font-jp);
+      color: var(--color-gray);
+      margin-left: 8px;
+    }
+
+    .salon-count-desc {
+      font-size: 13px;
+      color: var(--color-gray);
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ========================================
    SCHOOL（スクール紹介）
 ======================================== */
-.section.school {
-  padding: 120px 0;
-  background: var(--color-bg);
-}
-.school-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 700px;
-  margin: 48px auto 0;
-}
-.school-card {
-  border: 1px solid var(--color-border);
-  padding: 40px 32px;
-  text-align: center;
-}
-.school-card-level {
-  font-family: var(--font-en);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: var(--color-gold);
-  margin-bottom: 12px;
-}
-.school-card-name {
-  font-size: 18px;
-  color: var(--color-white);
-  margin-bottom: 12px;
-}
-.school-card-duration {
-  font-size: 13px;
-  margin-bottom: 16px;
-}
-.school-card-desc {
-  font-size: 13px;
-  color: var(--color-gray);
-  line-height: 1.8;
-}
-.school-note {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 13px;
-  color: var(--color-gray);
-  letter-spacing: 0.05em;
-}
+    .section.school {
+      padding: 120px 0;
+      background: var(--color-bg);
+    }
 
-/* ========================================
+    .school-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 700px;
+      margin: 48px auto 0;
+    }
+
+    .school-card {
+      border: 1px solid var(--color-border);
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .school-card-level {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--color-gold);
+      margin-bottom: 12px;
+    }
+
+    .school-card-name {
+      font-size: 18px;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .school-card-duration {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .school-card-desc {
+      font-size: 13px;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+
+    .school-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--color-gray);
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================
    EVIDENCE BADGES
 ======================================== */
-.evidence-badges {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  margin-top: 48px;
-  flex-wrap: wrap;
-}
-.evidence-badge {
-  border: 1px solid var(--color-gold);
-  padding: 20px 32px;
-  text-align: center;
-  min-width: 160px;
-}
-.evidence-badge-title {
-  font-size: 11px;
-  color: var(--color-gold);
-  letter-spacing: 0.15em;
-  margin-bottom: 8px;
-}
-.evidence-badge-num {
-  font-family: var(--font-en);
-  font-size: 16px;
-  color: var(--color-white);
-  letter-spacing: 0.05em;
-}
+    .evidence-badges {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
 
-/* ========================================
+    .evidence-badge {
+      border: 1px solid var(--color-gold);
+      padding: 20px 32px;
+      text-align: center;
+      min-width: 160px;
+    }
+
+    .evidence-badge-title {
+      font-size: 11px;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+
+    .evidence-badge-num {
+      font-family: var(--font-en);
+      font-size: 16px;
+      color: var(--color-white);
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================
    PRODUCT PRICE
 ======================================== */
-.product-price {
-  font-family: var(--font-en);
-  font-size: 18px;
-  color: var(--color-gold);
-  margin-top: 8px;
-  text-align: center;
-}
+    .product-price {
+      font-family: var(--font-en);
+      font-size: 18px;
+      color: var(--color-gold);
+      margin-top: 8px;
+      text-align: center;
+    }
 
-@media (max-width: 767px) {
-  .proof-grid,
-  .school-grid { grid-template-columns: 1fr; }
-  .rarity-content { flex-direction: column; gap: 32px; text-align: center; }
-  .rarity-num { font-size: 52px; }
-}
+    @media (max-width: 767px) {
+
+      .proof-grid,
+      .school-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rarity-content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+      }
+
+      .rarity-num {
+        font-size: 52px;
+      }
+    }
+
     .section.product {
       background: var(--color-bg-light);
     }
@@ -3035,44 +3339,49 @@
     }
 
 
-/* ========================================
+    /* ========================================
    SAFETYPROOF（飲めるほど安全な品質証明）
 ======================================== */
-.section.safetyproof {
-  padding: 120px 0;
-  background: var(--color-bg-light);
-}
-.safetyproof-body {
-  max-width: 620px;
-  margin: 32px auto 48px;
-  text-align: center;
-  line-height: 2.2;
-  color: var(--color-text);
-}
-.safetyproof-badges {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.safetyproof-badge {
-  border: 1px solid var(--color-gold);
-  padding: 24px 36px;
-  text-align: center;
-  min-width: 180px;
-}
-.safetyproof-badge-label {
-  font-size: 11px;
-  color: var(--color-gold);
-  letter-spacing: 0.15em;
-  margin-bottom: 8px;
-}
-.safetyproof-badge-value {
-  font-family: var(--font-en);
-  font-size: 15px;
-  color: var(--color-white);
-  letter-spacing: 0.05em;
-}
+    .section.safetyproof {
+      padding: 120px 0;
+      background: var(--color-bg-light);
+    }
+
+    .safetyproof-body {
+      max-width: 620px;
+      margin: 32px auto 48px;
+      text-align: center;
+      line-height: 2.2;
+      color: var(--color-text);
+    }
+
+    .safetyproof-badges {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .safetyproof-badge {
+      border: 1px solid var(--color-gold);
+      padding: 24px 36px;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .safetyproof-badge-label {
+      font-size: 11px;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+
+    .safetyproof-badge-value {
+      font-family: var(--font-en);
+      font-size: 15px;
+      color: var(--color-white);
+      letter-spacing: 0.05em;
+    }
   </style>
 </head>
 
@@ -3084,7 +3393,7 @@
     <div class="loader-bar-wrap">
       <div class="loader-bar"></div>
     </div>
-    <p class="loader-tagline">Black Silica Ritual Clay</p>
+    <p class="loader-tagline">Silica Black Ritual Clay</p>
   </div>
 
   <!-- ============ HEADER ============ -->
@@ -3093,7 +3402,8 @@
       <img src="images/noirica-logo.png" alt="NOIRICA">
     </a>
     <div class="header-nav">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="header-cta-primary">お問い合わせ</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+        target="_blank" rel="noopener noreferrer" class="header-cta-primary">お問い合わせ</a>
     </div>
   </header>
 
@@ -3116,8 +3426,8 @@
     <!-- コンテンツ: 左カラム -->
     <div class="hero-content">
       <h1 class="hero-logo">NOIRICA</h1>
-      <p class="hero-product-name">Black Silica Ritual Clay</p>
-      <p class="hero-main-copy">北海道産ブラックシリカ配合<br>"整える美容"の新習慣</p>
+      <p class="hero-product-name">Silica Black Ritual Clay</p>
+      <p class="hero-main-copy">北海道産シリカブラック配合<br>"整える美容"の新習慣</p>
       <div class="hero-divider"></div>
       <p class="hero-sub-copy">毛穴・くすみ・巡りに<br>塗るだけ10分のリチュアルケア</p>
     </div>
@@ -3138,7 +3448,7 @@
       <div class="empathy-grid">
         <div class="empathy-item fade-in stagger-1">毛穴</div>
         <div class="empathy-item fade-in stagger-2">くすみ</div>
-        <div class="empathy-item fade-in stagger-3">冷え</div>
+        <div class="empathy-item fade-in stagger-3">敏感肌</div>
         <div class="empathy-item fade-in stagger-4">スキンケア迷子</div>
       </div>
       <p class="empathy-catch fade-in stagger-5">
@@ -3223,7 +3533,8 @@
 
     <!-- Inline CTA -->
     <div class="inline-cta fade-in">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+        target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
     </div>
   </section>
 
@@ -3285,11 +3596,13 @@
           <div class="ba-images">
             <div class="ba-image-wrap">
               <span class="ba-image-label">BEFORE</span>
-              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=540&fit=crop&q=80" alt="毛穴 Before">
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=540&fit=crop&q=80"
+                alt="毛穴 Before">
             </div>
             <div class="ba-image-wrap">
               <span class="ba-image-label after">AFTER</span>
-              <img src="https://images.unsplash.com/photo-1614108538523-93f73a3ce4ad?w=400&h=540&fit=crop&q=80" alt="毛穴 After">
+              <img src="https://images.unsplash.com/photo-1614108538523-93f73a3ce4ad?w=400&h=540&fit=crop&q=80"
+                alt="毛穴 After">
             </div>
           </div>
           <p class="ba-title">毛穴</p>
@@ -3299,11 +3612,13 @@
           <div class="ba-images">
             <div class="ba-image-wrap">
               <span class="ba-image-label">BEFORE</span>
-              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=540&fit=crop&q=80" alt="トーンアップ Before">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=540&fit=crop&q=80"
+                alt="トーンアップ Before">
             </div>
             <div class="ba-image-wrap">
               <span class="ba-image-label after">AFTER</span>
-              <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=400&h=540&fit=crop&q=80" alt="トーンアップ After">
+              <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=400&h=540&fit=crop&q=80"
+                alt="トーンアップ After">
             </div>
           </div>
           <p class="ba-title">トーンアップ</p>
@@ -3313,11 +3628,13 @@
           <div class="ba-images">
             <div class="ba-image-wrap">
               <span class="ba-image-label">BEFORE</span>
-              <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=540&fit=crop&q=80" alt="血流 Before">
+              <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=540&fit=crop&q=80"
+                alt="血流 Before">
             </div>
             <div class="ba-image-wrap">
               <span class="ba-image-label after">AFTER</span>
-              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=540&fit=crop&q=80" alt="血流 After">
+              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=540&fit=crop&q=80"
+                alt="血流 After">
             </div>
           </div>
           <p class="ba-title">血流</p>
@@ -3363,7 +3680,7 @@
           </div>
         </div>
         <div class="story-image slide-right">
-          <img src="images/S__221528108.jpg" alt="北海道・上ノ国の黒色鉱石 ブラックシリカ">
+          <img src="images/S__221528108.jpg" alt="北海道・上ノ国の黒色鉱石 シリカブラック">
         </div>
       </div>
       <div class="story-thumbnails">
@@ -3393,7 +3710,7 @@
           <p class="rarity-num-desc">年間採掘可能量の上限</p>
         </div>
         <div class="rarity-text fade-in stagger-3">
-          <p>北海道・上ノ国町でのみ産出されるブラックシリカ。</p>
+          <p>北海道・上ノ国町でのみ産出されるシリカブラック。</p>
           <p>その年間採掘可能量はわずか2,000トン。</p>
           <p>希少性と品質を守るため、採掘量は厳しく管理されています。</p>
         </div>
@@ -3411,15 +3728,20 @@
       <h2 class="section-title-jp fade-in stagger-1">植物試験が証明する、生命力。</h2>
       <div class="proof-grid fade-in stagger-2">
         <div class="proof-item">
-          <div class="proof-image-placeholder"><p>【植物試験 Before 写真】</p></div>
+          <div class="proof-image-placeholder">
+            <p>【植物試験 Before 写真】</p>
+          </div>
           <p class="proof-label">通常の土壌</p>
         </div>
         <div class="proof-item">
-          <div class="proof-image-placeholder"><p>【植物試験 After 写真】</p></div>
-          <p class="proof-label">ブラックシリカ配合土壌</p>
+          <div class="proof-image-placeholder">
+            <p>【植物試験 After 写真】</p>
+          </div>
+          <p class="proof-label">シリカブラック配合土壌</p>
         </div>
       </div>
-      <p class="proof-desc fade-in stagger-3">ブラックシリカを混入した土壌では、植物の成長が顕著に促進されることが確認されました。<br>この「生命力を引き出す力」が、肌へのアプローチにも活かされています。</p>
+      <p class="proof-desc fade-in stagger-3">
+        シリカブラックを混入した土壌では、植物の成長が顕著に促進されることが確認されました。<br>この「生命力を引き出す力」が、肌へのアプローチにも活かされています。</p>
     </div>
   </section>
 
@@ -3445,7 +3767,7 @@
         </div>
         <div class="difference-card highlight fade-in stagger-3">
           <p class="difference-card-label">NOIRICA</p>
-          <p class="difference-card-title">ブラックシリカ配合 NOIRICA</p>
+          <p class="difference-card-title">シリカブラック配合 NOIRICA</p>
           <ul class="difference-card-list">
             <li>北海道・上ノ国産の希少な天然鉱石</li>
             <li>常温で遠赤外線を放射</li>
@@ -3469,7 +3791,7 @@
         <div class="evidence-card fade-in stagger-2">
           <div class="evidence-icon">
             <svg viewBox="0 0 24 24">
-              <path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/>
+              <path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z" />
             </svg>
           </div>
           <p class="evidence-title">天然ミネラル</p>
@@ -3478,8 +3800,9 @@
         <div class="evidence-card fade-in stagger-3">
           <div class="evidence-icon">
             <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="4"/>
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
             </svg>
           </div>
           <p class="evidence-title">遠赤外線</p>
@@ -3488,8 +3811,8 @@
         <div class="evidence-card fade-in stagger-4">
           <div class="evidence-icon">
             <svg viewBox="0 0 24 24">
-              <path d="M3 3v18h18"/>
-              <path d="M7 14l4-4 4 4 5-5"/>
+              <path d="M3 3v18h18" />
+              <path d="M7 14l4-4 4 4 5-5" />
             </svg>
           </div>
           <p class="evidence-title">データあり</p>
@@ -3516,7 +3839,7 @@
       <p class="section-label fade-in">Purity Proof</p>
       <h2 class="section-title-jp fade-in stagger-1">「飲めるほど安全」な品質。</h2>
       <div class="safetyproof-body fade-in stagger-2">
-        <p>NOIRICAのブラックシリカは、食品衛生法の安全基準をクリアした<br>高い安全性を持つ天然鉱石です。</p>
+        <p>NOIRICAのシリカブラックは、食品衛生法の安全基準をクリアした<br>高い安全性を持つ天然鉱石です。</p>
         <p>一般的な工業用鉱石とは異なり、<br>人体に安全な基準を満たした原料のみを使用しています。</p>
       </div>
       <div class="safetyproof-badges fade-in stagger-3">
@@ -3640,7 +3963,7 @@
   <section class="section product" id="product">
     <div class="container">
       <p class="section-label fade-in">Product</p>
-      <h2 class="section-title-jp fade-in stagger-1">Black Silica Ritual Clay</h2>
+      <h2 class="section-title-jp fade-in stagger-1">Silica Black Ritual Clay</h2>
       <div class="product-grid" style="margin-top: 48px;">
         <div class="product-item fade-in stagger-2">
           <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
@@ -3665,14 +3988,15 @@
         </div>
       </div>
       <div class="product-info fade-in">
-        <p>北海道・上ノ国産ブラックシリカ配合<br>ご自宅用からサロン専売まで、用途に合わせて選べる3サイズ展開</p>
+        <p>北海道・上ノ国産シリカブラック配合<br>ご自宅用からサロン専売まで、用途に合わせて選べる3サイズ展開</p>
         <p class="product-origin">From Kaminokuni, Hokkaido, Japan</p>
       </div>
     </div>
 
     <!-- Inline CTA -->
     <div class="inline-cta fade-in" style="margin-top: 40px;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+        target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
     </div>
   </section>
 
@@ -3742,7 +4066,8 @@
 
     <!-- Inline CTA -->
     <div class="inline-cta fade-in" style="margin-top: 20px;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+        target="_blank" rel="noopener noreferrer" class="inline-cta-button">お問い合わせ</a>
     </div>
   </section>
 
@@ -3882,11 +4207,14 @@
       <div class="faq-list">
         <div class="faq-item fade-in stagger-2">
           <p class="faq-q">未経験でも導入できますか？</p>
-          <p class="faq-a">はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。</p>
+          <p class="faq-a">
+            はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。</p>
         </div>
         <div class="faq-item fade-in stagger-3">
           <p class="faq-q">どれくらいの量で何回使用できますか？</p>
-          <p class="faq-a">目安として、100gご自宅用で1回15g〜20gほどで5〜6回分可能、1kgで約10回分(サロン施術の場合)が可能です。使用方法や部位によって前後しますが、フェイシャル・ボディ・フットバスなど幅広くご活用いただけます。</p>
+          <p class="faq-a">
+            目安として、100gご自宅用で1回15g〜20gほどで5〜6回分可能、1kgで約10回分(サロン施術の場合)が可能です。使用方法や部位によって前後しますが、フェイシャル・ボディ・フットバスなど幅広くご活用いただけます。
+          </p>
         </div>
         <div class="faq-item fade-in stagger-4">
           <p class="faq-q">講習はどのような内容ですか？</p>
@@ -3910,8 +4238,8 @@
           <p class="howto-step-num">STEP 01</p>
           <div class="howto-step-circle">
             <svg viewBox="0 0 24 24">
-              <path d="M6 3v6a6 6 0 0 0 12 0V3"/>
-              <path d="M6 21h12"/>
+              <path d="M6 3v6a6 6 0 0 0 12 0V3" />
+              <path d="M6 21h12" />
             </svg>
           </div>
           <p class="howto-step-title">混ぜる</p>
@@ -3920,7 +4248,7 @@
           <p class="howto-step-num">STEP 02</p>
           <div class="howto-step-circle">
             <svg viewBox="0 0 24 24">
-              <path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/>
+              <path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z" />
             </svg>
           </div>
           <p class="howto-step-title">塗る</p>
@@ -3929,8 +4257,8 @@
           <p class="howto-step-num">STEP 03</p>
           <div class="howto-step-circle">
             <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
           </div>
           <p class="howto-step-title">10分待つ</p>
@@ -3939,8 +4267,8 @@
           <p class="howto-step-num">STEP 04</p>
           <div class="howto-step-circle">
             <svg viewBox="0 0 24 24">
-              <path d="M3 12c3-4 6-4 9 0s6 4 9 0"/>
-              <path d="M3 18c3-4 6-4 9 0s6 4 9 0"/>
+              <path d="M3 12c3-4 6-4 9 0s6 4 9 0" />
+              <path d="M3 18c3-4 6-4 9 0s6 4 9 0" />
             </svg>
           </div>
           <p class="howto-step-title">流す</p>
@@ -3958,12 +4286,8 @@
       <p class="cta-heading fade-in stagger-1">まずは、お気軽にご相談ください。</p>
       <p class="cta-sub fade-in stagger-2">導入のご相談 / サンプル請求 / ご不明点など、どんなことでもお問い合わせください。</p>
       <div class="cta-button-wrap fade-in stagger-3">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta-main-button"
-        >
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+          target="_blank" rel="noopener noreferrer" class="cta-main-button">
           <span class="cta-main-button-text">お問い合わせ</span>
           <span class="cta-main-button-arrow">→</span>
         </a>
@@ -3980,7 +4304,8 @@
 
   <!-- ============ MOBILE FIXED CTA BAR ============ -->
   <div class="mobile-cta-bar" id="mobileCta">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer" class="cta-buy">お問い合わせ</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="cta-buy">お問い合わせ</a>
   </div>
 
   <!-- ============ JAVASCRIPT ============ -->
