@@ -3145,6 +3145,16 @@
       margin-top: 48px;
     }
 
+    .bloodvideo-wrap video {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
     .bloodvideo-placeholder {
       background: var(--color-bg-lighter);
       border: 1px dashed var(--color-border);
@@ -3718,14 +3728,17 @@
   <!-- ============ SECTION: 血液改善動画 ============ -->
   <section class="section bloodvideo" id="bloodvideo">
     <div class="container">
-      <div class="placeholder-banner">⚠️ 【要クライアント素材】顕微鏡映像の動画ファイルが必要です ― 仮実装</div>
       <p class="section-label fade-in">Blood Flow</p>
       <h2 class="section-title-jp fade-in stagger-1">血流の変化を、<br>顕微鏡で確かめる。</h2>
       <div class="bloodvideo-wrap fade-in stagger-2">
-        <div class="bloodvideo-placeholder">
-          <p>【顕微鏡映像 動画プレースホルダー】</p>
-          <p>使用前・使用後の血流比較映像</p>
-        </div>
+        <video
+          src="images/毛細血管動画.mp4"
+          controls
+          playsinline
+          muted
+          loop
+          preload="metadata"
+        ></video>
       </div>
       <p class="bloodvideo-caption fade-in stagger-3">施術前後の末梢血流を顕微鏡で撮影。<br>NOIRICAを使用した直後から、血流の改善が映像で確認できます。</p>
     </div>
