@@ -985,9 +985,8 @@
     .why-features {
       text-align: center;
       margin-top: 72px;
-      padding: 56px 0 64px;
+      padding: 56px 0 48px;
       border-top: 1px solid rgba(196, 162, 101, 0.2);
-      border-bottom: 1px solid rgba(196, 162, 101, 0.2);
     }
 
     .why-circles {
@@ -1010,10 +1009,19 @@
       flex-shrink: 0;
       background: radial-gradient(circle at center, rgba(196, 162, 101, 0.05) 0%, transparent 70%);
       box-shadow: 0 0 20px rgba(196, 162, 101, 0.08), inset 0 0 20px rgba(196, 162, 101, 0.03);
+      position: relative;
     }
 
     .why-circle:not(:first-child) {
       margin-left: -28px;
+    }
+
+    .why-circle:first-child {
+      left: -8px;
+    }
+
+    .why-circle:last-child {
+      left: 8px;
     }
 
     .why-circle-label {
@@ -1066,7 +1074,7 @@
 
     .why-keyphrase {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 24px;
       font-family: var(--font-jp);
       font-size: 14px;
       font-weight: 300;
@@ -3515,7 +3523,7 @@
         <div class="why-circles">
           <div class="why-circle">
             <p class="why-circle-label">吸着</p>
-            <p class="why-circle-text">クレイによる<br>吸着ケア</p>
+            <p class="why-circle-text">クレイによる<br>肌のデトックスケア</p>
           </div>
           <div class="why-circle">
             <p class="why-circle-label">活性</p>
@@ -3528,7 +3536,6 @@
         </div>
         <p class="why-features-copy">これを同時に叶える、<br>新しいミネラル美容です。</p>
       </div>
-      <p class="why-keyphrase fade-in">デトックス × 巡らせる × 整える</p>
     </div>
 
     <!-- Inline CTA -->
