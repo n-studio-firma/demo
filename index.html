@@ -3182,63 +3182,179 @@
     /* ========================================
    TESTIMONIALS（社会的証明）
 ======================================== */
+    /* ========================================
+   VOICE (お客様の声)
+======================================== */
     .section.testimonials {
       padding: 120px 0;
-      background: var(--color-bg);
+      background: #080808;
+      position: relative;
+      overflow: hidden;
     }
 
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
+    .section.testimonials::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 520px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(196,162,101,0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .testimonial-card {
-      border: 1px solid var(--color-border);
-      padding: 32px 24px;
+    .section.testimonials::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      right: -100px;
+      width: 520px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(196,162,101,0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .testimonial-text {
-      font-size: 14px;
-      line-height: 1.9;
-      color: var(--color-text);
-      margin-bottom: 16px;
-      font-style: italic;
+    .voice-sparkles {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
 
-    .testimonial-author {
-      font-size: 12px;
-      color: var(--color-gray);
-      letter-spacing: 0.05em;
+    .voice-diamond-sep {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 28px;
     }
 
-    .salon-count {
-      text-align: center;
-      margin-top: 64px;
-      border-top: 1px solid var(--color-border);
-      padding-top: 40px;
+    .voice-diamond-sep::before,
+    .voice-diamond-sep::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(196,162,101,0.6));
     }
 
-    .salon-count-num {
-      font-family: var(--font-en);
-      font-size: 60px;
+    .voice-diamond-sep::after {
+      background: linear-gradient(to left, transparent, rgba(196,162,101,0.6));
+    }
+
+    .voice-diamond-icon {
       color: var(--color-gold);
-      line-height: 1;
+      font-size: 13px;
+      opacity: 0.8;
     }
 
-    .salon-count-num span {
-      font-size: 20px;
+    .voice-subtitle {
+      text-align: center;
       font-family: var(--font-jp);
+      font-size: 14px;
+      line-height: 2;
       color: var(--color-gray);
-      margin-left: 8px;
+      margin-bottom: 64px;
+      letter-spacing: 0.5px;
     }
 
-    .salon-count-desc {
+    .voice-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .voice-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(196,162,101,0.45);
+      border-radius: 8px;
+      padding: 44px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .voice-icon-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(196,162,101,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .voice-icon-circle img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .voice-label-badge {
+      height: 30px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+
+    .voice-person-sub {
+      font-family: var(--font-jp);
       font-size: 13px;
       color: var(--color-gray);
-      margin-top: 8px;
-      letter-spacing: 0.08em;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .voice-card-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .voice-card-divider::before,
+    .voice-card-divider::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: rgba(196,162,101,0.4);
+    }
+
+    .voice-card-divider-icon {
+      color: var(--color-gold);
+      font-size: 11px;
+      opacity: 0.75;
+    }
+
+    .voice-quote-open {
+      font-size: 54px;
+      color: rgba(196,162,101,0.8);
+      line-height: 0.8;
+      margin-bottom: 10px;
+      align-self: flex-start;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    .voice-text {
+      font-family: var(--font-jp);
+      font-size: 15px;
+      line-height: 2.1;
+      color: var(--color-white);
+      letter-spacing: 0.3px;
+      flex: 1;
+    }
+
+    .voice-quote-close {
+      font-size: 54px;
+      color: rgba(196,162,101,0.8);
+      line-height: 0.8;
+      margin-top: 10px;
+      align-self: flex-end;
+      font-family: Georgia, 'Times New Roman', serif;
     }
 
     /* ========================================
@@ -3342,7 +3458,8 @@
     @media (max-width: 767px) {
 
       .proof-grid,
-      .school-grid {
+      .school-grid,
+      .voice-cards {
         grid-template-columns: 1fr;
       }
 
@@ -3383,8 +3500,7 @@
       .concept-headline,
       .bloodvideo-caption,
       .proof-desc,
-      .safetyproof-body,
-      .salon-count-desc {
+      .safetyproof-body {
         text-align: left;
       }
 
@@ -3910,29 +4026,111 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: 社会的証明 ============ -->
+  <!-- ============ SECTION: お客様の声 ============ -->
   <section class="section testimonials" id="testimonials">
+    <!-- Gold sparkle decoration -->
+    <svg class="voice-sparkles" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+      <!-- Top-left cluster -->
+      <g fill="#C4A265">
+        <circle cx="28" cy="80" r="1.5" opacity="0.85"/>
+        <circle cx="55" cy="45" r="1" opacity="0.55"/>
+        <circle cx="90" cy="105" r="2" opacity="0.75"/>
+        <circle cx="130" cy="60" r="1" opacity="0.5"/>
+        <circle cx="170" cy="30" r="1.5" opacity="0.7"/>
+        <circle cx="45" cy="155" r="1" opacity="0.55"/>
+        <circle cx="120" cy="140" r="2.5" opacity="0.85"/>
+        <circle cx="185" cy="110" r="1" opacity="0.5"/>
+        <circle cx="220" cy="72" r="1.5" opacity="0.65"/>
+        <circle cx="260" cy="45" r="1" opacity="0.4"/>
+        <circle cx="295" cy="92" r="1" opacity="0.55"/>
+        <circle cx="22" cy="35" r="1" opacity="0.5"/>
+        <circle cx="72" cy="178" r="1.5" opacity="0.65"/>
+        <circle cx="200" cy="160" r="1" opacity="0.5"/>
+        <circle cx="148" cy="28" r="1" opacity="0.4"/>
+        <circle cx="320" cy="55" r="1" opacity="0.4"/>
+        <circle cx="68" cy="20" r="1" opacity="0.45"/>
+        <path transform="translate(100,70)" d="M0,-5 L1,-1 L5,0 L1,1 L0,5 L-1,1 L-5,0 L-1,-1Z" opacity="0.9"/>
+        <path transform="translate(55,125)" d="M0,-4 L0.8,-0.8 L4,0 L0.8,0.8 L0,4 L-0.8,0.8 L-4,0 L-0.8,-0.8Z" opacity="0.7"/>
+        <path transform="translate(195,50)" d="M0,-6 L1.2,-1.2 L6,0 L1.2,1.2 L0,6 L-1.2,1.2 L-6,0 L-1.2,-1.2Z" opacity="0.85"/>
+        <path transform="translate(240,135)" d="M0,-4 L0.8,-0.8 L4,0 L0.8,0.8 L0,4 L-0.8,0.8 L-4,0 L-0.8,-0.8Z" opacity="0.6"/>
+        <path transform="translate(15,100)" d="M0,-3 L0.6,-0.6 L3,0 L0.6,0.6 L0,3 L-0.6,0.6 L-3,0 L-0.6,-0.6Z" opacity="0.5"/>
+      </g>
+      <!-- Bottom-right cluster -->
+      <g fill="#C4A265">
+        <circle cx="1025" cy="500" r="1.5" opacity="0.85"/>
+        <circle cx="1065" cy="468" r="1" opacity="0.55"/>
+        <circle cx="1102" cy="532" r="2" opacity="0.75"/>
+        <circle cx="1145" cy="480" r="1" opacity="0.5"/>
+        <circle cx="1172" cy="510" r="1.5" opacity="0.7"/>
+        <circle cx="1042" cy="558" r="1" opacity="0.55"/>
+        <circle cx="1082" cy="545" r="2.5" opacity="0.85"/>
+        <circle cx="1152" cy="562" r="1" opacity="0.5"/>
+        <circle cx="982" cy="542" r="1.5" opacity="0.65"/>
+        <circle cx="952" cy="490" r="1" opacity="0.4"/>
+        <circle cx="1002" cy="572" r="1" opacity="0.55"/>
+        <circle cx="1192" cy="488" r="1" opacity="0.5"/>
+        <circle cx="1072" cy="592" r="1.5" opacity="0.65"/>
+        <circle cx="1122" cy="428" r="1" opacity="0.5"/>
+        <circle cx="962" cy="448" r="1" opacity="0.4"/>
+        <circle cx="1180" cy="545" r="1" opacity="0.4"/>
+        <circle cx="1038" cy="430" r="1" opacity="0.45"/>
+        <path transform="translate(1092,512)" d="M0,-5 L1,-1 L5,0 L1,1 L0,5 L-1,1 L-5,0 L-1,-1Z" opacity="0.9"/>
+        <path transform="translate(1052,562)" d="M0,-4 L0.8,-0.8 L4,0 L0.8,0.8 L0,4 L-0.8,0.8 L-4,0 L-0.8,-0.8Z" opacity="0.7"/>
+        <path transform="translate(1142,472)" d="M0,-6 L1.2,-1.2 L6,0 L1.2,1.2 L0,6 L-1.2,1.2 L-6,0 L-1.2,-1.2Z" opacity="0.85"/>
+        <path transform="translate(982,512)" d="M0,-4 L0.8,-0.8 L4,0 L0.8,0.8 L0,4 L-0.8,0.8 L-4,0 L-0.8,-0.8Z" opacity="0.6"/>
+        <path transform="translate(1190,520)" d="M0,-3 L0.6,-0.6 L3,0 L0.6,0.6 L0,3 L-0.6,0.6 L-3,0 L-0.6,-0.6Z" opacity="0.5"/>
+      </g>
+    </svg>
+
     <div class="container">
-      <div class="placeholder-banner">⚠️ 【要クライアント素材】顧客の声・サロン導入実績が必要です ― 仮実装</div>
-      <p class="section-label fade-in">Real Voices</p>
-      <h2 class="section-title-jp fade-in stagger-1">使った人の声</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in stagger-2">
-          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
-          <p class="testimonial-author">【お客様名・年齢・属性】</p>
-        </div>
-        <div class="testimonial-card fade-in stagger-3">
-          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
-          <p class="testimonial-author">【お客様名・年齢・属性】</p>
-        </div>
-        <div class="testimonial-card fade-in stagger-4">
-          <p class="testimonial-text">「【顧客コメントのプレースホルダー】」</p>
-          <p class="testimonial-author">【お客様名・年齢・属性】</p>
-        </div>
+      <p class="section-label fade-in">Voice</p>
+      <h2 class="section-title-jp fade-in stagger-1">お客様の声</h2>
+
+      <div class="voice-diamond-sep fade-in stagger-2">
+        <span class="voice-diamond-icon">◇</span>
       </div>
-      <div class="salon-count fade-in stagger-5">
-        <p class="salon-count-num placeholder-text">【導入サロン数】<span>店舗</span></p>
-        <p class="salon-count-desc">全国のサロンに導入いただいています</p>
+
+      <p class="voice-subtitle fade-in stagger-2">実際にご体験いただいたお客様から、<br>嬉しいお声をいただいております。</p>
+
+      <div class="voice-cards">
+        <!-- Card 1: 一般のお客様 -->
+        <div class="voice-card fade-in stagger-2">
+          <div class="voice-icon-circle">
+            <img src="images/VOICE_ICON_USER.png" alt="一般のお客様">
+          </div>
+          <img class="voice-label-badge" src="images/VOICE_label①.png" alt="一般のお客様">
+          <p class="voice-person-sub">30代女性</p>
+          <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+          <p class="voice-quote-open">&ldquo;</p>
+          <p class="voice-text">肌のざらつきがやわらぎ、施術後の透明感に驚きました。落ち着く香りと丁寧なケアで、心まで整う感覚でした。</p>
+          <p class="voice-quote-close">&rdquo;</p>
+        </div>
+
+        <!-- Card 2: 導入サロン -->
+        <div class="voice-card fade-in stagger-3">
+          <div class="voice-icon-circle">
+            <img src="images/VOICE_ICON_SALON.png" alt="導入サロン">
+          </div>
+          <img class="voice-label-badge" src="images/VOICE_label②.png" alt="導入サロン">
+          <p class="voice-person-sub">オーナー様</p>
+          <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+          <p class="voice-quote-open">&ldquo;</p>
+          <p class="voice-text">乾燥しやすい季節でも、うるおい感が続いてメイクのりも良くなりました。サロンでの時間そのものがご褒美です。</p>
+          <p class="voice-quote-close">&rdquo;</p>
+        </div>
+
+        <!-- Card 3: 一般のお客様 -->
+        <div class="voice-card fade-in stagger-4">
+          <div class="voice-icon-circle">
+            <img src="images/VOICE_ICON_USER.png" alt="一般のお客様">
+          </div>
+          <img class="voice-label-badge" src="images/VOICE_label①.png" alt="一般のお客様">
+          <p class="voice-person-sub">30代女性</p>
+          <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+          <p class="voice-quote-open">&ldquo;</p>
+          <p class="voice-text">自宅でも使いやすく、使うたびに肌がなめらかになるのを実感しています。上質で続けたくなるアイテムです。</p>
+          <p class="voice-quote-close">&rdquo;</p>
+        </div>
       </div>
     </div>
   </section>
