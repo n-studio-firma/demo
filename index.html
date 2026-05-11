@@ -3289,11 +3289,26 @@
       object-fit: contain;
     }
 
-    .voice-label-badge {
-      width: 240px;
-      height: 70px;
-      object-fit: contain;
+    .voice-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #C4A265;
+      color: #100c04;
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      padding: 10px 28px;
+      border-radius: 50px;
+      white-space: nowrap;
       margin-bottom: 12px;
+    }
+
+    .voice-badge svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
     }
 
     .voice-person-sub {
@@ -4094,7 +4109,10 @@
           <div class="voice-icon-circle">
             <img src="images/VOICE_ICON_USER.png" alt="一般のお客様">
           </div>
-          <img class="voice-label-badge" src="images/VOICE_label①.png" alt="一般のお客様">
+          <span class="voice-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>
+            一般のお客様
+          </span>
           <p class="voice-person-sub">30代女性</p>
           <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
           <p class="voice-quote-open">&ldquo;</p>
@@ -4107,7 +4125,10 @@
           <div class="voice-icon-circle">
             <img src="images/VOICE_ICON_SALON.png" alt="導入サロン">
           </div>
-          <img class="voice-label-badge" src="images/VOICE_label②.png" alt="導入サロン">
+          <span class="voice-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>
+            導入サロン
+          </span>
           <p class="voice-person-sub">オーナー様</p>
           <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
           <p class="voice-quote-open">&ldquo;</p>
@@ -4120,7 +4141,10 @@
           <div class="voice-icon-circle">
             <img src="images/VOICE_ICON_USER.png" alt="一般のお客様">
           </div>
-          <img class="voice-label-badge" src="images/VOICE_label①.png" alt="一般のお客様">
+          <span class="voice-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>
+            一般のお客様
+          </span>
           <p class="voice-person-sub">30代女性</p>
           <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
           <p class="voice-quote-open">&ldquo;</p>
