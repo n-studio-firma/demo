@@ -2577,45 +2577,92 @@
 
     .flow-header {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 56px;
     }
 
-    .flow-steps {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 1000px;
+    .flow-sub {
+      font-size: 12px;
+      color: var(--color-gray);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .flow-timeline {
+      position: relative;
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    .flow-step {
-      text-align: center;
-      padding: 32px 20px;
-      border: 1px solid var(--color-border);
-      background: var(--color-bg-lighter);
+    .flow-timeline::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(196,162,101,0.5) 8%, rgba(196,162,101,0.5) 92%, transparent);
     }
 
-    .flow-step-num {
+    .flow-tl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 24px 0;
+      position: relative;
+    }
+
+    .flow-tl-item:not(:last-child) {
+      border-bottom: 1px solid rgba(196,162,101,0.08);
+    }
+
+    .flow-tl-dot {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,162,101,0.5);
+      background: var(--color-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: var(--font-en);
-      font-size: 24px;
+      font-size: 11px;
+      letter-spacing: 1px;
       color: var(--color-gold);
-      letter-spacing: 2px;
-      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
     }
 
-    .flow-step-title {
-      font-family: var(--font-jp);
-      font-size: 15px;
-      font-weight: 400;
-      color: var(--color-white);
+    .flow-tl-content {
+      flex: 1;
+      padding-top: 10px;
+    }
+
+    .flow-tl-en {
+      font-family: var(--font-en);
+      font-size: 9px;
       letter-spacing: 2px;
+      color: rgba(196,162,101,0.5);
+      margin-bottom: 4px;
+    }
+
+    .flow-tl-title {
+      font-family: var(--font-jp);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-white);
+      letter-spacing: 1px;
+      line-height: 1.6;
     }
 
     @media (min-width: 768px) {
-      .flow-steps {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-      }
+      .flow-timeline::before { left: 32px; }
+      .flow-tl-dot { width: 64px; height: 64px; font-size: 13px; }
+      .flow-tl-item { gap: 32px; padding: 32px 0; }
+      .flow-tl-content { padding-top: 18px; }
+      .flow-tl-en { font-size: 10px; }
+      .flow-tl-title { font-size: 17px; }
     }
 
     /* ========================================
@@ -3128,19 +3175,19 @@
       grid-template-columns: 88px 1fr;
       gap: 0 48px;
       padding: 52px 0;
-      border-top: 1px solid rgba(196,162,101,0.15);
+      border-top: 1px solid rgba(196, 162, 101, 0.15);
       align-items: start;
     }
 
     .proof-b-block:last-child {
-      border-bottom: 1px solid rgba(196,162,101,0.15);
+      border-bottom: 1px solid rgba(196, 162, 101, 0.15);
     }
 
     .proof-b-num {
       font-family: var(--font-en);
       font-size: 56px;
       line-height: 1;
-      color: rgba(196,162,101,0.12);
+      color: rgba(196, 162, 101, 0.12);
       letter-spacing: -2px;
       padding-top: 4px;
     }
@@ -3176,8 +3223,14 @@
         gap: 8px;
         padding: 36px 0;
       }
-      .proof-b-num { font-size: 36px; }
-      .proof-b-title { font-size: 18px; }
+
+      .proof-b-num {
+        font-size: 36px;
+      }
+
+      .proof-b-title {
+        font-size: 18px;
+      }
     }
 
     .proof-grid {
@@ -4101,7 +4154,7 @@
           <div class="proof-b-content">
             <p class="proof-b-en">Vitality Proof</p>
             <h3 class="proof-b-title">植物試験が証明する、生命力。</h3>
-            <p class="proof-b-text">シリカブラックを混入した土壌では、植物の成長が顕著に促進されることが確認されました。この「生命力を引き出す力」が、肌へのアプローチにも活かされています。</p>
+            <p class="proof-b-text">シリカブラックを混入した土壌では、植物の成長が顕著に促進されることが確認されました。<br>この「生命力を引き出す力」が、肌へのアプローチにも活かされています。</p>
           </div>
         </div>
 
@@ -4111,7 +4164,8 @@
           <div class="proof-b-content">
             <p class="proof-b-en">Purity Proof</p>
             <h3 class="proof-b-title">「飲めるほど安全」な、品質。</h3>
-            <p class="proof-b-text">NOIRICAのシリカブラックは、食品衛生法の安全基準をクリアした高い安全性を持つ天然鉱石です。一般的な工業用鉱石とは異なり、人体に安全な基準を満たした原料のみを使用しています。</p>
+            <p class="proof-b-text">
+              NOIRICAのシリカブラックは、食品衛生法の安全基準をクリアした高い安全性を持つ天然鉱石です。<br>一般的な工業用鉱石とは異なり、人体に安全な基準を満たした原料のみを使用しています。</p>
           </div>
         </div>
 
@@ -4574,29 +4628,45 @@
   <section class="section flow" id="flow">
     <div class="container">
       <div class="flow-header">
-        <p class="section-label fade-in">Flow</p>
+        <p class="section-label fade-in">How to Start</p>
         <h2 class="section-title-jp fade-in stagger-1">導入までの流れ</h2>
+        <p class="flow-sub fade-in stagger-2">お問い合わせから導入まで、最短2週間</p>
       </div>
-      <div class="flow-steps">
-        <div class="flow-step fade-in stagger-2">
-          <p class="flow-step-num">01</p>
-          <p class="flow-step-title">お問い合わせ</p>
+      <div class="flow-timeline">
+        <div class="flow-tl-item fade-in stagger-2">
+          <div class="flow-tl-dot">01</div>
+          <div class="flow-tl-content">
+            <p class="flow-tl-en">Contact</p>
+            <p class="flow-tl-title">お問い合わせ</p>
+          </div>
         </div>
-        <div class="flow-step fade-in stagger-3">
-          <p class="flow-step-num">02</p>
-          <p class="flow-step-title">オンラインカウンセリングの日程調整</p>
+        <div class="flow-tl-item fade-in stagger-3">
+          <div class="flow-tl-dot">02</div>
+          <div class="flow-tl-content">
+            <p class="flow-tl-en">Schedule</p>
+            <p class="flow-tl-title">オンラインカウンセリングの日程調整</p>
+          </div>
         </div>
-        <div class="flow-step fade-in stagger-4">
-          <p class="flow-step-num">03</p>
-          <p class="flow-step-title">オンラインカウンセリングにて商品説明</p>
+        <div class="flow-tl-item fade-in stagger-4">
+          <div class="flow-tl-dot">03</div>
+          <div class="flow-tl-content">
+            <p class="flow-tl-en">Counseling</p>
+            <p class="flow-tl-title">オンラインカウンセリングにて商品説明</p>
+          </div>
         </div>
-        <div class="flow-step fade-in stagger-5">
-          <p class="flow-step-num">04</p>
-          <p class="flow-step-title">ご契約</p>
+        <div class="flow-tl-item fade-in stagger-5">
+          <div class="flow-tl-dot">04</div>
+          <div class="flow-tl-content">
+            <p class="flow-tl-en">Contract</p>
+            <p class="flow-tl-title">ご契約</p>
+          </div>
         </div>
-        <div class="flow-step fade-in stagger-5">
-          <p class="flow-step-num">05</p>
-          <p class="flow-step-title">ご導入</p>
+        <div class="flow-tl-item fade-in stagger-5">
+          <div class="flow-tl-dot">05</div>
+          <div class="flow-tl-content">
+            <p class="flow-tl-en">Introduction</p>
+            <p class="flow-tl-title">ご導入</p>
+          </div>
         </div>
       </div>
     </div>
