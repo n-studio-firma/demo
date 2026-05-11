@@ -1645,12 +1645,13 @@
     }
 
     .cta-logo {
-      font-family: var(--font-en);
-      font-size: 28px;
-      font-weight: 400;
-      letter-spacing: 10px;
-      color: var(--color-gold);
       margin-bottom: 32px;
+    }
+    .cta-logo img {
+      width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     .cta-heading {
@@ -1732,9 +1733,8 @@
     }
 
     @media (min-width: 768px) {
-      .cta-logo {
-        font-size: 36px;
-        letter-spacing: 12px;
+      .cta-logo img {
+        width: 200px;
       }
 
       .cta-heading {
@@ -1752,9 +1752,8 @@
         padding: 140px 0 80px;
       }
 
-      .cta-logo {
-        font-size: 48px;
-        letter-spacing: 16px;
+      .cta-logo img {
+        width: 240px;
       }
 
       .cta-heading {
@@ -4671,7 +4670,7 @@
   <!-- ============ SECTION: CTA ============ -->
   <section class="cta-section" id="contact">
     <div class="container">
-      <p class="cta-logo fade-in">NOIRICA</p>
+      <div class="cta-logo fade-in"><img src="images/noirica-logo.png" alt="NOIRICA"></div>
       <p class="cta-heading fade-in stagger-1">まずは、お気軽にご相談ください。</p>
       <p class="cta-sub fade-in stagger-2">導入のご相談 / ご不明点など、どんなことでもお問い合わせください。</p>
       <div class="cta-button-wrap fade-in stagger-3">
@@ -4687,6 +4686,9 @@
 
   <footer class="footer">
     <div class="container">
+      <p style="margin-bottom:12px;">
+        <a href="privacy.html" style="font-family:var(--font-en);font-size:10px;letter-spacing:2px;color:var(--color-gray-dark);text-decoration:none;border-bottom:1px solid rgba(136,136,136,0.3);padding-bottom:2px;">Privacy Policy</a>
+      </p>
       <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
     </div>
   </footer>
