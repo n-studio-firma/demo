@@ -2545,6 +2545,14 @@
       line-height: 1.8;
     }
 
+    .prospec-note {
+      font-size: 11px;
+      color: var(--color-gray);
+      letter-spacing: 0.5px;
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+
     @media (min-width: 768px) {
       .prospec-row {
         padding: 28px 24px;
@@ -3212,7 +3220,7 @@
       left: -100px;
       width: 520px;
       height: 400px;
-      background: radial-gradient(ellipse at center, rgba(196,162,101,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(196, 162, 101, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -3223,7 +3231,7 @@
       right: -100px;
       width: 520px;
       height: 400px;
-      background: radial-gradient(ellipse at center, rgba(196,162,101,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(196, 162, 101, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -3241,11 +3249,11 @@
       display: block;
       width: 80px;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(196,162,101,0.6));
+      background: linear-gradient(to right, transparent, rgba(196, 162, 101, 0.6));
     }
 
     .voice-diamond-sep::after {
-      background: linear-gradient(to left, transparent, rgba(196,162,101,0.6));
+      background: linear-gradient(to left, transparent, rgba(196, 162, 101, 0.6));
     }
 
     .voice-diamond-icon {
@@ -3283,7 +3291,7 @@
     .voice-card {
       flex: 0 0 calc(33.333% - 16px);
       background: #0d0d0d;
-      border: 1px solid rgba(196,162,101,0.45);
+      border: 1px solid rgba(196, 162, 101, 0.45);
       border-radius: 8px;
       padding: 28px 20px;
       display: flex;
@@ -3302,7 +3310,7 @@
 
     .voice-carousel-btn {
       background: transparent;
-      border: 1px solid rgba(196,162,101,0.5);
+      border: 1px solid rgba(196, 162, 101, 0.5);
       color: var(--color-gold);
       width: 44px;
       height: 44px;
@@ -3317,7 +3325,7 @@
     }
 
     .voice-carousel-btn:hover:not(:disabled) {
-      background: rgba(196,162,101,0.15);
+      background: rgba(196, 162, 101, 0.15);
     }
 
     .voice-carousel-btn:disabled {
@@ -3335,7 +3343,7 @@
       width: 6px;
       height: 6px;
       border-radius: 3px;
-      background: rgba(196,162,101,0.3);
+      background: rgba(196, 162, 101, 0.3);
       cursor: pointer;
       border: none;
       padding: 0;
@@ -3413,7 +3421,7 @@
       display: block;
       width: 40px;
       height: 1px;
-      background: rgba(196,162,101,0.4);
+      background: rgba(196, 162, 101, 0.4);
     }
 
     .voice-card-divider-icon {
@@ -3424,7 +3432,7 @@
 
     .voice-quote-open {
       font-size: 54px;
-      color: rgba(196,162,101,0.8);
+      color: rgba(196, 162, 101, 0.8);
       line-height: 0.8;
       margin-bottom: 10px;
       align-self: flex-start;
@@ -3442,7 +3450,7 @@
 
     .voice-quote-close {
       font-size: 54px;
-      color: rgba(196,162,101,0.8);
+      color: rgba(196, 162, 101, 0.8);
       line-height: 0.8;
       margin-top: 10px;
       align-self: flex-end;
@@ -4086,37 +4094,50 @@
             <!-- 1: S1 肌のトーンアップ -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>導入サロン</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>導入サロン</span>
               <p class="voice-person-sub">ご契約サロン様</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【肌のトーンアップに驚き】</p>
-              <p class="voice-text">NOIRICAを導入してから、お客様から「肌が明るくなった」や「くすみが取れた」といった嬉しい声をいただくようになりました。施術後の即効性があるので、リピーターも増えています。</p>
+              <p class="voice-text">
+                NOIRICAを導入してから、お客様から「肌が明るくなった」や「くすみが取れた」といった嬉しい声をいただくようになりました。施術後の即効性があるので、リピーターも増えています。</p>
             </div>
 
             <!-- 2: U1 敏感肌でも -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">20代 男性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【敏感肌でも忘れるくらい、ノンストレス！】</p>
-              <p class="voice-text">ニキビと炎症で赤みが引かなかったのですが、NOIRICAのパック後、赤みが引いていて週2、3回ずつ続けていると肌荒れが無くなってきて、感動しました！これからもデイリーケアと一緒に続けたいと思います。</p>
+              <p class="voice-text">
+                ニキビと炎症で赤みが引かなかったのですが、NOIRICAのパック後、赤みが引いていて週2、3回ずつ続けていると肌荒れが無くなってきて、感動しました！これからもデイリーケアと一緒に続けたいと思います。</p>
             </div>
 
             <!-- 3: S2 遠赤外線 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>導入サロン</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>導入サロン</span>
               <p class="voice-person-sub">ご契約サロン様</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【遠赤外線効果でリラックス】</p>
-              <p class="voice-text">施術前に足湯を必ず取り入れていますが、シリカブラックが入っているからか温まるのが早く、「体がポカポカし続けてるし、気持ちいい」というお声もあり、入浴用で物販にも繋がり、特に冷え性の方に好評です。</p>
+              <p class="voice-text">
+                施術前に足湯を必ず取り入れていますが、シリカブラックが入っているからか温まるのが早く、「体がポカポカし続けてるし、気持ちいい」というお声もあり、入浴用で物販にも繋がり、特に冷え性の方に好評です。</p>
             </div>
 
             <!-- 4: U2 天然温泉 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">40代 女性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【天然温泉みたいに、ぽっかぽか！】</p>
@@ -4126,17 +4147,24 @@
             <!-- 5: S3 デトックス -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>導入サロン</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>導入サロン</span>
               <p class="voice-person-sub">ご契約サロン様</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【デトックス作用に満足】</p>
-              <p class="voice-text">泥パック特有の老廃物吸着力とブラックシリカの遠赤外線効果のおかげで、筋肉が緩み施術がしやすく、施術後は肌がすっきりと軽い感じになると好評です。むくみが取れたという声もいただき、結果に満足されるお客様が多いです。</p>
+              <p class="voice-text">
+                泥パック特有の老廃物吸着力とブラックシリカの遠赤外線効果のおかげで、筋肉が緩み施術がしやすく、施術後は肌がすっきりと軽い感じになると好評です。むくみが取れたという声もいただき、結果に満足されるお客様が多いです。
+              </p>
             </div>
 
             <!-- 6: U3 毛穴改善 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">30代 女性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【肌のごわつき、毛穴が改善】</p>
@@ -4146,17 +4174,23 @@
             <!-- 7: S4 高付加価値 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>導入サロン</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>導入サロン</span>
               <p class="voice-person-sub">ご契約サロン様</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【高付加価値メニューとして人気】</p>
-              <p class="voice-text">他のサロンとの差別化にも繋がり、天然鉱石の力を活用した高付加価値メニューとして、お客様から興味を持っていただけています。自然派志向のお客様にも選ばれやすいですね。</p>
+              <p class="voice-text">他のサロンとの差別化にも繋がり、天然鉱石の力を活用した高付加価値メニューとして、お客様から興味を持っていただけています。自然派志向のお客様にも選ばれやすいですね。
+              </p>
             </div>
 
             <!-- 8: U4 子供のアトピー -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">30代 女性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【子供のアトピーに悩んでいました。】</p>
@@ -4166,31 +4200,42 @@
             <!-- 9: S5 導入コスト -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z"/></svg>導入サロン</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>導入サロン</span>
               <p class="voice-person-sub">ご契約サロン様</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【導入コストに対する満足度が高い】</p>
-              <p class="voice-text">導入時のコストはそれほど高くなく、比較的手軽に始められたのが良かったです。美容鍼を扱っているため、血行促進など掛け合わせがとても良く施術の満足度が高いです。サロン全体の売上向上にも期待できてます。</p>
+              <p class="voice-text">
+                導入時のコストはそれほど高くなく、比較的手軽に始められたのが良かったです。美容鍼を扱っているため、血行促進など掛け合わせがとても良く施術の満足度が高いです。サロン全体の売上向上にも期待できてます。</p>
             </div>
 
             <!-- 10: U5 日焼け後 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">20代 女性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【日焼け後のひんやり感が心地良い】</p>
-              <p class="voice-text">塗った瞬間、ひんやりとした感触があり気持ちよかった。使用後、日焼けの赤みやヒリヒリ感が一気にましになって、肌がワントーン明るくなったように感じ正直、とても感動です。</p>
+              <p class="voice-text">塗った瞬間、ひんやりとした感触があり気持ちよかった。使用後、日焼けの赤みやヒリヒリ感が一気にましになって、肌がワントーン明るくなったように感じ正直、とても感動です。
+              </p>
             </div>
 
             <!-- 11: U6 乾燥肌 -->
             <div class="voice-card">
               <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg>一般のお客様</span>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>一般のお客様</span>
               <p class="voice-person-sub">30代 女性</p>
               <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
               <p class="voice-card-title">【乾燥しやすい肌だからこそ、気に入りました】</p>
-              <p class="voice-text">乾燥肌の自分には少し不安だったのですが、洗い流した後の軽さとは裏腹に、つっぱる感じもなく瑞々しさを感じられました。肌がワントーン明るくなってスキンケアの楽しさに触れた気がします。</p>
+              <p class="voice-text">
+                乾燥肌の自分には少し不安だったのですが、洗い流した後の軽さとは裏腹に、つっぱる感じもなく瑞々しさを感じられました。肌がワントーン明るくなってスキンケアの楽しさに触れた気がします。</p>
             </div>
 
           </div>
@@ -4296,7 +4341,7 @@
       <h2 class="section-title-jp fade-in stagger-1">こんなお悩み、ありませんか？</h2>
       <div class="salonpain-list">
         <div class="salonpain-item fade-in stagger-2">高単価メニューを作りたいが、差別化できる技術が見つからない</div>
-        <div class="salonpain-item fade-in stagger-3">他店との差別化を図り、選ばれるサロンになりたい</div>
+        <div class="salonpain-item fade-in stagger-3">機械依存から卒業し、“技術そのもの”が価値になるサロンづくりをしたい</div>
         <div class="salonpain-item fade-in stagger-4">リピートが続かず、新規集客に追われ続けている</div>
       </div>
     </div>
@@ -4348,7 +4393,7 @@
           <p class="pro-card-desc">体感しやすく、<br>習慣化につながる</p>
         </div>
       </div>
-      <p class="pro-note fade-in">※ 技術導入・教育対応（施術指導・スクール展開）も可能</p>
+      <p class="pro-note fade-in">※施術指導・正規代理店も可能</p>
     </div>
 
     <!-- Inline CTA -->
@@ -4371,7 +4416,7 @@
         <div class="salonritual-card fade-in stagger-2">
           <p class="salonritual-card-en">Facial</p>
           <p class="salonritual-card-jp">フェイシャルメニュー</p>
-          <p class="salonritual-card-desc">顔・デコルテへの<br>本格リチュアルケア。<br>客単価アップに直結</p>
+          <p class="salonritual-card-desc">顔・デコルテへの<br>本格トリートメント。<br>客単価アップに直結</p>
         </div>
         <div class="salonritual-card fade-in stagger-3">
           <p class="salonritual-card-en">Body</p>
@@ -4380,7 +4425,7 @@
         </div>
         <div class="salonritual-card fade-in stagger-4">
           <p class="salonritual-card-en">Bath</p>
-          <p class="salonritual-card-jp">バス・フットバス</p>
+          <p class="salonritual-card-jp">フットバス</p>
           <p class="salonritual-card-desc">入浴・フットバスとして<br>付帯サービス化が可能。<br>滞在時間と満足度を向上</p>
         </div>
       </div>
@@ -4399,7 +4444,7 @@
       <div class="prospec-table fade-in stagger-2">
         <div class="prospec-row">
           <div class="prospec-label">SIZE</div>
-          <div class="prospec-value">業務用 1kg</div>
+          <div class="prospec-value">業務用 800g</div>
         </div>
         <div class="prospec-row">
           <div class="prospec-label">USAGE</div>
@@ -4411,7 +4456,10 @@
         </div>
         <div class="prospec-row">
           <div class="prospec-label">TRAINING</div>
-          <div class="prospec-value">基礎講習(1DAY) / 技術講習(4日間〜) ご用意</div>
+          <div class="prospec-value">
+            基礎講習(1DAY) / 技術講習(4日間〜) ご用意
+            <p class="prospec-note">サロン導入の場合は、導入講習の受講が必須となります。詳細はお問い合わせください。</p>
+          </div>
         </div>
         <div class="prospec-row">
           <div class="prospec-label">CAPACITY</div>
