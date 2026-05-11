@@ -2291,7 +2291,7 @@
     ======================================== */
     .section.howto {
       padding: 120px 0;
-      background-color: var(--color-bg-light);
+      background-color: var(--color-bg);
     }
 
     .howto-header {
@@ -2372,7 +2372,7 @@
     ======================================== */
     .section.salonpain {
       padding: 120px 0;
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-light);
       text-align: center;
     }
 
@@ -2451,7 +2451,7 @@
     ======================================== */
     .section.salonritual {
       padding: 120px 0;
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-light);
     }
 
     .salonritual-header {
@@ -2509,7 +2509,7 @@
     ======================================== */
     .section.prospec {
       padding: 120px 0;
-      background-color: var(--color-bg-light);
+      background-color: var(--color-bg);
     }
 
     .prospec-header {
@@ -2572,7 +2572,7 @@
     ======================================== */
     .section.flow {
       padding: 120px 0;
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-light);
     }
 
     .flow-header {
@@ -2670,7 +2670,7 @@
     ======================================== */
     .section.faq {
       padding: 120px 0;
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-light);
     }
 
     .faq-header {
@@ -3322,75 +3322,15 @@
     /* ========================================
    VOICE (お客様の声)
 ======================================== */
-    .section.testimonials {
+    .section.voice {
       padding: 120px 0;
-      background: #080808;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section.testimonials::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      width: 520px;
-      height: 400px;
-      background: radial-gradient(ellipse at center, rgba(196, 162, 101, 0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .section.testimonials::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      right: -100px;
-      width: 520px;
-      height: 400px;
-      background: radial-gradient(ellipse at center, rgba(196, 162, 101, 0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .voice-diamond-sep {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px 0 28px;
-    }
-
-    .voice-diamond-sep::before,
-    .voice-diamond-sep::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(196, 162, 101, 0.6));
-    }
-
-    .voice-diamond-sep::after {
-      background: linear-gradient(to left, transparent, rgba(196, 162, 101, 0.6));
-    }
-
-    .voice-diamond-icon {
-      color: var(--color-gold);
-      font-size: 13px;
-      opacity: 0.8;
-    }
-
-    .voice-subtitle {
-      text-align: center;
-      font-family: var(--font-jp);
-      font-size: 14px;
-      line-height: 2;
-      color: var(--color-gray);
-      margin-bottom: 64px;
-      letter-spacing: 0.5px;
+      background: var(--color-bg-light);
     }
 
     /* ===== Voice Carousel ===== */
     .voice-carousel {
       position: relative;
+      margin-top: 56px;
     }
 
     .voice-carousel-window {
@@ -3748,15 +3688,15 @@
     }
 
     .section.ritual {
-      background: var(--color-bg-light);
+      background: var(--color-bg);
     }
 
     .section.professionals {
-      background: var(--color-bg-light);
+      background: var(--color-bg);
     }
 
     .section.founder {
-      background: var(--color-bg-light);
+      background: var(--color-bg);
     }
 
 
@@ -4176,16 +4116,10 @@
   <div class="gold-line"></div>
 
   <!-- ============ SECTION: お客様の声 ============ -->
-  <section class="section testimonials" id="testimonials">
+  <section class="section voice" id="voice">
     <div class="container">
       <p class="section-label fade-in">Voice</p>
       <h2 class="section-title-jp fade-in stagger-1">お客様の声</h2>
-
-      <div class="voice-diamond-sep fade-in stagger-2">
-        <span class="voice-diamond-icon">◇</span>
-      </div>
-
-      <p class="voice-subtitle fade-in stagger-2">実際にご体験いただいたお客様から、<br>嬉しいお声をいただいております。</p>
 
       <div class="voice-carousel fade-in stagger-2">
         <div class="voice-carousel-window">
