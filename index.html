@@ -2131,20 +2131,13 @@
       text-align: center;
     }
 
-    .ba-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
     .ba-image-wrap {
       position: relative;
       aspect-ratio: 3 / 4;
       overflow: hidden;
       background: var(--color-bg);
       border: 1px solid var(--color-border);
+      margin-bottom: 20px;
     }
 
     .ba-image-wrap img {
@@ -2152,24 +2145,6 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(20%) brightness(0.95);
-    }
-
-    .ba-image-label {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      font-family: var(--font-en);
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: var(--color-white);
-      background: rgba(0, 0, 0, 0.6);
-      padding: 4px 10px;
-      backdrop-filter: blur(4px);
-    }
-
-    .ba-image-label.after {
-      color: var(--color-gold);
-      border: 1px solid rgba(196, 162, 101, 0.5);
     }
 
     .ba-title {
@@ -3966,43 +3941,22 @@
       </div>
       <div class="ba-grid">
         <div class="ba-item fade-in stagger-2">
-          <div class="ba-images">
-            <div class="ba-image-wrap">
-              <span class="ba-image-label">BEFORE</span>
-              <img src="images/pores.JPG" alt="毛穴 Before">
-            </div>
-            <div class="ba-image-wrap">
-              <span class="ba-image-label after">AFTER</span>
-              <img src="images/pores.JPG" alt="毛穴 After">
-            </div>
+          <div class="ba-image-wrap">
+            <img src="images/pores.JPG" alt="毛穴">
           </div>
           <p class="ba-title">毛穴</p>
           <p class="ba-desc">引き締まり、なめらかな質感へ</p>
         </div>
         <div class="ba-item fade-in stagger-3">
-          <div class="ba-images">
-            <div class="ba-image-wrap">
-              <span class="ba-image-label">BEFORE</span>
-              <img src="images/troubled-skin.JPG" alt="肌荒れ Before">
-            </div>
-            <div class="ba-image-wrap">
-              <span class="ba-image-label after">AFTER</span>
-              <img src="images/troubled-skin.JPG" alt="肌荒れ After">
-            </div>
+          <div class="ba-image-wrap">
+            <img src="images/troubled-skin.JPG" alt="肌荒れ">
           </div>
           <p class="ba-title">肌荒れ</p>
           <p class="ba-desc">赤みが鎮静し、透明感のある肌へ</p>
         </div>
         <div class="ba-item fade-in stagger-4">
-          <div class="ba-images">
-            <div class="ba-image-wrap">
-              <span class="ba-image-label">BEFORE</span>
-              <img src="images/blood-flow.jpg" alt="血流 Before">
-            </div>
-            <div class="ba-image-wrap">
-              <span class="ba-image-label after">AFTER</span>
-              <img src="images/blood-flow.jpg" alt="血流 After">
-            </div>
+          <div class="ba-image-wrap">
+            <img src="images/blood-flow.jpg" alt="血流">
           </div>
           <p class="ba-title">血流</p>
           <p class="ba-desc">巡りが整い、内側から温まる</p>
