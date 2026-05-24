@@ -1647,6 +1647,7 @@
     .cta-logo {
       margin-bottom: 32px;
     }
+
     .cta-logo img {
       width: 160px;
       height: auto;
@@ -2600,7 +2601,7 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background: linear-gradient(to bottom, transparent, rgba(196,162,101,0.5) 8%, rgba(196,162,101,0.5) 92%, transparent);
+      background: linear-gradient(to bottom, transparent, rgba(196, 162, 101, 0.5) 8%, rgba(196, 162, 101, 0.5) 92%, transparent);
     }
 
     .flow-tl-item {
@@ -2612,7 +2613,7 @@
     }
 
     .flow-tl-item:not(:last-child) {
-      border-bottom: 1px solid rgba(196,162,101,0.08);
+      border-bottom: 1px solid rgba(196, 162, 101, 0.08);
     }
 
     .flow-tl-dot {
@@ -2620,7 +2621,7 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      border: 1px solid rgba(196,162,101,0.5);
+      border: 1px solid rgba(196, 162, 101, 0.5);
       background: var(--color-bg);
       display: flex;
       align-items: center;
@@ -2642,7 +2643,7 @@
       font-family: var(--font-en);
       font-size: 9px;
       letter-spacing: 2px;
-      color: rgba(196,162,101,0.5);
+      color: rgba(196, 162, 101, 0.5);
       margin-bottom: 4px;
     }
 
@@ -2656,12 +2657,32 @@
     }
 
     @media (min-width: 768px) {
-      .flow-timeline::before { left: 32px; }
-      .flow-tl-dot { width: 64px; height: 64px; font-size: 13px; }
-      .flow-tl-item { gap: 32px; padding: 32px 0; }
-      .flow-tl-content { padding-top: 18px; }
-      .flow-tl-en { font-size: 10px; }
-      .flow-tl-title { font-size: 17px; }
+      .flow-timeline::before {
+        left: 32px;
+      }
+
+      .flow-tl-dot {
+        width: 64px;
+        height: 64px;
+        font-size: 13px;
+      }
+
+      .flow-tl-item {
+        gap: 32px;
+        padding: 32px 0;
+      }
+
+      .flow-tl-content {
+        padding-top: 18px;
+      }
+
+      .flow-tl-en {
+        font-size: 10px;
+      }
+
+      .flow-tl-title {
+        font-size: 17px;
+      }
     }
 
     /* ========================================
@@ -3771,7 +3792,7 @@
   <section class="hero" id="hero">
     <!-- 背景画像レイヤー -->
     <div class="hero-image">
-      <img src="images/メインビュー.png" alt="NOIRICA メインビジュアル">
+      <img src="images/hero-main-visual.png" alt="NOIRICA メインビジュアル">
     </div>
 
     <!-- モバイル用オーバーレイ（全面暗幕） -->
@@ -3925,7 +3946,7 @@
       <p class="section-label fade-in">Digital Detox</p>
       <h2 class="section-title-jp fade-in stagger-1">現代人の、見えない疲労。</h2>
       <div class="digitaldetox-image fade-in stagger-2">
-        <img src="images/電磁波.png" alt="現代人の見えない疲労 電磁波イメージ">
+        <img src="images/detox-emf.png" alt="現代人の見えない疲労 電磁波イメージ">
       </div>
       <div class="digitaldetox-body fade-in stagger-3">
         <p>スマートフォン、パソコン、Wi-Fi——</p>
@@ -4005,7 +4026,7 @@
       <p class="section-label fade-in">BIO FLOW DATA</p>
       <h2 class="section-title-jp fade-in stagger-1">血流の変化。</h2>
       <div class="bloodvideo-wrap fade-in stagger-2">
-        <video src="images/毛細血管動画.mp4" controls playsinline autoplay muted loop preload="metadata"></video>
+        <video src="images/bloodvideo-capillary.mp4" controls playsinline autoplay muted loop preload="metadata"></video>
       </div>
       <p class="bloodvideo-caption fade-in stagger-3">施術前後の毛細血管を顕微鏡で撮影。<br>NOIRICAを使用した直後から、血流の改善が映像で確認できます。</p>
     </div>
@@ -4028,7 +4049,7 @@
           </div>
         </div>
         <div class="story-image slide-right">
-          <img src="images/S__221528108.jpg" alt="北海道・上ノ国のシリカブラック">
+          <img src="images/story-silica-black.jpg" alt="北海道・上ノ国のシリカブラック">
         </div>
       </div>
       <div class="story-thumbnails">
@@ -4296,28 +4317,28 @@
       <div class="ritual-cards">
         <!-- Card 1: Facial Ritual -->
         <div class="ritual-card fade-in stagger-2">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=600&fit=crop&q=80"
+          <img src="images/facial-treatment.png"
             alt="Facial Ritual - フェイシャルトリートメント">
           <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Facial Ritual</p>
+            <p class="ritual-card-en">Facial Treatment</p>
             <p class="ritual-card-jp">フェイシャルトリートメント</p>
           </div>
         </div>
-        <!-- Card 2: Foot Bath -->
+        <!-- Card 2: Body Treatment -->
         <div class="ritual-card fade-in stagger-4">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=600&fit=crop&q=80"
-            alt="Foot Bath - フットバス">
+          <img src="images/body-treatment.png"
+            alt="Body Treatment - ボディートリートメント">
           <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Foot Bath</p>
-            <p class="ritual-card-jp">フットバス</p>
+            <p class="ritual-card-en">Body Treatment</p>
+            <p class="ritual-card-jp">ボディートリートメント</p>
           </div>
         </div>
-        <!-- Card 3: Bath Ritual -->
+        <!-- Card 3: Bath & Spa -->
         <div class="ritual-card fade-in stagger-6">
-          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&h=600&fit=crop&q=80"
-            alt="Bath Ritual - 入浴">
+          <img src="images/bath-spa.png"
+            alt="Bath & Spa - 入浴">
           <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Bath Ritual</p>
+            <p class="ritual-card-en">Bath & Spa</p>
             <p class="ritual-card-jp">入浴</p>
           </div>
         </div>
@@ -4612,7 +4633,7 @@
     <div class="container">
       <div class="founder-grid">
         <div class="founder-image slide-left">
-          <img src="images/S__221536269.jpg" alt="戸田美咲 - NOIRICA 開発者">
+          <img src="images/story-founder.jpg" alt="戸田美咲 - NOIRICA 開発者">
         </div>
         <div class="founder-text">
           <p class="section-label fade-in">Founder's Message</p>
@@ -4687,7 +4708,9 @@
   <footer class="footer">
     <div class="container">
       <p style="margin-bottom:12px;">
-        <a href="privacy.html" style="font-family:var(--font-en);font-size:10px;letter-spacing:2px;color:var(--color-gray-dark);text-decoration:none;border-bottom:1px solid rgba(136,136,136,0.3);padding-bottom:2px;">Privacy Policy</a>
+        <a href="privacy.html"
+          style="font-family:var(--font-en);font-size:10px;letter-spacing:2px;color:var(--color-gray-dark);text-decoration:none;border-bottom:1px solid rgba(136,136,136,0.3);padding-bottom:2px;">Privacy
+          Policy</a>
       </p>
       <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
     </div>
