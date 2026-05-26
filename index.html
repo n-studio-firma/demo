@@ -9,6 +9,15 @@
   <meta property="og:title" content="NOIRICA | Silica Black Ritual Clay">
   <meta property="og:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://noirica.jp/">
+  <meta property="og:image" content="https://noirica.jp/images/hero-main-visual.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="NOIRICA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOIRICA | Silica Black Ritual Clay">
+  <meta name="twitter:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
+  <meta name="twitter:image" content="https://noirica.jp/images/hero-main-visual.png">
+  <link rel="canonical" href="https://noirica.jp/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -2170,7 +2179,7 @@
     }
 
     .ba-label--before { top: 10px; }
-    .ba-label--after-bottom { top: 50%; color: var(--color-gold); border: 1px solid rgba(196,162,101,0.5); }
+    .ba-label--after-bottom { bottom: 10px; top: auto; color: var(--color-gold); border: 1px solid rgba(196,162,101,0.5); }
     .ba-label--after-right { left: auto; right: 10px; top: 10px; color: var(--color-gold); border: 1px solid rgba(196,162,101,0.5); }
 
     .ba-title {
@@ -2710,11 +2719,26 @@
     .faq-item {
       border: 1px solid var(--color-border);
       background: var(--color-bg-lighter);
-      padding: 28px 24px;
       transition: border-color 0.4s ease;
     }
 
     .faq-item:hover {
+      border-color: rgba(196, 162, 101, 0.3);
+    }
+
+    /* details/summary アコーディオン */
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 28px 24px;
+      user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item[open] {
       border-color: rgba(196, 162, 101, 0.3);
     }
 
@@ -2726,7 +2750,9 @@
       color: var(--color-white);
       letter-spacing: 1px;
       line-height: 1.7;
-      margin-bottom: 16px;
+      margin: 0;
+      padding-right: 32px;
+      position: relative;
     }
 
     .faq-q::before {
@@ -2737,6 +2763,23 @@
       flex-shrink: 0;
     }
 
+    .faq-q::after {
+      content: '+';
+      font-family: var(--font-en);
+      font-size: 20px;
+      color: var(--color-gold);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+      line-height: 1;
+    }
+
+    .faq-item[open] .faq-q::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
     .faq-a {
       display: flex;
       align-items: flex-start;
@@ -2745,8 +2788,9 @@
       color: var(--color-text);
       letter-spacing: 1px;
       line-height: 1.9;
-      padding-top: 16px;
+      padding: 16px 24px 28px;
       border-top: 1px solid var(--color-border);
+      margin: 0;
     }
 
     .faq-a::before {
@@ -2758,8 +2802,12 @@
     }
 
     @media (min-width: 768px) {
-      .faq-item {
+      .faq-item summary {
         padding: 36px 40px;
+      }
+
+      .faq-a {
+        padding: 16px 40px 36px;
       }
 
       .faq-q {
@@ -2794,84 +2842,6 @@
 
     .contactform-link-button:hover {
       opacity: 0.8;
-    }
-
-    .contactform-row {
-      margin-bottom: 24px;
-    }
-
-    .contactform-label {
-      display: block;
-      font-family: var(--font-en);
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--color-gold);
-      margin-bottom: 8px;
-    }
-
-    .contactform-input,
-    .contactform-textarea,
-    .contactform-select {
-      width: 100%;
-      background: var(--color-bg-lighter);
-      border: 1px solid var(--color-border);
-      color: var(--color-white);
-      font-family: var(--font-jp);
-      font-size: 14px;
-      padding: 14px 16px;
-      letter-spacing: 1px;
-      transition: border-color 0.3s ease;
-    }
-
-    .contactform-input:focus,
-    .contactform-textarea:focus,
-    .contactform-select:focus {
-      outline: none;
-      border-color: var(--color-gold);
-    }
-
-    .contactform-textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .contactform-submit {
-      display: block;
-      width: 100%;
-      padding: 18px 32px;
-      background: transparent;
-      border: 1px solid var(--color-gold);
-      color: var(--color-gold);
-      font-family: var(--font-en);
-      font-size: 13px;
-      letter-spacing: 4px;
-      cursor: pointer;
-      margin-top: 24px;
-      transition: all 0.4s ease;
-    }
-
-    .contactform-submit:hover {
-      background: var(--color-gold);
-      color: var(--color-bg);
-    }
-
-    .contactform-buttons {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 32px;
-    }
-
-    @media (min-width: 768px) {
-      .contactform-row.split {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-
-      .contactform-buttons {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
     /* ========================================
@@ -3052,27 +3022,6 @@
     }
 
     /* ========================================
-   PLACEHOLDER NOTICE
-======================================== */
-    .placeholder-banner {
-      background: rgba(196, 162, 101, 0.12);
-      border: 2px dashed #C4A265;
-      color: #C4A265;
-      text-align: center;
-      padding: 12px 20px;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      margin-bottom: 40px;
-      font-family: var(--font-jp);
-    }
-
-    .placeholder-text {
-      color: #C4A265;
-      border-bottom: 1px dashed #C4A265;
-      display: inline-block;
-    }
-
-    /* ========================================
    DIGITAL DETOX
 ======================================== */
     .section.digitaldetox {
@@ -3127,54 +3076,6 @@
       font-size: 12px;
       color: var(--color-gray);
       letter-spacing: 0.05em;
-    }
-
-    /* ========================================
-   RARITY（希少性）
-======================================== */
-    .section.rarity {
-      padding: 120px 0;
-      background: var(--color-bg-light);
-    }
-
-    .rarity-content {
-      display: flex;
-      gap: 60px;
-      align-items: center;
-      margin-top: 48px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .rarity-number {
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .rarity-num {
-      font-family: var(--font-en);
-      font-size: 72px;
-      color: var(--color-gold);
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
-
-    .rarity-num span {
-      font-size: 28px;
-      color: var(--color-gray);
-    }
-
-    .rarity-num-desc {
-      font-size: 12px;
-      color: var(--color-gray);
-      margin-top: 8px;
-      letter-spacing: 0.1em;
-    }
-
-    .rarity-text {
-      max-width: 400px;
-      line-height: 2.2;
-      color: var(--color-text);
     }
 
     /* ========================================
@@ -3262,19 +3163,6 @@
       margin: 48px auto 0;
     }
 
-    .proof-image-placeholder {
-      background: var(--color-bg-lighter);
-      border: 1px dashed var(--color-border);
-      aspect-ratio: 4/3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--color-gray);
-      font-size: 13px;
-      padding: 16px;
-    }
-
     .proof-label {
       text-align: center;
       font-size: 13px;
@@ -3311,22 +3199,6 @@
       aspect-ratio: 16/9;
       object-fit: cover;
       border-radius: 2px;
-    }
-
-    .bloodvideo-placeholder {
-      background: var(--color-bg-lighter);
-      border: 1px dashed var(--color-border);
-      aspect-ratio: 16/9;
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--color-gray);
-      font-size: 14px;
-      gap: 8px;
     }
 
     .bloodvideo-caption {
@@ -3535,93 +3407,6 @@
     }
 
     /* ========================================
-   SCHOOL（スクール紹介）
-======================================== */
-    .section.school {
-      padding: 120px 0;
-      background: var(--color-bg);
-    }
-
-    .school-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 700px;
-      margin: 48px auto 0;
-    }
-
-    .school-card {
-      border: 1px solid var(--color-border);
-      padding: 40px 32px;
-      text-align: center;
-    }
-
-    .school-card-level {
-      font-family: var(--font-en);
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      color: var(--color-gold);
-      margin-bottom: 12px;
-    }
-
-    .school-card-name {
-      font-size: 18px;
-      color: var(--color-white);
-      margin-bottom: 12px;
-    }
-
-    .school-card-duration {
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
-
-    .school-card-desc {
-      font-size: 13px;
-      color: var(--color-gray);
-      line-height: 1.8;
-    }
-
-    .school-note {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 13px;
-      color: var(--color-gray);
-      letter-spacing: 0.05em;
-    }
-
-    /* ========================================
-   EVIDENCE BADGES
-======================================== */
-    .evidence-badges {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      margin-top: 48px;
-      flex-wrap: wrap;
-    }
-
-    .evidence-badge {
-      border: 1px solid var(--color-gold);
-      padding: 20px 32px;
-      text-align: center;
-      min-width: 160px;
-    }
-
-    .evidence-badge-title {
-      font-size: 11px;
-      color: var(--color-gold);
-      letter-spacing: 0.15em;
-      margin-bottom: 8px;
-    }
-
-    .evidence-badge-num {
-      font-family: var(--font-en);
-      font-size: 16px;
-      color: var(--color-white);
-      letter-spacing: 0.05em;
-    }
-
-    /* ========================================
    PRODUCT PRICE
 ======================================== */
     .product-price {
@@ -3634,23 +3419,12 @@
 
     @media (max-width: 767px) {
 
-      .proof-grid,
-      .school-grid {
+      .proof-grid {
         grid-template-columns: 1fr;
       }
 
       .voice-card {
         flex: 0 0 100%;
-      }
-
-      .rarity-content {
-        flex-direction: column;
-        gap: 32px;
-        text-align: center;
-      }
-
-      .rarity-num {
-        font-size: 52px;
       }
     }
 
@@ -3679,8 +3453,7 @@
       .concept-arrow,
       .concept-headline,
       .bloodvideo-caption,
-      .proof-desc,
-      .safetyproof-body {
+      .proof-desc {
         text-align: left;
       }
 
@@ -3721,50 +3494,73 @@
     }
 
 
-    /* ========================================
-   SAFETYPROOF（飲めるほど安全な品質証明）
-======================================== */
-    .section.safetyproof {
-      padding: 120px 0;
-      background: var(--color-bg-light);
-    }
-
-    .safetyproof-body {
-      max-width: 620px;
-      margin: 32px auto 48px;
-      text-align: center;
-      line-height: 2.2;
-      color: var(--color-text);
-    }
-
-    .safetyproof-badges {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .safetyproof-badge {
-      border: 1px solid var(--color-gold);
-      padding: 24px 36px;
-      text-align: center;
-      min-width: 180px;
-    }
-
-    .safetyproof-badge-label {
-      font-size: 11px;
-      color: var(--color-gold);
-      letter-spacing: 0.15em;
-      margin-bottom: 8px;
-    }
-
-    .safetyproof-badge-value {
-      font-family: var(--font-en);
-      font-size: 15px;
-      color: var(--color-white);
-      letter-spacing: 0.05em;
-    }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "NOIRICA",
+        "url": "https://noirica.jp/",
+        "logo": "https://noirica.jp/images/noirica-logo.png",
+        "description": "北海道・上ノ国産の希少鉱石「シリカブラック」を配合したミネラル美容ブランド"
+      },
+      {
+        "@type": "Product",
+        "name": "Silica Black Ritual Clay",
+        "brand": { "@type": "Brand", "name": "NOIRICA" },
+        "description": "北海道・上ノ国産シリカブラック配合のミネラル美容クレイ。遠赤外線放射率98%、毛穴・くすみ・巡りに。",
+        "image": "https://noirica.jp/images/hero-main-visual.png",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Home Care 100g",
+            "price": "3900",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Professional 800g",
+            "price": "22000",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "未経験でも導入できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どれくらいの量で何回使用できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "目安として、フェイシャル利用の場合、100gご自宅用で1回15g〜20gほどで5〜6回分可能、800gサロン施術の場合、約15回分が可能です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "講習はどのような内容ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "導入講習では、基本的な使用方法やメニュー化の考え方をお伝えします。技術講習では、フェイシャルやデコルテを含めた実践的な施術スキルを習得いただけます。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -3793,7 +3589,7 @@
   <section class="hero" id="hero">
     <!-- 背景画像レイヤー -->
     <div class="hero-image">
-      <img src="images/hero-main-visual.png" alt="NOIRICA メインビジュアル">
+      <img src="images/hero-main-visual.png" alt="NOIRICA メインビジュアル" fetchpriority="high" loading="eager">
     </div>
 
     <!-- モバイル用オーバーレイ（全面暗幕） -->
@@ -3952,7 +3748,8 @@
       <div class="digitaldetox-body fade-in stagger-3">
         <p>スマートフォン、パソコン、Wi-Fi——</p>
         <p>私たちの身体は、毎日見えない電磁波にさらされています。</p>
-        <p>その蓄積が、肌荒れ・自立神経の乱れ・慢性疲労の<br class="pc-only">一因になっていることに気づいていますか？</p>
+        <p>その蓄積が、肌荒れ・自律神経の乱れ・慢性疲労の<br class="pc-only">一因になっていることに気づいていますか？</p>
+        <p style="margin-top: 2em; color: var(--color-text);">NOIRICAの天然鉱石から放出される遠赤外線（放射率98%）は、<br class="pc-only">スマホ疲れで滞った身体の巡りを内側から温め直します。<br>デジタル時代だからこそ必要な、"整えるリチュアルケア"です。</p>
       </div>
     </div>
   </section>
@@ -4006,8 +3803,8 @@
       <p class="section-label fade-in">BIO FLOW DATA</p>
       <h2 class="section-title-jp fade-in stagger-1">血流の変化。</h2>
       <div class="bloodvideo-wrap fade-in stagger-2">
-        <video src="images/bloodvideo-capillary.mp4" controls playsinline autoplay muted loop
-          preload="metadata"></video>
+        <video data-src="images/bloodvideo-capillary.mp4" controls playsinline muted loop
+          preload="none"></video>
       </div>
       <p class="bloodvideo-caption fade-in stagger-3">施術前後の毛細血管を顕微鏡で撮影。<br>NOIRICAを使用した直後から、血流の改善が映像で確認できます。</p>
     </div>
@@ -4034,13 +3831,13 @@
         </div>
       </div>
       <div class="story-thumbnails">
-        <img class="fade-in stagger-1"
+        <img class="fade-in stagger-1" loading="lazy"
           src="images/story-hokkaido.jpg" alt="北海道の大自然">
-        <img class="fade-in stagger-2"
+        <img class="fade-in stagger-2" loading="lazy"
           src="images/story-mineral.jpg" alt="鉱石の表面">
-        <img class="fade-in stagger-3"
+        <img class="fade-in stagger-3" loading="lazy"
           src="images/story-nature.jpg" alt="自然の岩場">
-        <img class="fade-in stagger-4"
+        <img class="fade-in stagger-4" loading="lazy"
           src="images/story-stream.jpg" alt="清流">
       </div>
     </div>
@@ -4128,7 +3925,7 @@
 
             <!-- 1: S1 肌のトーンアップ -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
                 </svg>導入サロン</span>
@@ -4141,7 +3938,7 @@
 
             <!-- 2: U1 敏感肌でも -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4155,7 +3952,7 @@
 
             <!-- 3: S2 遠赤外線 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
                 </svg>導入サロン</span>
@@ -4168,7 +3965,7 @@
 
             <!-- 4: U2 天然温泉 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4181,7 +3978,7 @@
 
             <!-- 5: S3 デトックス -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
                 </svg>導入サロン</span>
@@ -4195,7 +3992,7 @@
 
             <!-- 6: U3 毛穴改善 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4208,7 +4005,7 @@
 
             <!-- 7: S4 高付加価値 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
                 </svg>導入サロン</span>
@@ -4221,7 +4018,7 @@
 
             <!-- 8: U4 子供のアトピー -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4234,7 +4031,7 @@
 
             <!-- 9: S5 導入コスト -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
                 </svg>導入サロン</span>
@@ -4247,7 +4044,7 @@
 
             <!-- 10: U5 日焼け後 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4261,7 +4058,7 @@
 
             <!-- 11: U6 乾燥肌 -->
             <div class="voice-card">
-              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様"></div>
+              <div class="voice-icon-circle"><img src="images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
               <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
@@ -4337,14 +4134,16 @@
       <h2 class="section-title-jp fade-in stagger-1">Silica Black Ritual Clay</h2>
       <div class="product-grid product-grid--two" style="margin-top: 48px;">
         <div class="product-item fade-in stagger-2">
-          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
+          <!-- TODO: 実際の商品写真（100g）に差し替えてください -->
+          <img src="images/story-silica-black.jpg" loading="lazy"
             alt="NOIRICA 100g ホームケア">
           <p class="product-name">Home Care</p>
           <p class="product-spec">100g</p>
           <p class="product-price">¥3,900<span class="product-price-tax">+tax</span></p>
         </div>
         <div class="product-item fade-in stagger-3">
-          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=600&fit=crop&q=80"
+          <!-- TODO: 実際の商品写真（800g）に差し替えてください -->
+          <img src="images/story-mineral.jpg" loading="lazy"
             alt="NOIRICA 800g プロフェッショナル">
           <p class="product-name">Professional</p>
           <p class="product-spec">800g</p>
@@ -4645,21 +4444,36 @@
         <h2 class="section-title-jp fade-in stagger-1">よくあるご質問</h2>
       </div>
       <div class="faq-list">
-        <div class="faq-item fade-in stagger-2">
-          <p class="faq-q">未経験でも導入できますか？</p>
-          <p class="faq-a">
-            はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。</p>
-        </div>
-        <div class="faq-item fade-in stagger-3">
-          <p class="faq-q">どれくらいの量で何回使用できますか？</p>
-          <p class="faq-a">
-            目安として、フェイシャル利用の場合、100gご自宅用で1回15g〜20gほどで5〜6回分可能、800gサロン施術の場合、約15回分が可能です。使用方法や部位によって前後しますが、フェイシャル・ボディ・フットバスなど幅広くご活用いただけます。
-          </p>
-        </div>
-        <div class="faq-item fade-in stagger-4">
-          <p class="faq-q">講習はどのような内容ですか？</p>
+        <!-- B2C向け -->
+        <details class="faq-item fade-in stagger-2">
+          <summary><p class="faq-q">敏感肌・乾燥肌でも使えますか？</p></summary>
+          <p class="faq-a">はい、使えます。NOIRICAは食品衛生法の安全基準をクリアした天然鉱石を原料としており、余分な添加物を含まない設計です。敏感肌・乾燥肌の方にもお使いいただいていますが、初回はパッチテストを行ってからご使用ください。</p>
+        </details>
+        <details class="faq-item fade-in stagger-3">
+          <summary><p class="faq-q">子供や男性でも使えますか？</p></summary>
+          <p class="faq-a">はい、年齢・性別を問わずお使いいただけます。お子様の敏感なお肌にお使いいただいているお客様の声も届いております。ただし、お子様への使用は保護者の方の判断のもとでお願いいたします。</p>
+        </details>
+        <details class="faq-item fade-in stagger-4">
+          <summary><p class="faq-q">どのくらいの頻度で使うのがおすすめですか？</p></summary>
+          <p class="faq-a">週2〜3回のご使用を目安としている方が多いです。日常のスキンケアに「整える時間」として取り入れることで、継続的な効果を実感しやすくなります。肌の状態に合わせてお試しください。</p>
+        </details>
+        <details class="faq-item fade-in stagger-5">
+          <summary><p class="faq-q">効果はいつごろから実感できますか？</p></summary>
+          <p class="faq-a">使用直後から温感・毛穴のなめらかさを感じる方が多くいらっしゃいます。継続的な変化（くすみ・巡りの改善）は、週2〜3回のご使用で2〜4週間を目安としている方が多いですが、肌質や生活習慣によって個人差があります。</p>
+        </details>
+        <!-- サロン向け -->
+        <details class="faq-item fade-in stagger-6">
+          <summary><p class="faq-q">未経験でも導入できますか？</p></summary>
+          <p class="faq-a">はい、可能です。導入時には基礎講習(1DAY)をご用意しており、未経験の方でも安心してスタートいただけます。さらに、技術をしっかり習得したい方向けに、4日間〜の技術講習コースもございます。</p>
+        </details>
+        <details class="faq-item fade-in stagger-7">
+          <summary><p class="faq-q">どれくらいの量で何回使用できますか？</p></summary>
+          <p class="faq-a">目安として、フェイシャル利用の場合、100gご自宅用で1回15g〜20gほどで5〜6回分可能、800gサロン施術の場合、約15回分が可能です。使用方法や部位によって前後しますが、フェイシャル・ボディ・フットバスなど幅広くご活用いただけます。</p>
+        </details>
+        <details class="faq-item fade-in stagger-8">
+          <summary><p class="faq-q">講習はどのような内容ですか？</p></summary>
           <p class="faq-a">導入講習では、基本的な使用方法やメニュー化の考え方をお伝えします。技術講習では、フェイシャルやデコルテを含めた実践的な施術スキルを習得いただけます。</p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -4695,7 +4509,7 @@
   </footer>
 
   <!-- ============ MOBILE FIXED CTA BAR ============ -->
-  <div class="mobile-cta-bar" id="mobileCta">
+  <div class="mobile-cta-bar dual" id="mobileCta">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
       target="_blank" rel="noopener noreferrer" class="cta-buy">お問い合わせ</a>
   </div>
@@ -4743,29 +4557,50 @@
       lastScroll = currentScroll;
     }, { passive: true });
 
-    // Counter animation for 98%
+    // Counter animation for 98% (prefers-reduced-motion 対応)
     const counterEl = document.querySelector('[data-count]');
     if (counterEl) {
-      const counterObserver = new IntersectionObserver((entries) => {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        counterEl.textContent = counterEl.getAttribute('data-count') + '%';
+      } else {
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const target = parseInt(entry.target.getAttribute('data-count'));
+              let current = 0;
+              const duration = 2000;
+              const step = target / (duration / 16);
+              const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                entry.target.textContent = Math.floor(current) + '%';
+              }, 16);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        counterObserver.observe(counterEl);
+      }
+    }
+
+    // 血流動画の遅延読み込み
+    const videoEl = document.querySelector('.bloodvideo-wrap video[data-src]');
+    if (videoEl) {
+      const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const target = parseInt(entry.target.getAttribute('data-count'));
-            let current = 0;
-            const duration = 2000;
-            const step = target / (duration / 16);
-            const timer = setInterval(() => {
-              current += step;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              entry.target.textContent = Math.floor(current) + '%';
-            }, 16);
-            counterObserver.unobserve(entry.target);
+            videoEl.src = videoEl.dataset.src;
+            videoEl.load();
+            videoEl.play().catch(() => {});
+            videoObserver.unobserve(videoEl);
           }
         });
-      }, { threshold: 0.5 });
-      counterObserver.observe(counterEl);
+      }, { rootMargin: '200px' });
+      videoObserver.observe(videoEl);
     }
 
     // Header background on scroll
@@ -4825,6 +4660,31 @@
 
       prevBtn.addEventListener('click', () => goTo(current - 1));
       nextBtn.addEventListener('click', () => goTo(current + 1));
+
+      // キーボード操作
+      const carouselWindow = document.querySelector('.voice-carousel-window');
+      if (carouselWindow) {
+        carouselWindow.setAttribute('tabindex', '0');
+        carouselWindow.setAttribute('role', 'region');
+        carouselWindow.setAttribute('aria-label', 'お客様の声');
+        carouselWindow.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+          if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+        });
+      }
+
+      // タッチスワイプ操作
+      let touchStartX = 0;
+      track.parentElement.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      track.parentElement.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) goTo(current + 1);
+          else goTo(current - 1);
+        }
+      }, { passive: true });
 
       let resizeTimer;
       window.addEventListener('resize', () => {
