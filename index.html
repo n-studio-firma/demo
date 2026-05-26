@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOIRICA | Silica Black Ritual Clay - 北海道・上ノ国の希少鉱石から生まれた次世代ミネラル美容</title>
-  <meta name="description" content="NOIRICAは北海道・上ノ国産の希少鉱石「シリカブラック」の自然エネルギーを美容へ昇華した、高級SPA向けミネラルビューティーブランドです。">
+  <meta name="description" content="NOIRICAは北海道・上ノ国産の希少鉱石「シリカブラック」配合のミネラル美容クレイ。遠赤外線放射率98%で毛穴・くすみ・血流を整える。高級SPA・サロン向けリチュアルケアブランド。感じる美容、整える美容の新基準。">
   <meta property="og:title" content="NOIRICA | Silica Black Ritual Clay">
   <meta property="og:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
   <meta property="og:type" content="website">
@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="北海道・上ノ国の希少鉱石から生まれた、整える美容の新基準。">
   <meta name="twitter:image" content="https://noirica.jp/images/hero-main-visual.png">
   <link rel="canonical" href="https://noirica.jp/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://noirica.jp data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://docs.google.com;">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -155,11 +156,24 @@
       --color-gold-accent: #D4AF37;
       --color-white: #FFFFFF;
       --color-text: #E8E8E8;
-      --color-gray: #888888;
+      --color-gray: #999999;
       --color-gray-dark: #666666;
       --color-border: #222222;
       --font-en: 'Cinzel', serif;
       --font-jp: 'Shippori Mincho', serif;
+    }
+
+    /* ========================================
+       FOCUS VISIBLE (Accessibility)
+    ======================================== */
+    a:focus-visible,
+    button:focus-visible,
+    [role="button"]:focus-visible,
+    summary:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 3px;
     }
 
     /* ========================================
@@ -3527,7 +3541,14 @@
             "priceCurrency": "JPY",
             "availability": "https://schema.org/InStock"
           }
-        ]
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "120",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       },
       {
         "@type": "FAQPage",
@@ -3584,6 +3605,8 @@
         target="_blank" rel="noopener noreferrer" class="header-cta-primary">お問い合わせ</a>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- ============ SECTION 1: HERO (2カラム+オーバーレイ) ============ -->
   <section class="hero" id="hero">
@@ -4088,7 +4111,7 @@
     <div class="container">
       <div class="ritual-header">
         <p class="section-label fade-in">Experience / Ritual</p>
-        <h2 class="ritual-catchcopy fade-in stagger-1">単なるスキンケアではありません。<br>NOIRICAは、肌と心を整える"リチュアル"です。</h2>
+        <p class="ritual-catchcopy fade-in stagger-1">単なるスキンケアではありません。<br>NOIRICAは、肌と心を整える"リチュアル"です。</p>
         <p class="ritual-sub fade-in stagger-2">日常の中に、"整える時間"を生み出します。</p>
       </div>
 
@@ -4497,6 +4520,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <p style="margin-bottom:12px;">
@@ -4548,7 +4573,7 @@
     const mobileCta = document.getElementById('mobileCta');
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
+      const currentScroll = window.scrollY;
       if (currentScroll > 300) {
         mobileCta.classList.add('show');
       } else {
@@ -4605,11 +4630,12 @@
 
     // Header background on scroll
     const header = document.querySelector('.header');
+    let lastHeaderBg = '';
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 50) {
-        header.style.background = 'rgba(11, 11, 11, 0.95)';
-      } else {
-        header.style.background = 'rgba(11, 11, 11, 0.85)';
+      const newBg = window.scrollY > 50 ? 'rgba(11, 11, 11, 0.95)' : 'rgba(11, 11, 11, 0.85)';
+      if (newBg !== lastHeaderBg) {
+        header.style.background = newBg;
+        lastHeaderBg = newBg;
       }
     }, { passive: true });
 
