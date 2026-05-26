@@ -2146,6 +2146,39 @@
       filter: grayscale(20%) brightness(0.95);
     }
 
+    .ba-image-wrap--fixed {
+      aspect-ratio: 1 / 1;
+    }
+
+    .ba-image-wrap--fixed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ba-label {
+      position: absolute;
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      background: rgba(0,0,0,0.55);
+      padding: 4px 10px;
+      backdrop-filter: blur(4px);
+      z-index: 2;
+      left: 10px;
+    }
+
+    .ba-label--before { top: 10px; }
+    .ba-label--after-bottom { top: 50%; }
+    .ba-label--after-right {
+      left: auto;
+      right: 10px;
+      top: 10px;
+      color: var(--color-gold);
+      border: 1px solid rgba(196,162,101,0.5);
+    }
+
     .ba-title {
       font-family: var(--font-jp);
       font-size: 16px;
@@ -3941,6 +3974,8 @@
       <div class="ba-grid">
         <div class="ba-item fade-in stagger-2">
           <div class="ba-image-wrap">
+            <span class="ba-label ba-label--before">BEFORE</span>
+            <span class="ba-label ba-label--after-bottom">AFTER</span>
             <img src="images/pores.JPG" alt="毛穴">
           </div>
           <p class="ba-title">毛穴</p>
@@ -3948,13 +3983,17 @@
         </div>
         <div class="ba-item fade-in stagger-3">
           <div class="ba-image-wrap">
+            <span class="ba-label ba-label--before">BEFORE</span>
+            <span class="ba-label ba-label--after-bottom">AFTER</span>
             <img src="images/troubled-skin.JPG" alt="肌荒れ">
           </div>
           <p class="ba-title">肌荒れ</p>
           <p class="ba-desc">赤みが鎮静し、透明感のある肌へ</p>
         </div>
         <div class="ba-item fade-in stagger-4">
-          <div class="ba-image-wrap">
+          <div class="ba-image-wrap ba-image-wrap--fixed">
+            <span class="ba-label ba-label--before">BEFORE</span>
+            <span class="ba-label ba-label--after-right">AFTER</span>
             <img src="images/blood-flow.jpg" alt="血流">
           </div>
           <p class="ba-title">血流</p>
