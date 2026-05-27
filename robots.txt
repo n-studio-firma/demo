@@ -3,4 +3,4 @@ Allow: /
 Disallow: /_docs/
 Disallow: /_assets/
 
-Sitemap: https://noirica.jp/sitemap.xml
+Sitemap: https://noirica.com/sitemap.xml

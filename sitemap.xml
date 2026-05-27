@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://noirica.jp/ja/</loc>
+    <loc>https://noirica.com/ja/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://noirica.jp/ja/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://noirica.jp/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noirica.jp/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://noirica.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://noirica.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://noirica.com/"/>
   </url>
   <url>
-    <loc>https://noirica.jp/en/</loc>
+    <loc>https://noirica.com/en/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://noirica.jp/ja/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://noirica.jp/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noirica.jp/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://noirica.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://noirica.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://noirica.com/"/>
   </url>
   <url>
-    <loc>https://noirica.jp/ja/privacy.html</loc>
+    <loc>https://noirica.com/ja/privacy.html</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://noirica.jp/en/privacy.html</loc>
+    <loc>https://noirica.com/en/privacy.html</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
