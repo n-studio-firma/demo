@@ -10,16 +10,17 @@
   <link rel="alternate" hreflang="x-default" href="https://noirica.jp/">
   <script>
     (function () {
+      var base = location.href.replace(/[^/]*$/, '');
       var lang = (navigator.language || navigator.userLanguage || 'ja').toLowerCase();
       if (lang.startsWith('ja')) {
-        location.replace('/ja/');
+        location.replace(base + 'ja/');
       } else {
-        location.replace('/en/');
+        location.replace(base + 'en/');
       }
     })();
   </script>
   <noscript>
-    <meta http-equiv="refresh" content="0; url=/ja/">
+    <meta http-equiv="refresh" content="0; url=ja/">
   </noscript>
   <style>
     body {
@@ -49,8 +50,8 @@
 </head>
 <body>
   <div class="redirect-links">
-    <a href="/ja/">日本語</a>
-    <a href="/en/">English</a>
+    <a href="ja/">日本語</a>
+    <a href="en/">English</a>
   </div>
 </body>
 </html>
