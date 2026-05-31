@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRICA モバイルヒーロー プレビュー 3案</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #0B0B0B;
+      --color-gold: #C4A265;
+      --color-white: #F5F0E8;
+      --color-text: #C8BBA8;
+      --color-gray: #999999;
+      --font-en: 'Cinzel', serif;
+      --font-jp: 'Noto Sans JP', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111;
+      padding: 48px 24px 80px;
+      font-family: var(--font-jp);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+    }
+
+    h1.page-title {
+      color: var(--color-gold);
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 4px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .plans {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .plan-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .plan-label {
+      color: var(--color-gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      font-family: var(--font-en);
+      font-weight: 400;
+    }
+
+    .plan-desc {
+      color: var(--color-gray);
+      font-size: 11px;
+      letter-spacing: 1px;
+      line-height: 1.7;
+      text-align: center;
+      max-width: 375px;
+    }
+
+    /* ── 共通フレーム ─────────────────────── */
+    .phone {
+      width: 375px;
+      height: 720px;
+      overflow: hidden;
+      border: 1.5px solid #333;
+      border-radius: 40px;
+      position: relative;
+      background: var(--color-bg);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+    }
+
+    /* ── 共通ヒーロー要素 ─────────────────── */
+    .hero-logo {
+      font-family: var(--font-en);
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: 7px;
+      color: var(--color-gold);
+      margin-bottom: 18px;
+      line-height: 1;
+    }
+    .hero-logo::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 1px;
+      margin-top: 20px;
+      background: var(--color-gold);
+    }
+    .hero-product-name {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero-main-copy {
+      font-family: var(--font-jp);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.85;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 22px;
+    }
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--color-gold);
+      margin-bottom: 20px;
+    }
+    .hero-sub-copy {
+      font-family: var(--font-jp);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.9;
+      letter-spacing: 1.5px;
+      color: var(--color-text);
+    }
+
+    /* ════════════════════════════════════════
+       案A — テキスト上 / 画像下
+    ════════════════════════════════════════ */
+    .plan-a .hero {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-a .hero-content {
+      background: var(--color-bg);
+      padding: 40px 28px 28px;
+      flex-shrink: 0;
+    }
+
+    .plan-a .hero-image {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .plan-a .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    /* ════════════════════════════════════════
+       案B — 全面画像 + 薄オーバーレイ
+    ════════════════════════════════════════ */
+    .plan-b .hero {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-b .hero-image {
+      position: absolute;
+      inset: 0;
+    }
+
+    .plan-b .hero-image img {
+      width: 135%;
+      height: auto;
+      position: absolute;
+      top: -180px;
+      left: -17.5%;
+    }
+
+    .plan-b .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(5,5,5,0.10) 0%,
+          rgba(5,5,5,0.05) 35%,
+          rgba(5,5,5,0.60) 68%,
+          rgba(5,5,5,0.92) 100%);
+      z-index: 2;
+    }
+
+    .plan-b .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 0 28px 32px;
+    }
+
+    .plan-b .hero-logo {
+      font-size: 30px;
+      letter-spacing: 6px;
+      margin-bottom: 12px;
+    }
+
+    .plan-b .hero-logo::after {
+      margin-top: 14px;
+    }
+
+    .plan-b .hero-product-name {
+      margin-bottom: 16px;
+    }
+
+    .plan-b .hero-main-copy {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    .plan-b .hero-divider {
+      margin-bottom: 12px;
+    }
+
+    /* ════════════════════════════════════════
+       案C — 画像上 / テキストブロック下
+    ════════════════════════════════════════ */
+    .plan-c .hero {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-c .hero-image {
+      width: 100%;
+      height: 260px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .plan-c .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .plan-c .hero-content {
+      flex: 1;
+      background: var(--color-bg);
+      padding: 32px 28px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">MOBILE HERO — 3 PROPOSALS</h1>
+
+  <div class="plans">
+
+    <!-- 案A -->
+    <div class="plan-wrapper">
+      <p class="plan-label">PLAN A</p>
+      <div class="phone plan-a">
+        <div class="hero">
+          <div class="hero-content">
+            <h1 class="hero-logo">NOIRICA</h1>
+            <p class="hero-product-name">Silica Black Ritual Clay</p>
+            <p class="hero-main-copy">北海道産シリカブラック配合<br>"整える美容"の新習慣</p>
+            <div class="hero-divider"></div>
+            <p class="hero-sub-copy">毛穴・くすみ・巡りに<br>塗るだけ10分のリチュアルケア</p>
+          </div>
+          <div class="hero-image">
+            <img src="../images/hero-main-visual-mb.png" alt="NOIRICA">
+          </div>
+        </div>
+      </div>
+      <p class="plan-desc">テキスト上・画像下の分割<br>画像はオーバーレイなしでフルで表示</p>
+    </div>
+
+    <!-- 案B -->
+    <div class="plan-wrapper">
+      <p class="plan-label">PLAN B</p>
+      <div class="phone plan-b">
+        <div class="hero">
+          <div class="hero-image">
+            <img src="../images/hero-main-visual-mb.png" alt="NOIRICA">
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-logo">NOIRICA</h1>
+            <p class="hero-product-name">Silica Black Ritual Clay</p>
+            <p class="hero-main-copy">北海道産シリカブラック配合<br>"整える美容"の新習慣</p>
+            <div class="hero-divider"></div>
+            <p class="hero-sub-copy">毛穴・くすみ・巡りに<br>塗るだけ10分のリチュアルケア</p>
+          </div>
+        </div>
+      </div>
+      <p class="plan-desc">現状の全面画像構成を維持<br>オーバーレイを大幅に軽く・テキストを下寄せ</p>
+    </div>
+
+    <!-- 案C -->
+    <div class="plan-wrapper">
+      <p class="plan-label">PLAN C</p>
+      <div class="phone plan-c">
+        <div class="hero">
+          <div class="hero-image">
+            <img src="../images/hero-main-visual-mb.png" alt="NOIRICA">
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-logo">NOIRICA</h1>
+            <p class="hero-product-name">Silica Black Ritual Clay</p>
+            <p class="hero-main-copy">北海道産シリカブラック配合<br>"整える美容"の新習慣</p>
+            <div class="hero-divider"></div>
+            <p class="hero-sub-copy">毛穴・くすみ・巡りに<br>塗るだけ10分のリチュアルケア</p>
+          </div>
+        </div>
+      </div>
+      <p class="plan-desc">画像上・テキスト下の分割<br>画像はオーバーレイなし・テキストは黒背景で明確</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
