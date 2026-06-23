@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://noirica.com/en/">
   <meta property="og:image" content="https://noirica.com/images/hero-main-visual.png">
-  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="NOIRICA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NOIRICA | Silica Black Ritual Clay">
@@ -997,9 +997,9 @@
       stroke-width: 1.5;
     }
 
-    .why-number {
+    .why-value {
       font-family: var(--font-en);
-      font-size: 36px;
+      font-size: 39px;
       font-weight: 400;
       color: var(--color-white);
       letter-spacing: 2px;
@@ -1007,7 +1007,7 @@
       transition: text-shadow 0.3s ease;
     }
 
-    .why-col:hover .why-number {
+    .why-col:hover .why-value {
       text-shadow: 0 0 20px rgba(196, 162, 101, 0.5);
     }
 
@@ -1098,22 +1098,30 @@
 
     @media (min-width: 768px) {
       .why-circle {
-        width: 240px;
-        height: 240px;
-        gap: 12px;
+        width: 380px;
+        height: 380px;
+        gap: 16px;
       }
 
       .why-circle:not(:first-child) {
-        margin-left: -56px;
+        margin-left: -90px;
+      }
+
+      .why-circle:first-child {
+        left: -43px;
+      }
+
+      .why-circle:last-child {
+        left: 43px;
       }
 
       .why-circle-label {
-        font-size: 14px;
+        font-size: 60px;
         letter-spacing: 4px;
       }
 
       .why-circle-text {
-        font-size: 13px;
+        font-size: 16px;
       }
     }
 
@@ -1142,8 +1150,8 @@
         height: 70px;
       }
 
-      .why-number {
-        font-size: 48px;
+      .why-value {
+        font-size: 39px;
       }
 
       .why-keyword {
@@ -1174,8 +1182,8 @@
         height: 30px;
       }
 
-      .why-number {
-        font-size: 56px;
+      .why-value {
+        font-size: 39px;
       }
 
       .why-keyword {
@@ -1702,7 +1710,7 @@
 
     .cta-heading {
       font-family: var(--font-jp);
-      font-size: 20px;
+      font-size: 70px;
       font-weight: 300;
       letter-spacing: 0.1em;
       color: var(--color-white);
@@ -2315,7 +2323,7 @@
     }
 
     .evidence-desc {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 1.9;
       color: var(--color-gray);
       letter-spacing: 1px;
@@ -2421,37 +2429,76 @@
       background-color: var(--color-bg-light);
       text-align: center;
     }
+    /* ── Solution Bridge ── */
+    .solution-bridge {
+      background: var(--color-bg-light);
+      padding: 0;
+      line-height: 0;
+      text-align: center;
+    }
+
+    .solution-bridge::after {
+      content: '▼';
+      display: block;
+      font-size: 70px;
+      color: var(--color-gold);
+      opacity: 0.6;
+    }
+
 
     .salonpain-list {
-      max-width: 700px;
       margin: 56px auto 0;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      counter-reset: pain-counter;
     }
 
     .salonpain-item {
-      border-left: 2px solid rgba(196, 162, 101, 0.4);
-      padding: 20px 24px;
-      text-align: left;
-      font-size: 15px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.9;
       color: var(--color-text);
-      background: var(--color-bg-lighter);
       letter-spacing: 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .salonpain-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-gold);
+      box-shadow: 0 10px 30px rgba(196, 162, 101, 0.1);
+    }
+
+    .salonpain-item {
+      counter-increment: pain-counter;
     }
 
     .salonpain-item::before {
-      content: '"';
+      content: counter(pain-counter, decimal-leading-zero);
       font-family: var(--font-en);
       color: var(--color-gold);
-      font-size: 24px;
-      margin-right: 8px;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1;
+      margin-bottom: 24px;
+      display: block;
     }
 
     @media (min-width: 768px) {
+      .salonpain-list {
+        flex-direction: row;
+      }
       .salonpain-item {
-        font-size: 17px;
-        padding: 24px 32px;
+        flex: 1;
+        font-size: 16px;
+        padding: 44px 28px;
       }
     }
 
@@ -2522,7 +2569,7 @@
 
     .salonritual-card-en {
       font-family: var(--font-en);
-      font-size: 16px;
+      font-size: 30px;
       letter-spacing: 4px;
       color: var(--color-gold);
       margin-bottom: 8px;
@@ -2530,14 +2577,14 @@
 
     .salonritual-card-jp {
       font-family: var(--font-jp);
-      font-size: 14px;
+      font-size: 19px;
       color: var(--color-white);
       letter-spacing: 2px;
       margin-bottom: 20px;
     }
 
     .salonritual-card-desc {
-      font-size: 13px;
+      font-size: 16px;
       line-height: 1.9;
       color: var(--color-gray);
       letter-spacing: 1px;
@@ -2802,7 +2849,7 @@
     .faq-q::after {
       content: '+';
       font-family: var(--font-en);
-      font-size: 20px;
+      font-size: 70px;
       color: var(--color-gold);
       position: absolute;
       right: 0;
@@ -3007,33 +3054,70 @@
        LANGUAGE SWITCHER
     ======================================== */
     .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      font-family: var(--font-en);
-      font-size: 11px;
-      letter-spacing: 1.5px;
+      position: relative;
     }
 
-    .lang-switcher a,
-    .lang-switcher span {
+    .lang-current {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 2px;
+    }
+
+    .lang-globe {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .lang-caret {
+      width: 9px;
+      height: 9px;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .lang-switcher.open .lang-caret {
+      transform: rotate(180deg);
+    }
+
+    .lang-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      background: rgba(15, 15, 15, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(196, 162, 101, 0.2);
+      min-width: 72px;
+      z-index: 200;
+    }
+
+    .lang-switcher.open .lang-dropdown {
+      display: block;
+    }
+
+    .lang-dropdown a {
+      display: block;
+      padding: 12px 16px;
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
       color: var(--color-gray);
       text-decoration: none;
-      padding: 4px 6px;
       transition: color 0.2s ease;
     }
 
-    .lang-switcher a:hover {
+    .lang-dropdown a:hover {
       color: var(--color-gold);
-    }
-
-    .lang-switcher .lang-active {
-      color: var(--color-gold);
-      pointer-events: none;
-    }
-
-    .lang-switcher .lang-divider {
-      color: var(--color-border);
     }
 
     /* ========================================
@@ -3559,12 +3643,178 @@
       background: var(--color-bg);
     }
 
+    /* ========================================
+       SECTION: COMPANY
+    ======================================== */
+    .section.company {
+      background: var(--color-bg-light);
+      padding: 120px 0;
+    }
+
+    .company-table {
+      max-width: 720px;
+      margin: 56px auto 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .company-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px 16px;
+    }
+
+    .company-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      align-self: start;
+      padding-top: 2px;
+    }
+
+    .company-value {
+      font-size: 14px;
+      color: var(--color-text);
+      letter-spacing: 1px;
+      line-height: 1.9;
+    }
+
+    @media (min-width: 768px) {
+      .company-row { padding: 28px 24px; }
+      .company-label { font-size: 12px; }
+      .company-value { font-size: 15px; }
+    }
+
     .section.founder {
       background: var(--color-bg);
     }
 
 
-  </style>
+  
+    /* ========================================
+       HEADER NAV LINKS (desktop)
+    ======================================== */
+    .header-nav-links {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .header-nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .header-nav-links a {
+        font-size: 13px;
+      }
+    }
+
+    .header-nav-links {
+      margin-right: 8px;
+    }
+
+    .header-nav-links a {
+      font-family: var(--font-en);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--color-gray);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-nav-links a:hover {
+      color: var(--color-gold);
+    }
+
+    /* ========================================
+       HAMBURGER BUTTON
+    ======================================== */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--color-gold);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    @media (min-width: 768px) {
+      .hamburger { display: none; }
+    }
+
+    /* ========================================
+       MOBILE MENU
+    ======================================== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      z-index: 98;
+      background: rgba(11, 11, 11, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(196, 162, 101, 0.15);
+      padding: 8px 24px 32px;
+      flex-direction: column;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu-link {
+      font-family: var(--font-en);
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--color-gray);
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: color 0.2s ease;
+      text-decoration: none;
+    }
+
+    .mobile-menu-link:hover {
+      color: var(--color-gold);
+    }
+
+    .mobile-menu-cta {
+      margin-top: 24px;
+      text-align: center;
+      align-self: center;
+    }
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -3657,15 +3907,38 @@
       <img src="../images/noirica-logo.png" alt="NOIRICA">
     </a>
     <div class="header-nav">
-      <nav class="lang-switcher" aria-label="Language switcher">
-        <a href="../ja/">JP</a>
-        <span class="lang-divider">|</span>
-        <span class="lang-active">EN</span>
+      <nav class="header-nav-links" aria-label="Main navigation">
+        <a href="#concept">Concept</a>
+        <a href="#beforeafter">Results</a>
+        <a href="#product">Product</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
         target="_blank" rel="noopener noreferrer" class="header-cta-primary">Inquire Now</a>
+      <div class="lang-switcher">
+        <button class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Language switcher">
+          <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>EN</span>
+          <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <a href="../ja/">JP</a>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#concept" class="mobile-menu-link">Concept</a>
+    <a href="#beforeafter" class="mobile-menu-link">Results</a>
+    <a href="#product" class="mobile-menu-link">Product</a>
+    <a href="#faq" class="mobile-menu-link">FAQ</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="header-cta-primary mobile-menu-cta">Inquire Now</a>
+  </div>
 
   <main id="main-content">
 
@@ -3703,26 +3976,138 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: EMPATHY (共感) ============ -->
-  <section class="section empathy" id="empathy">
+<!-- ============ SECTION: CONCEPT (マイナス美容) ============ -->
+  <section class="section concept" id="concept">
     <div class="container">
-      <p class="section-label fade-in empathy-label">Your Concerns</p>
-      <div class="empathy-grid">
-        <div class="empathy-item fade-in stagger-1">Enlarged Pores</div>
-        <div class="empathy-item fade-in stagger-2">Dullness</div>
-        <div class="empathy-item fade-in stagger-3">Sensitive Skin</div>
-        <div class="empathy-item fade-in stagger-4">Skincare Confusion</div>
-      </div>
-      <p class="empathy-catch fade-in stagger-5">
-        It might be...<br class="sp-only"><strong>"over-layering your skincare."</strong>
+      <p class="section-label fade-in">Concept</p>
+      <p class="concept-arrow fade-in stagger-1">— MINUS BEAUTY —</p>
+      <h2 class="concept-headline fade-in stagger-2">
+        From adding more,<br class="sp-only">to <strong>rebalancing</strong>.
+      </h2>
+      <div class="concept-divider fade-in stagger-3"></div>
+      <p class="concept-body fade-in stagger-4">
+        Remove the excess.<br class="sp-only">
+        Reveal your skin's natural strength.
+      </p>
+      <p class="concept-body fade-in stagger-5">
+        NOIRICA proposes a new beauty ritual —<br class="sp-only">
+        one that starts with subtraction.
       </p>
     </div>
   </section>
 
   <div class="gold-line"></div>
+
+<!-- ============ SECTION 4-5: RITUAL ============ -->
+  <section class="section ritual" id="ritual">
+    <div class="container">
+      <div class="ritual-header">
+        <p class="section-label fade-in">Experience / Ritual</p>
+        <p class="ritual-catchcopy fade-in stagger-1">More than skincare.<br>NOIRICA is a ritual to rebalance skin and spirit.</p>
+        <p class="ritual-sub fade-in stagger-2">Bringing a moment of rebalancing into everyday life.</p>
+      </div>
+
+      <div class="ritual-cards">
+        <!-- Card 1: Facial Ritual -->
+        <div class="ritual-card fade-in stagger-2">
+          <img src="../images/facial-treatment.png" alt="Facial Ritual">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Facial Treatment</p>
+            <p class="ritual-card-jp">Facial Treatment</p>
+          </div>
+        </div>
+        <!-- Card 2: Body Treatment -->
+        <div class="ritual-card fade-in stagger-4">
+          <img src="../images/body-treatment.png" alt="Body Treatment">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Body Treatment</p>
+            <p class="ritual-card-jp">Body Treatment</p>
+          </div>
+        </div>
+        <!-- Card 3: Bath & Spa -->
+        <div class="ritual-card fade-in stagger-6">
+          <img src="../images/bath-spa.png" alt="Bath &amp; Spa">
+          <div class="ritual-card-overlay">
+            <p class="ritual-card-en">Bath & Spa</p>
+            <p class="ritual-card-jp">Bath &amp; Spa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ritual-texture fade-in">
+        <p>The moment it touches your skin — gentle warmth, perfect adhesion.<br>After treatment: clarity, smoothness, and firmness.<br>A refined texture designed for professional salon use.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION 3: WHY NOIRICA ============ -->
+<!-- ============ SECTION: DIFFERENCE (差別化) ============ -->
+  <section class="section difference" id="difference">
+    <div class="container">
+      <div class="difference-header">
+        <p class="section-label fade-in">Unique Position</p>
+        <h2 class="section-title-jp fade-in stagger-1">What Sets NOIRICA Apart</h2>
+      </div>
+      <div class="difference-comparison">
+        <div class="difference-card fade-in stagger-2">
+          <p class="difference-card-label">GENERAL CLAY</p>
+          <p class="difference-card-title">Ordinary Clay</p>
+          <ul class="difference-card-list">
+            <li>Focuses on absorbing impurities</li>
+            <li>Single function</li>
+            <li>Surface-level approach</li>
+          </ul>
+        </div>
+        <div class="difference-card highlight fade-in stagger-3">
+          <p class="difference-card-label">NOIRICA</p>
+          <p class="difference-card-title">Exclusive Silica Black Formula</p>
+          <ul class="difference-card-list">
+            <li>Rare natural mineral from Kaminokuni, Hokkaido</li>
+            <li>Emits far-infrared radiation at room temperature</li>
+            <li>Circulation, warmth &amp; detox — simultaneously</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION 2: BRAND STORY ============ -->
+  <section class="section story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="section-label fade-in">Origin Story</p>
+          <h2 class="section-title-jp fade-in stagger-1">Hokkaido, Kaminokuni —<br>Silica Black,<br>Born Over Hundreds of Millions of Years</h2>
+          <div class="story-body">
+            <p class="fade-in stagger-2">Kaminokuni, Hokkaido.</p>
+            <p class="fade-in stagger-3">A mineral formed over hundreds of millions of years — extraordinarily rare, found nowhere else on Earth.</p>
+            <p class="fade-in stagger-4">Charged with the energy of nature, this land has long been regarded as a place of singular power.</p>
+            <p class="fade-in stagger-5">NOIRICA harnesses this rare Japanese-origin material, reimagined for modern beauty.</p>
+          </div>
+        </div>
+        <div class="story-image slide-right">
+          <img src="../images/story-silica-black.jpg" alt="Silica Black from Kaminokuni, Hokkaido">
+        </div>
+      </div>
+      <div class="story-thumbnails">
+        <img class="fade-in stagger-1" loading="lazy"
+          src="../images/story-hokkaido.jpg" alt="Nature of Hokkaido">
+        <img class="fade-in stagger-2" loading="lazy"
+          src="../images/story-mineral.jpg" alt="Mineral surface">
+        <img class="fade-in stagger-3" loading="lazy"
+          src="../images/story-nature.jpg" alt="Natural rock formation">
+        <img class="fade-in stagger-4" loading="lazy"
+          src="../images/story-stream.jpg" alt="Clear stream">
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION 3: WHY NOIRICA ============ -->
   <section class="section why" id="why">
     <div class="container">
       <p class="section-label fade-in">Why NOIRICA</p>
@@ -3745,9 +4130,9 @@
               <path d="M19.07 4.93l-1.41 1.41" />
             </svg>
           </div>
-          <div class="why-number" data-count="98">98%</div>
+          <div class="why-value">98%</div>
           <p class="why-keyword">Far-Infrared Rate</p>
-          <p class="why-desc">天然鉱石による<br>98%のFar-Infrared Rateで、<br>身体の芯から温めます</p>
+          <p class="why-desc">High far-infrared emissivity<br>from natural minerals —<br>warms your body from within.</p>
         </div>
         <!-- Column 2: 循環 -->
         <div class="why-col fade-in stagger-5">
@@ -3757,7 +4142,7 @@
               <path d="M21 3v6h-6" />
             </svg>
           </div>
-          <div class="why-number">Flow</div>
+          <div class="why-value">Flow</div>
           <p class="why-keyword">Nature's Circulation</p>
           <p class="why-desc">Black silica mineral energy<br>supports skin &amp; body circulation</p>
         </div>
@@ -3768,7 +4153,7 @@
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01z" />
             </svg>
           </div>
-          <div class="why-number">Unique</div>
+          <div class="why-value">Unique</div>
           <p class="why-keyword">World's Only Source</p>
           <p class="why-desc">Found only in Kaminokuni,<br>Hokkaido — rare beyond<br>anywhere else on Earth</p>
         </div>
@@ -3799,48 +4184,53 @@
     </div>
   </section>
 
-  <!-- ============ SECTION: CONCEPT (マイナス美容) ============ -->
-  <section class="section concept" id="concept">
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION: SALON PAIN (サロンの悩み) ============ -->
+  <section class="section salonpain" id="salonpain">
     <div class="container">
-      <p class="section-label fade-in">Concept</p>
-      <p class="concept-arrow fade-in stagger-1">— MINUS BEAUTY —</p>
-      <h2 class="concept-headline fade-in stagger-2">
-        From adding more,<br class="sp-only">to <strong>rebalancing</strong>.
-      </h2>
-      <div class="concept-divider fade-in stagger-3"></div>
-      <p class="concept-body fade-in stagger-4">
-        Remove the excess.<br class="sp-only">
-        Reveal your skin's natural strength.
-      </p>
-      <p class="concept-body fade-in stagger-5">
-        NOIRICA proposes a new beauty ritual —<br class="sp-only">
-        one that starts with subtraction.
-      </p>
+      <p class="section-label fade-in">Your Pain</p>
+      <h2 class="section-title-jp fade-in stagger-1">Sound familiar?</h2>
+      <div class="salonpain-list">
+        <div class="salonpain-item fade-in stagger-2">Looking to create premium menus but struggling to find a differentiating technique</div>
+            <div class="salonpain-item fade-in stagger-3">Ready to move beyond machine dependency — and build a salon where technique itself is the value.</div>
+        <div class="salonpain-item fade-in stagger-4">Repeat bookings aren't growing, and new client acquisition is constant</div>
+      </div>
+    </div>
+  </section>
+
+<div class="solution-bridge"></div>
+
+  <!-- ============ SECTION: SALON RITUAL (メニュー展開) ============ -->
+  <section class="section salonritual" id="salonritual">
+    <div class="container">
+      <div class="salonritual-header">
+        <p class="section-label fade-in">Ritual Menu</p>
+        <h2 class="section-title-jp fade-in stagger-1">3 Menu Applications</h2>
+      </div>
+      <div class="salonritual-grid">
+        <div class="salonritual-card fade-in stagger-2">
+          <p class="salonritual-card-en">Facial</p>
+          <p class="salonritual-card-jp">Facial Menu</p>
+          <p class="salonritual-card-desc">Full facial &amp; décolleté<br>treatment. Directly lifts<br>treatment ticket value.</p>
+        </div>
+        <div class="salonritual-card fade-in stagger-3">
+          <p class="salonritual-card-en">Body</p>
+          <p class="salonritual-card-jp">Body Menu</p>
+          <p class="salonritual-card-desc">Back, abdomen, legs and more.<br>Versatile treatment<br>for the whole body.</p>
+        </div>
+        <div class="salonritual-card fade-in stagger-4">
+          <p class="salonritual-card-en">Bath</p>
+          <p class="salonritual-card-jp">Foot Bath</p>
+          <p class="salonritual-card-desc">As a bath or foot bath add-on.<br>Extends visit time<br>and elevates satisfaction.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: DIGITAL DETOX ============ -->
-  <section class="section digitaldetox" id="digitaldetox">
-    <div class="container">
-      <p class="section-label fade-in">Digital Detox</p>
-      <h2 class="section-title-jp fade-in stagger-1">The Invisible Fatigue of Modern Life.</h2>
-      <div class="digitaldetox-image fade-in stagger-2">
-        <img src="../images/detox-emf.png" alt="The invisible fatigue of modern life — electromagnetic exposure">
-      </div>
-      <div class="digitaldetox-body fade-in stagger-3">
-        <p>Smartphones, computers, Wi-Fi —</p>
-        <p>Our bodies are exposed to invisible electromagnetic radiation every day.</p>
-        <p>Have you considered that this accumulation may be contributing to skin sensitivity,<br class="pc-only">autonomic imbalance, and chronic fatigue?</p>
-        <p style="margin-top: 2em; color: var(--color-text);">The far-infrared rays (98% emissivity) from NOIRICA's natural minerals rewarm and restore<br class="pc-only">circulation slowed by constant screen exposure — from the inside out.<br>In the digital age, a realigning ritual care is exactly what your body needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: BEFORE / AFTER ============ -->
+<!-- ============ SECTION: BEFORE / AFTER ============ -->
   <section class="section beforeafter" id="beforeafter">
     <div class="container">
       <div class="ba-header">
@@ -3881,444 +4271,10 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: 血液改善動画 ============ -->
-  <section class="section bloodvideo" id="bloodvideo">
-    <div class="container">
-      <p class="section-label fade-in">BIO FLOW DATA</p>
-      <h2 class="section-title-jp fade-in stagger-1">Blood Flow, Visualized.</h2>
-      <div class="bloodvideo-wrap fade-in stagger-2">
-        <video data-src="../images/bloodvideo-capillary.mp4" controls playsinline muted loop
-          preload="none"></video>
-      </div>
-      <p class="bloodvideo-caption fade-in stagger-3">Capillaries filmed under microscope before and after treatment.<br>Improvement in blood flow is visible immediately after using NOIRICA.</p>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION 2: BRAND STORY ============ -->
-  <section class="section story" id="story">
-    <div class="container">
-      <div class="story-grid">
-        <div class="story-text">
-          <p class="section-label fade-in">Origin Story</p>
-          <h2 class="section-title-jp fade-in stagger-1">Hokkaido, Kaminokuni —<br>Silica Black,<br>Born Over Hundreds of Millions of Years</h2>
-          <div class="story-body">
-            <p class="fade-in stagger-2">Kaminokuni, Hokkaido.</p>
-            <p class="fade-in stagger-3">A mineral formed over hundreds of millions of years — extraordinarily rare, found nowhere else on Earth.</p>
-            <p class="fade-in stagger-4">Charged with the energy of nature, this land has long been regarded as a place of singular power.</p>
-            <p class="fade-in stagger-5">NOIRICA harnesses this rare Japanese-origin material, reimagined for modern beauty.</p>
-          </div>
-        </div>
-        <div class="story-image slide-right">
-          <img src="../images/story-silica-black.jpg" alt="Silica Black from Kaminokuni, Hokkaido">
-        </div>
-      </div>
-      <div class="story-thumbnails">
-        <img class="fade-in stagger-1" loading="lazy"
-          src="../images/story-hokkaido.jpg" alt="Nature of Hokkaido">
-        <img class="fade-in stagger-2" loading="lazy"
-          src="../images/story-mineral.jpg" alt="Mineral surface">
-        <img class="fade-in stagger-3" loading="lazy"
-          src="../images/story-nature.jpg" alt="Natural rock formation">
-        <img class="fade-in stagger-4" loading="lazy"
-          src="../images/story-stream.jpg" alt="Clear stream">
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: DIFFERENCE (差別化) ============ -->
-  <section class="section difference" id="difference">
-    <div class="container">
-      <div class="difference-header">
-        <p class="section-label fade-in">Unique Position</p>
-        <h2 class="section-title-jp fade-in stagger-1">What Sets NOIRICA Apart</h2>
-      </div>
-      <div class="difference-comparison">
-        <div class="difference-card fade-in stagger-2">
-          <p class="difference-card-label">GENERAL CLAY</p>
-          <p class="difference-card-title">Ordinary Clay</p>
-          <ul class="difference-card-list">
-            <li>Focuses on absorbing impurities</li>
-            <li>Single function</li>
-            <li>Surface-level approach</li>
-          </ul>
-        </div>
-        <div class="difference-card highlight fade-in stagger-3">
-          <p class="difference-card-label">NOIRICA</p>
-          <p class="difference-card-title">Exclusive Silica Black Formula</p>
-          <ul class="difference-card-list">
-            <li>Rare natural mineral from Kaminokuni, Hokkaido</li>
-            <li>Emits far-infrared radiation at room temperature</li>
-            <li>Circulation, warmth &amp; detox — simultaneously</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: 生命力の証明 ============ -->
-  <!-- ============ SECTION: PROOF (統合) ============ -->
-  <section class="section proof-combined" id="proof">
-    <div class="container">
-      <p class="section-label fade-in">Proof</p>
-      <h2 class="section-title-jp fade-in stagger-1">Proof of Quality and Vitality.</h2>
-
-      <div class="proof-b-blocks fade-in stagger-2">
-
-        <!-- 01: Vitality Proof -->
-        <div class="proof-b-block">
-          <div class="proof-b-num">01</div>
-          <div class="proof-b-content">
-            <p class="proof-b-en">Vitality Proof</p>
-            <h3 class="proof-b-title">Vitality, Proven by Plant Studies.</h3>
-            <p class="proof-b-text">Soil mixed with Silica Black showed significantly accelerated plant growth. This "power to draw out vitality" is directly applied to our skincare approach.</p>
-          </div>
-        </div>
-
-        <!-- 02: Purity Proof -->
-        <div class="proof-b-block">
-          <div class="proof-b-num">02</div>
-          <div class="proof-b-content">
-            <p class="proof-b-en">Purity Proof</p>
-            <h3 class="proof-b-title">Quality Pure Enough to Ingest.</h3>
-            <p class="proof-b-text">
-              NOIRICA's Silica Black meets Japan's Food Sanitation Act safety standards. Unlike industrial-grade minerals, only human-safe materials are used.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: お客様の声 ============ -->
-  <section class="section voice" id="voice">
-    <div class="container">
-      <p class="section-label fade-in">Voice</p>
-      <h2 class="section-title-jp fade-in stagger-1">What Our Customers Say</h2>
-
-      <div class="voice-carousel fade-in stagger-2">
-        <div class="voice-carousel-window">
-          <div class="voice-carousel-track">
-
-            <!-- 1: S1 肌のトーンアップ -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
-                </svg>Partner Salon</span>
-              <p class="voice-person-sub">Partner Salon</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Remarkable Skin Brightening ]</p>
-              <p class="voice-text">
-                Since introducing NOIRICA, guests have been telling us their skin feels more radiant and dullness has cleared. The immediate post-treatment results keep them coming back.</p>
-            </div>
-
-            <!-- 2: U1 敏感肌でも -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Male, 20s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Zero Stress — Even for Sensitive Skin! ]</p>
-              <p class="voice-text">
-                I had persistent redness from acne and inflammation, but after masking with NOIRICA the redness calmed. Using it 2–3 times a week, my breakouts have stopped — genuinely amazing! I'll keep it as part of my daily routine.</p>
-            </div>
-
-            <!-- 3: S2 遠赤外線 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
-                </svg>Partner Salon</span>
-              <p class="voice-person-sub">Partner Salon</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Far-Infrared Warmth &amp; Deep Relaxation ]</p>
-              <p class="voice-text">
-                We always include a foot bath before treatments, and with Silica Black added, guests warm up noticeably faster. They say they feel comfortably warm long after — it's also driving retail sales, especially popular with clients prone to cold circulation.</p>
-            </div>
-
-            <!-- 4: U2 天然温泉 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Female, 40s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Warm Like a Natural Hot Spring! ]</p>
-              <p class="voice-text">I've struggled with cold extremities all year, but after adding NOIRICA to my bath daily for just one week, my fingertips stayed warm throughout the day. Now it's an absolute essential!</p>
-            </div>
-
-            <!-- 5: S3 デトックス -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
-                </svg>Partner Salon</span>
-              <p class="voice-person-sub">Partner Salon</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Satisfied with the Detoxifying Effect ]</p>
-              <p class="voice-text">
-                The clay's absorption power combined with Silica Black's far-infrared effect relaxes muscles, making treatment easier. Clients leave feeling light and refreshed. Many also mention reduced puffiness — very high overall satisfaction.
-              </p>
-            </div>
-
-            <!-- 6: U3 毛穴改善 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Female, 30s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Pores and Roughness, Transformed ]</p>
-              <p class="voice-text">The rough texture and enlarged pores cleared up, and my makeup application improved dramatically. It addresses pores, skin tone, and hydration all at once — something I want to use regularly.</p>
-            </div>
-
-            <!-- 7: S4 高付加価値 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
-                </svg>Partner Salon</span>
-              <p class="voice-person-sub">Partner Salon</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ A Popular High-Value Menu Addition ]</p>
-              <p class="voice-text">It sets us apart from other salons and draws genuine interest as a premium treatment powered by natural minerals. Natural-minded clients especially appreciate it.
-              </p>
-            </div>
-
-            <!-- 8: U4 子供のアトピー -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Female, 30s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ It Helped My Child's Eczema. ]</p>
-              <p class="voice-text">There were limits to what we could safely use, but being all-natural gave us peace of mind. Applying it as a pack on troubled areas, the redness reduced day by day and the itching settled. We rely on it now.</p>
-            </div>
-
-            <!-- 9: S5 導入コスト -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="導入サロン" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
-                </svg>Partner Salon</span>
-              <p class="voice-person-sub">Partner Salon</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ Excellent Value for Introduction Cost ]</p>
-              <p class="voice-text">
-                The initial cost was manageable and easy to get started. We also offer cosmetic acupuncture, and the synergy with circulation improvement is excellent — client satisfaction is very high. We expect it to boost overall revenue.</p>
-            </div>
-
-            <!-- 10: U5 日焼け後 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Female, 20s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ The Cooling Sensation After Sun Exposure Was Bliss ]</p>
-              <p class="voice-text">There was an immediate cooling sensation on application that felt wonderful. The post-sun redness and stinging subsided dramatically, and my skin felt a full shade brighter. I was honestly amazed.
-              </p>
-            </div>
-
-            <!-- 11: U6 乾燥肌 -->
-            <div class="voice-card">
-              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="一般のお客様" loading="lazy"></div>
-              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
-                </svg>Home User</span>
-              <p class="voice-person-sub">Female, 30s</p>
-              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
-              <p class="voice-card-title">[ As Someone with Dry Skin, I Love It ]</p>
-              <p class="voice-text">
-                I was nervous given my dry skin, but after rinsing, it felt light and clean — no tightness at all, just a fresh dewiness. My skin looked a tone brighter, and I rediscovered how enjoyable skincare can be.</p>
-            </div>
-
-          </div>
-        </div>
-        <div class="voice-carousel-controls">
-          <button class="voice-carousel-btn prev" aria-label="Previous">&#8592;</button>
-          <div class="voice-carousel-dots"></div>
-          <button class="voice-carousel-btn next" aria-label="Next">&#8594;</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION 4-5: RITUAL ============ -->
-  <section class="section ritual" id="ritual">
-    <div class="container">
-      <div class="ritual-header">
-        <p class="section-label fade-in">Experience / Ritual</p>
-        <p class="ritual-catchcopy fade-in stagger-1">More than skincare.<br>NOIRICA is a ritual to rebalance skin and spirit.</p>
-        <p class="ritual-sub fade-in stagger-2">Bringing a moment of rebalancing into everyday life.</p>
-      </div>
-
-      <div class="ritual-cards">
-        <!-- Card 1: Facial Ritual -->
-        <div class="ritual-card fade-in stagger-2">
-          <img src="../images/facial-treatment.png" alt="Facial Ritual - フェイシャルトリートメント">
-          <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Facial Treatment</p>
-            <p class="ritual-card-jp">Facial Treatment</p>
-          </div>
-        </div>
-        <!-- Card 2: Body Treatment -->
-        <div class="ritual-card fade-in stagger-4">
-          <img src="../images/body-treatment.png" alt="Body Treatment - ボディートリートメント">
-          <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Body Treatment</p>
-            <p class="ritual-card-jp">Body Treatment</p>
-          </div>
-        </div>
-        <!-- Card 3: Bath & Spa -->
-        <div class="ritual-card fade-in stagger-6">
-          <img src="../images/bath-spa.png" alt="Bath & Spa - 入浴">
-          <div class="ritual-card-overlay">
-            <p class="ritual-card-en">Bath & Spa</p>
-            <p class="ritual-card-jp">Bath &amp; Spa</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ritual-texture fade-in">
-        <p>The moment it touches your skin — gentle warmth, perfect adhesion.<br>After treatment: clarity, smoothness, and firmness.<br>A refined texture designed for professional salon use.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION 6: PRODUCT ============ -->
-  <section class="section product" id="product">
-    <div class="container">
-      <p class="section-label fade-in">Product</p>
-      <h2 class="section-title-jp fade-in stagger-1">Silica Black Ritual Clay</h2>
-      <div class="product-grid product-grid--two" style="margin-top: 48px;">
-        <div class="product-item fade-in stagger-2">
-          <img src="../images/product-hero-product.jpg" loading="lazy"
-            alt="NOIRICA Silica Black Ritual Clay 100g Home Care">
-          <p class="product-name">Home Care</p>
-          <p class="product-spec">100g</p>
-          <p class="product-price">¥3,900<span class="product-price-tax">+tax</span></p>
-        </div>
-        <div class="product-item fade-in stagger-3">
-          <img src="../images/product-hero-product.jpg" loading="lazy"
-            alt="NOIRICA Silica Black Ritual Clay 800g Professional">
-          <p class="product-name">Professional</p>
-          <p class="product-spec">800g</p>
-          <p class="product-price">¥22,000<span class="product-price-tax">+tax</span></p>
-        </div>
-      </div>
-      <div class="product-info fade-in">
-        <p>Silica Black from Kaminokuni, Hokkaido<br>Two sizes — home care &amp; salon professional</p>
-        <p class="product-origin">From Kaminokuni, Hokkaido, Japan</p>
-      </div>
-    </div>
-
-    <!-- Inline CTA -->
-    <div class="inline-cta fade-in" style="margin-top: 40px;">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-        target="_blank" rel="noopener noreferrer" class="inline-cta-button">Inquire Now</a>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: HOW TO USE (使用方法) ============ -->
-  <section class="section howto" id="howto">
-    <div class="container">
-      <div class="howto-header">
-        <p class="section-label fade-in">How to Use</p>
-        <h2 class="section-title-jp fade-in stagger-1">4 Simple Steps</h2>
-      </div>
-      <div class="howto-steps">
-        <div class="howto-step fade-in stagger-2">
-          <p class="howto-step-num">STEP 01</p>
-          <div class="howto-step-circle">
-            <svg viewBox="0 0 24 24">
-              <path d="M6 3v6a6 6 0 0 0 12 0V3" />
-              <path d="M6 21h12" />
-            </svg>
-          </div>
-          <p class="howto-step-title">Mix</p>
-        </div>
-        <div class="howto-step fade-in stagger-3">
-          <p class="howto-step-num">STEP 02</p>
-          <div class="howto-step-circle">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z" />
-            </svg>
-          </div>
-          <p class="howto-step-title">Apply</p>
-        </div>
-        <div class="howto-step fade-in stagger-4">
-          <p class="howto-step-num">STEP 03</p>
-          <div class="howto-step-circle">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-          </div>
-          <p class="howto-step-title">Wait 10 min</p>
-        </div>
-        <div class="howto-step fade-in stagger-5">
-          <p class="howto-step-num">STEP 04</p>
-          <div class="howto-step-circle">
-            <svg viewBox="0 0 24 24">
-              <path d="M3 12c3-4 6-4 9 0s6 4 9 0" />
-              <path d="M3 18c3-4 6-4 9 0s6 4 9 0" />
-            </svg>
-          </div>
-          <p class="howto-step-title">Rinse</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION: SALON PAIN (サロンの悩み) ============ -->
-  <section class="section salonpain" id="salonpain">
-    <div class="container">
-      <p class="section-label fade-in">For Salon Owners</p>
-      <h2 class="section-title-jp fade-in stagger-1">Sound familiar?</h2>
-      <div class="salonpain-list">
-        <div class="salonpain-item fade-in stagger-2">Looking to create premium menus but struggling to find a differentiating technique</div>
-        <div class="salonpain-item fade-in stagger-3">機械依存から卒業し、“技術そのもの”が価値になるサロンづくりをしたい</div>
-        <div class="salonpain-item fade-in stagger-4">Repeat bookings aren't growing, and new client acquisition is constant</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gold-line"></div>
-
-  <!-- ============ SECTION 8: FOR PROFESSIONALS ============ -->
+<!-- ============ SECTION 8: FOR PROFESSIONALS ============ -->
   <section class="section professionals" id="professionals">
     <div class="container">
-      <p class="section-label fade-in">For Salon Owners</p>
+      <p class="section-label fade-in">The Benefit</p>
       <h2 class="section-title-jp fade-in stagger-1">Benefits of Introduction</h2>
       <div class="pro-cards" style="margin-top: 48px;">
         <!-- Card 1 -->
@@ -4371,65 +4327,88 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: SALON RITUAL (メニュー展開) ============ -->
-  <section class="section salonritual" id="salonritual">
+<!-- ============ SECTION 6: PRODUCT ============ -->
+  <section class="section product" id="product">
     <div class="container">
-      <div class="salonritual-header">
-        <p class="section-label fade-in">Ritual Menu</p>
-        <h2 class="section-title-jp fade-in stagger-1">3 Menu Applications</h2>
-      </div>
-      <div class="salonritual-grid">
-        <div class="salonritual-card fade-in stagger-2">
-          <p class="salonritual-card-en">Facial</p>
-          <p class="salonritual-card-jp">Facial Menu</p>
-          <p class="salonritual-card-desc">Full facial &amp; décolleté<br>treatment. Directly lifts<br>treatment ticket value.</p>
+      <p class="section-label fade-in">Product</p>
+      <h2 class="section-title-jp fade-in stagger-1">Silica Black Ritual Clay</h2>
+      <div class="product-grid product-grid--two" style="margin-top: 48px;">
+        <div class="product-item fade-in stagger-2">
+          <img src="../images/product-hero-product.jpg" loading="lazy"
+            alt="NOIRICA Silica Black Ritual Clay 100g Home Care">
+          <p class="product-name">Home Care</p>
+          <p class="product-spec">100g</p>
+          <p class="product-price">¥3,900<span class="product-price-tax">+tax</span></p>
         </div>
-        <div class="salonritual-card fade-in stagger-3">
-          <p class="salonritual-card-en">Body</p>
-          <p class="salonritual-card-jp">Body Menu</p>
-          <p class="salonritual-card-desc">Back, abdomen, legs and more.<br>Versatile treatment<br>for the whole body.</p>
-        </div>
-        <div class="salonritual-card fade-in stagger-4">
-          <p class="salonritual-card-en">Bath</p>
-          <p class="salonritual-card-jp">Foot Bath</p>
-          <p class="salonritual-card-desc">As a bath or foot bath add-on.<br>Extends visit time<br>and elevates satisfaction.</p>
+        <div class="product-item fade-in stagger-3">
+          <img src="../images/product-hero-product.jpg" loading="lazy"
+            alt="NOIRICA Silica Black Ritual Clay 800g Professional">
+          <p class="product-name">Professional</p>
+          <p class="product-spec">800g</p>
+          <p class="product-price">¥22,000<span class="product-price-tax">+tax</span></p>
         </div>
       </div>
+      <div class="product-info fade-in">
+        <p>Silica Black from Kaminokuni, Hokkaido<br>Two sizes — home care &amp; salon professional</p>
+        <p class="product-origin">From Kaminokuni, Hokkaido, Japan</p>
+      </div>
+    </div>
+
+    <!-- Inline CTA -->
+    <div class="inline-cta fade-in" style="margin-top: 40px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+        target="_blank" rel="noopener noreferrer" class="inline-cta-button">Inquire Now</a>
     </div>
   </section>
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: PRO SPEC (プロ向けスペック) ============ -->
-  <section class="section prospec" id="prospec">
+<!-- ============ SECTION: HOW TO USE (使用方法) ============ -->
+  <section class="section howto" id="howto">
     <div class="container">
-      <div class="prospec-header">
-        <p class="section-label fade-in">Product Spec</p>
-        <h2 class="section-title-jp fade-in stagger-1">Professional Product Specs</h2>
+      <div class="howto-header">
+        <p class="section-label fade-in">How to Use</p>
+        <h2 class="section-title-jp fade-in stagger-1">4 Simple Steps</h2>
       </div>
-      <div class="prospec-table fade-in stagger-2">
-        <div class="prospec-row">
-          <div class="prospec-label">SIZE</div>
-          <div class="prospec-value">Professional 800g</div>
-        </div>
-        <div class="prospec-row">
-          <div class="prospec-label">USAGE</div>
-          <div class="prospec-value">Facial / Body / Foot Bath / Bath</div>
-        </div>
-        <div class="prospec-row">
-          <div class="prospec-label">TREATMENT</div>
-          <div class="prospec-value">Salon treatment ready / Full-body applicable</div>
-        </div>
-        <div class="prospec-row">
-          <div class="prospec-label">TRAINING</div>
-          <div class="prospec-value">
-            Basic Training (1 Day) / Technical Course (4+ Days) Available
-            <p class="prospec-note">※ Training is required for salon introduction. Please contact us for details.</p>
+      <div class="howto-steps">
+        <div class="howto-step fade-in stagger-2">
+          <p class="howto-step-num">STEP 01</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 3v6a6 6 0 0 0 12 0V3" />
+              <path d="M6 21h12" />
+            </svg>
           </div>
+          <p class="howto-step-title">Mix</p>
         </div>
-        <div class="prospec-row">
-          <div class="prospec-label">CAPACITY</div>
-          <div class="prospec-value">Approx. 15 facial treatments (guideline)</div>
+        <div class="howto-step fade-in stagger-3">
+          <p class="howto-step-num">STEP 02</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z" />
+            </svg>
+          </div>
+          <p class="howto-step-title">Apply</p>
+        </div>
+        <div class="howto-step fade-in stagger-4">
+          <p class="howto-step-num">STEP 03</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <p class="howto-step-title">Wait 10 min</p>
+        </div>
+        <div class="howto-step fade-in stagger-5">
+          <p class="howto-step-num">STEP 04</p>
+          <div class="howto-step-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12c3-4 6-4 9 0s6 4 9 0" />
+              <path d="M3 18c3-4 6-4 9 0s6 4 9 0" />
+            </svg>
+          </div>
+          <p class="howto-step-title">Rinse</p>
         </div>
       </div>
     </div>
@@ -4437,7 +4416,7 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: FLOW (導入の流れ) ============ -->
+<!-- ============ SECTION: FLOW (導入の流れ) ============ -->
   <section class="section flow" id="flow">
     <div class="container">
       <div class="flow-header">
@@ -4487,7 +4466,242 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: FOUNDER ============ -->
+<!-- ============ SECTION: お客様の声 ============ -->
+  <section class="section voice" id="voice">
+    <div class="container">
+      <p class="section-label fade-in">Voice</p>
+      <h2 class="section-title-jp fade-in stagger-1">What Our Customers Say</h2>
+
+      <div class="voice-carousel fade-in stagger-2">
+        <div class="voice-carousel-window">
+          <div class="voice-carousel-track">
+
+            <!-- 1: S1 肌のトーンアップ -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="Partner Salon" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>Partner Salon</span>
+              <p class="voice-person-sub">Partner Salon</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Remarkable Skin Brightening ]</p>
+              <p class="voice-text">
+                Since introducing NOIRICA, guests have been telling us their skin feels more radiant and dullness has cleared. The immediate post-treatment results keep them coming back.</p>
+            </div>
+
+            <!-- 2: U1 敏感肌でも -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Male, 20s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Zero Stress — Even for Sensitive Skin! ]</p>
+              <p class="voice-text">
+                I had persistent redness from acne and inflammation, but after masking with NOIRICA the redness calmed. Using it 2–3 times a week, my breakouts have stopped — genuinely amazing! I'll keep it as part of my daily routine.</p>
+            </div>
+
+            <!-- 3: S2 遠赤外線 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="Partner Salon" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>Partner Salon</span>
+              <p class="voice-person-sub">Partner Salon</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Far-Infrared Warmth &amp; Deep Relaxation ]</p>
+              <p class="voice-text">
+                We always include a foot bath before treatments, and with Silica Black added, guests warm up noticeably faster. They say they feel comfortably warm long after — it's also driving retail sales, especially popular with clients prone to cold circulation.</p>
+            </div>
+
+            <!-- 4: U2 天然温泉 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Female, 40s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Warm Like a Natural Hot Spring! ]</p>
+              <p class="voice-text">I've struggled with cold extremities all year, but after adding NOIRICA to my bath daily for just one week, my fingertips stayed warm throughout the day. Now it's an absolute essential!</p>
+            </div>
+
+            <!-- 5: S3 デトックス -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="Partner Salon" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>Partner Salon</span>
+              <p class="voice-person-sub">Partner Salon</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Satisfied with the Detoxifying Effect ]</p>
+              <p class="voice-text">
+                The clay's absorption power combined with Silica Black's far-infrared effect relaxes muscles, making treatment easier. Clients leave feeling light and refreshed. Many also mention reduced puffiness — very high overall satisfaction.
+              </p>
+            </div>
+
+            <!-- 6: U3 毛穴改善 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Female, 30s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Pores and Roughness, Transformed ]</p>
+              <p class="voice-text">The rough texture and enlarged pores cleared up, and my makeup application improved dramatically. It addresses pores, skin tone, and hydration all at once — something I want to use regularly.</p>
+            </div>
+
+            <!-- 7: S4 高付加価値 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="Partner Salon" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>Partner Salon</span>
+              <p class="voice-person-sub">Partner Salon</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ A Popular High-Value Menu Addition ]</p>
+              <p class="voice-text">It sets us apart from other salons and draws genuine interest as a premium treatment powered by natural minerals. Natural-minded clients especially appreciate it.
+              </p>
+            </div>
+
+            <!-- 8: U4 子供のアトピー -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Female, 30s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ It Helped My Child's Eczema. ]</p>
+              <p class="voice-text">There were limits to what we could safely use, but being all-natural gave us peace of mind. Applying it as a pack on troubled areas, the redness reduced day by day and the itching settled. We rely on it now.</p>
+            </div>
+
+            <!-- 9: S5 導入コスト -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_SALON.png" alt="Partner Salon" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M5 16L3 5l5.5 5.5L12 4l3.5 6.5L21 5l-2 11H5zm2 3c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1H7v1z" />
+                </svg>Partner Salon</span>
+              <p class="voice-person-sub">Partner Salon</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ Excellent Value for Introduction Cost ]</p>
+              <p class="voice-text">
+                The initial cost was manageable and easy to get started. We also offer cosmetic acupuncture, and the synergy with circulation improvement is excellent — client satisfaction is very high. We expect it to boost overall revenue.</p>
+            </div>
+
+            <!-- 10: U5 日焼け後 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Female, 20s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ The Cooling Sensation After Sun Exposure Was Bliss ]</p>
+              <p class="voice-text">There was an immediate cooling sensation on application that felt wonderful. The post-sun redness and stinging subsided dramatically, and my skin felt a full shade brighter. I was honestly amazed.
+              </p>
+            </div>
+
+            <!-- 11: U6 乾燥肌 -->
+            <div class="voice-card">
+              <div class="voice-icon-circle"><img src="../images/VOICE_ICON_USER.png" alt="Home User" loading="lazy"></div>
+              <span class="voice-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z" />
+                </svg>Home User</span>
+              <p class="voice-person-sub">Female, 30s</p>
+              <div class="voice-card-divider"><span class="voice-card-divider-icon">◇</span></div>
+              <p class="voice-card-title">[ As Someone with Dry Skin, I Love It ]</p>
+              <p class="voice-text">
+                I was nervous given my dry skin, but after rinsing, it felt light and clean — no tightness at all, just a fresh dewiness. My skin looked a tone brighter, and I rediscovered how enjoyable skincare can be.</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="voice-carousel-controls">
+          <button class="voice-carousel-btn prev" aria-label="Previous">&#8592;</button>
+          <div class="voice-carousel-dots"></div>
+          <button class="voice-carousel-btn next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION: 血液改善動画 ============ -->
+  <section class="section bloodvideo" id="bloodvideo">
+    <div class="container">
+      <p class="section-label fade-in">BIO FLOW DATA</p>
+      <h2 class="section-title-jp fade-in stagger-1">Blood Flow, Visualized.</h2>
+      <div class="bloodvideo-wrap fade-in stagger-2">
+        <video data-src="../images/bloodvideo-capillary.mp4" controls playsinline muted loop
+          preload="none"></video>
+      </div>
+      <p class="bloodvideo-caption fade-in stagger-3">Capillaries filmed under microscope before and after treatment.<br>Improvement in blood flow is visible immediately after using NOIRICA.</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION: DIGITAL DETOX ============ -->
+  <section class="section digitaldetox" id="digitaldetox">
+    <div class="container">
+      <p class="section-label fade-in">Digital Detox</p>
+      <h2 class="section-title-jp fade-in stagger-1">The Invisible Fatigue of Modern Life.</h2>
+      <div class="digitaldetox-image fade-in stagger-2">
+        <img src="../images/detox-emf.png" alt="The invisible fatigue of modern life — electromagnetic exposure">
+      </div>
+      <div class="digitaldetox-body fade-in stagger-3">
+        <p>Smartphones, computers, Wi-Fi —</p>
+        <p>Our bodies are exposed to invisible electromagnetic radiation every day.</p>
+        <p>Have you considered that this accumulation may be contributing to skin sensitivity,<br class="pc-only">autonomic imbalance, and chronic fatigue?</p>
+        <p style="margin-top: 2em; color: var(--color-text);">The far-infrared rays (98% emissivity) from NOIRICA's natural minerals rewarm and restore<br class="pc-only">circulation slowed by constant screen exposure — from the inside out.<br>In the digital age, a realigning ritual care is exactly what your body needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION: FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <p class="section-label fade-in">FAQ</p>
+        <h2 class="section-title-jp fade-in stagger-1">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <!-- B2C向け -->
+        <details class="faq-item fade-in stagger-2">
+          <summary><p class="faq-q">Can I use it on sensitive or dry skin?</p></summary>
+          <p class="faq-a">Yes. NOIRICA uses natural mineral ingredients meeting Japan's Food Sanitation Act safety standards, formulated without unnecessary additives. It has been used by those with sensitive and dry skin — though we recommend a patch test before first use.</p>
+        </details>
+        <details class="faq-item fade-in stagger-3">
+          <summary><p class="faq-q">Is it suitable for children and men?</p></summary>
+          <p class="faq-a">Yes, it can be used by all ages and genders. We've received feedback from parents using it on their children's sensitive skin. For children, please use under parental supervision.</p>
+        </details>
+        <details class="faq-item fade-in stagger-4">
+          <summary><p class="faq-q">How often should I use it?</p></summary>
+          <p class="faq-a">Most users settle into 2–3 times per week. Building it into your daily skincare as a dedicated rebalancing moment makes it easier to feel consistent, lasting results. Adjust based on your skin's needs.</p>
+        </details>
+        <details class="faq-item fade-in stagger-5">
+          <summary><p class="faq-q">When will I start to notice results?</p></summary>
+          <p class="faq-a">Many users notice warmth and smoother pores immediately after use. For longer-term changes (reduced dullness, improved circulation), most report effects within 2–4 weeks at 2–3 sessions per week — results vary by skin type and lifestyle.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+<!-- ============ SECTION: FOUNDER ============ -->
   <section class="section founder" id="founder">
     <div class="container">
       <div class="founder-grid">
@@ -4518,44 +4732,36 @@
 
   <div class="gold-line"></div>
 
-  <!-- ============ SECTION: FAQ ============ -->
-  <section class="section faq" id="faq">
+<!-- ============ SECTION: COMPANY (会社概要) ============ -->
+  <section class="section company" id="company">
     <div class="container">
-      <div class="faq-header">
-        <p class="section-label fade-in">FAQ</p>
-        <h2 class="section-title-jp fade-in stagger-1">Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-list">
-        <!-- B2C向け -->
-        <details class="faq-item fade-in stagger-2">
-          <summary><p class="faq-q">Can I use it on sensitive or dry skin?</p></summary>
-          <p class="faq-a">Yes. NOIRICA uses natural mineral ingredients meeting Japan's Food Sanitation Act safety standards, formulated without unnecessary additives. It has been used by those with sensitive and dry skin — though we recommend a patch test before first use.</p>
-        </details>
-        <details class="faq-item fade-in stagger-3">
-          <summary><p class="faq-q">Is it suitable for children and men?</p></summary>
-          <p class="faq-a">Yes, it can be used by all ages and genders. We've received feedback from parents using it on their children's sensitive skin. For children, please use under parental supervision.</p>
-        </details>
-        <details class="faq-item fade-in stagger-4">
-          <summary><p class="faq-q">How often should I use it?</p></summary>
-          <p class="faq-a">Most users settle into 2–3 times per week. Building it into your daily skincare as a dedicated rebalancing moment makes it easier to feel consistent, lasting results. Adjust based on your skin's needs.</p>
-        </details>
-        <details class="faq-item fade-in stagger-5">
-          <summary><p class="faq-q">When will I start to notice results?</p></summary>
-          <p class="faq-a">Many users notice warmth and smoother pores immediately after use. For longer-term changes (reduced dullness, improved circulation), most report effects within 2–4 weeks at 2–3 sessions per week — results vary by skin type and lifestyle.</p>
-        </details>
-        <!-- サロン向け -->
-        <details class="faq-item fade-in stagger-6">
-          <summary><p class="faq-q">Can beginners introduce it to their salon?</p></summary>
-          <p class="faq-a">Absolutely. We offer a foundational 1-Day training for those with no prior experience. A 4+ Day technical training course is also available for those seeking deeper skill development.</p>
-        </details>
-        <details class="faq-item fade-in stagger-7">
-          <summary><p class="faq-q">How many uses per size?</p></summary>
-          <p class="faq-a">As a guide: the 100g home size yields approx. 5–6 facial applications (15–20g per use). The 800g salon size yields approx. 15 facial treatments. Usage varies by application type — facial, body, and foot bath all possible.</p>
-        </details>
-        <details class="faq-item fade-in stagger-8">
-          <summary><p class="faq-q">What does the training involve?</p></summary>
-          <p class="faq-a">The introductory session covers basic application methods and how to build it into your menu. The technical course includes hands-on skill development for facial and décolleté treatments.</p>
-        </details>
+    <p class="section-label fade-in">Company</p>
+      <h2 class="section-title-jp fade-in stagger-1">Company Overview</h2>
+      <div class="company-table fade-in stagger-2">
+        <div class="company-row">
+          <div class="company-label">NAME</div>
+          <div class="company-value">〇〇〇〇 Co., Ltd.</div>
+        </div>
+        <div class="company-row">
+          <div class="company-label">FOUNDED</div>
+          <div class="company-value">202X, Month XX</div>
+        </div>
+        <div class="company-row">
+          <div class="company-label">CEO</div>
+          <div class="company-value">Misaki Toda</div>
+        </div>
+        <div class="company-row">
+          <div class="company-label">ADDRESS</div>
+          <div class="company-value">Postal Code: 000-0000<br>0-0-0 〇〇, 〇〇 City, Hokkaido</div>
+        </div>
+        <div class="company-row">
+          <div class="company-label">BUSINESS</div>
+          <div class="company-value">Planning, development &amp; distribution of mineral beauty products<br>Professional care products for esthetic salons</div>
+        </div>
+        <div class="company-row">
+          <div class="company-label">CONTACT</div>
+          <div class="company-value">info@noirica.com</div>
+        </div>
       </div>
     </div>
   </section>
@@ -4641,35 +4847,7 @@
       lastScroll = currentScroll;
     }, { passive: true });
 
-    // Counter animation for 98% (prefers-reduced-motion 対応)
-    const counterEl = document.querySelector('[data-count]');
-    if (counterEl) {
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) {
-        counterEl.textContent = counterEl.getAttribute('data-count') + '%';
-      } else {
-        const counterObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const target = parseInt(entry.target.getAttribute('data-count'));
-              let current = 0;
-              const duration = 2000;
-              const step = target / (duration / 16);
-              const timer = setInterval(() => {
-                current += step;
-                if (current >= target) {
-                  current = target;
-                  clearInterval(timer);
-                }
-                entry.target.textContent = Math.floor(current) + '%';
-              }, 16);
-              counterObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.5 });
-        counterObserver.observe(counterEl);
-      }
-    }
+
 
     // 血流動画の遅延読み込み
     const videoEl = document.querySelector('.bloodvideo-wrap video[data-src]');
@@ -4783,6 +4961,52 @@
 
       buildDots();
       goTo(0);
+    })();
+  
+  </script>
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        btn.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+        menu.setAttribute('aria-hidden', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          btn.classList.remove('open');
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var switchers = document.querySelectorAll('.lang-switcher');
+      switchers.forEach(function(sw) {
+        var btn = sw.querySelector('.lang-current');
+        if (!btn) return;
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = sw.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen);
+        });
+      });
+      document.addEventListener('click', function() {
+        switchers.forEach(function(sw) {
+          sw.classList.remove('open');
+          var btn = sw.querySelector('.lang-current');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      });
     })();
   </script>
 </body>
