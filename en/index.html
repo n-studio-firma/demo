@@ -2474,12 +2474,22 @@
       margin-top: 52px;
     }
 
+    .howto-video-link-label {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--color-gray);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
     .howto-video-link img {
-      max-width: 260px;
+      max-width: 140px;
       width: 100%;
       height: auto;
       opacity: 0.9;
       transition: opacity 0.2s ease;
+      display: block;
+      margin: 0 auto;
     }
 
     .howto-video-link img:hover {
@@ -2488,7 +2498,7 @@
 
     @media (min-width: 768px) {
       .howto-video-link img {
-        max-width: 300px;
+        max-width: 160px;
       }
     }
 
@@ -4507,6 +4517,7 @@
         </div>
       </div>
       <div class="howto-video-link fade-in">
+        <p class="howto-video-link-label">How to use — text guide here</p>
         <img src="../images/how-to-video-link.png" alt="How to use NOIRICA - video">
       </div>
     </div>
