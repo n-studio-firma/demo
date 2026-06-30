@@ -2455,6 +2455,29 @@
       }
     }
 
+    .howto-video-link {
+      text-align: center;
+      margin-top: 52px;
+    }
+
+    .howto-video-link img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
+    }
+
+    .howto-video-link img:hover {
+      opacity: 1;
+    }
+
+    @media (min-width: 768px) {
+      .howto-video-link img {
+        max-width: 300px;
+      }
+    }
+
     /* ========================================
        SECTION: SALON PAIN (サロンの悩み)
     ======================================== */
@@ -4407,6 +4430,9 @@
             </div>
             <p class="howto-step-title">流す</p>
           </div>
+        </div>
+        <div class="howto-video-link fade-in">
+          <img src="../images/how-to-video-link.png" alt="How to use NOIRICA - 使い方動画">
         </div>
       </div>
     </section>
