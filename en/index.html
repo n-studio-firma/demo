@@ -3210,7 +3210,8 @@
       padding: 0;
     }
 
-    .mobile-cta-bar.dual button {
+    .mobile-cta-bar.dual button,
+    .mobile-cta-bar.dual a {
       flex: 1;
       border-radius: 0;
       margin: 0;
@@ -3797,6 +3798,18 @@
       }
     }
 
+    /* Tighten nav gap and CTA width on tablet widths so the logo doesn't get squeezed */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .header-nav-links {
+        gap: 14px;
+      }
+      .header-nav .header-cta,
+      .header-nav .header-cta-primary {
+        min-width: 0;
+        padding: 8px 14px;
+      }
+    }
+
     @media (min-width: 1024px) {
       .header-nav-links a {
         font-size: 13px;
@@ -4005,7 +4018,9 @@
         <a href="#company">Company</a>
       </nav>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-        target="_blank" rel="noopener noreferrer" class="header-cta-primary">Inquire Now</a>
+        target="_blank" rel="noopener noreferrer" class="header-cta">Inquire Now</a>
+      <!-- TEMP: shop page is JP-only for now; points to the ja/ version until an EN translation ships -->
+      <a href="../ja/shop/index.html" class="header-cta-primary">Shop Now</a>
       <div class="lang-switcher">
         <button class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="Language switcher">
           <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -4910,8 +4925,10 @@
 
   <!-- ============ MOBILE FIXED CTA BAR ============ -->
   <div class="mobile-cta-bar dual" id="mobileCta">
+    <!-- TEMP: shop page is JP-only for now; points to the ja/ version until an EN translation ships -->
+    <a href="../ja/shop/index.html" class="cta-buy">Shop Now</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-      target="_blank" rel="noopener noreferrer" class="cta-buy">Inquire Now</a>
+      target="_blank" rel="noopener noreferrer" class="cta-salon">Inquire Now</a>
   </div>
 
   <!-- ============ JAVASCRIPT ============ -->

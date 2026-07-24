@@ -4,7 +4,7 @@
     {
       "name": "noirica-lp",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/otsudanorikatsu/Desktop/NOIRICA\u3000LP"],
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/otsudanorikatsu/Desktop/noirica-lp"],
       "port": 8080
     }
   ]

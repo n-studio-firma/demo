@@ -165,6 +165,50 @@
       letter-spacing: 2px;
       color: var(--color-gray-dark);
     }
+
+    /* ===== MOBILE FIXED CTA BAR ===== */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 0;
+      padding-bottom: env(safe-area-inset-bottom);
+      border-top: 1px solid rgba(196, 162, 101, 0.2);
+      gap: 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-cta-bar.show { transform: translateY(0); }
+    .mobile-cta-bar a {
+      flex: 1;
+      height: 48px;
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .mobile-cta-bar .cta-buy {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    .mobile-cta-bar .cta-salon {
+      background: var(--color-bg-light);
+      color: var(--color-white);
+      border-left: 1px solid var(--color-gold);
+    }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; }
+    }
   </style>
 </head>
 <body>
@@ -272,6 +316,25 @@
   <footer class="site-footer">
     <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
   </footer>
+
+  <!-- ============ MOBILE FIXED CTA BAR ============ -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="shop/index.html" class="cta-buy">購入はこちら</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="cta-salon">お問い合わせ</a>
+  </div>
+
+  <script>
+    // Mobile CTA bar show/hide
+    const mobileCta = document.getElementById('mobileCta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        mobileCta.classList.add('show');
+      } else {
+        mobileCta.classList.remove('show');
+      }
+    }, { passive: true });
+  </script>
 
 </body>
 </html>

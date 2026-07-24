@@ -3134,6 +3134,13 @@
       }
     }
 
+    /* タブレット幅は3ボタン+ナビが収まりきらないため、優先度の低いサロン導線を非表示 */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .header-nav .header-cta-salon {
+        display: none;
+      }
+    }
+
     /* ========================================
        LANGUAGE SWITCHER
     ======================================== */
@@ -3213,7 +3220,8 @@
       padding: 0;
     }
 
-    .mobile-cta-bar.dual button {
+    .mobile-cta-bar.dual button,
+    .mobile-cta-bar.dual a {
       flex: 1;
       border-radius: 0;
       margin: 0;
@@ -3811,6 +3819,18 @@
       }
     }
 
+    /* タブレット幅はナビ間隔とCTA幅を詰めてロゴとの衝突を防ぐ */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .header-nav-links {
+        gap: 14px;
+      }
+      .header-nav .header-cta,
+      .header-nav .header-cta-primary {
+        min-width: 0;
+        padding: 8px 14px;
+      }
+    }
+
     @media (min-width: 1024px) {
       .header-nav-links a {
         font-size: 13px;
@@ -4022,7 +4042,8 @@
       </nav>
       <a href="distributor/" class="header-cta header-cta-salon">サロン・SPA関係者</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-        target="_blank" rel="noopener noreferrer" class="header-cta-primary">お問い合わせ</a>
+        target="_blank" rel="noopener noreferrer" class="header-cta">お問い合わせ</a>
+      <a href="shop/index.html" class="header-cta-primary">購入はこちら</a>
       <div class="lang-switcher">
         <button class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="言語切り替え">
           <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -4739,8 +4760,9 @@
 
   <!-- ============ MOBILE FIXED CTA BAR ============ -->
   <div class="mobile-cta-bar dual" id="mobileCta">
+    <a href="shop/index.html" class="cta-buy">購入はこちら</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
-      target="_blank" rel="noopener noreferrer" class="cta-buy">お問い合わせ</a>
+      target="_blank" rel="noopener noreferrer" class="cta-salon">お問い合わせ</a>
   </div>
 
   <!-- ============ JAVASCRIPT ============ -->

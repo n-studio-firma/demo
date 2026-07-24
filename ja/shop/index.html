@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品一覧 | NOIRICA - Silica Black Ritual Clay</title>
+<meta name="description" content="NOIRICA（ノイリカ）の商品一覧。北海道・上ノ国産シリカブラック配合のミネラル美容クレイ、Home Care 100gとProfessional 800gをご紹介します。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Shippori+Mincho:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --color-bg: #0B0B0B;
+    --color-bg-light: #111111;
+    --color-bg-lighter: #0D0D0D;
+    --color-gold: #C4A265;
+    --color-gold-accent: #D4AF37;
+    --color-white: #FFFFFF;
+    --color-text: #E8E8E8;
+    --color-gray: #999999;
+    --color-gray-dark: #666666;
+    --color-border: #222222;
+    --font-en: 'Cinzel', serif;
+    --font-jp: 'Shippori Mincho', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-jp);
+    font-weight: 300;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Fade-up scroll animation ---------- */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1s cubic-bezier(.19,1,.22,1), transform 1s cubic-bezier(.19,1,.22,1);
+  }
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up.delay-1 { transition-delay: .12s; }
+  .fade-up.delay-2 { transition-delay: .24s; }
+  .fade-up.delay-3 { transition-delay: .36s; }
+
+  /* ---------- Header (LP本体と共通) ---------- */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: rgba(11, 11, 11, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+  }
+  .header-logo {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+  }
+  .header-logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .header-logo { height: 44px; }
+  }
+  @media (min-width: 1024px) {
+    .header { padding: 12px 60px; }
+    .header-logo { height: 52px; }
+  }
+  @media (min-width: 1440px) {
+    .header-logo { height: 58px; }
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .header-cta,
+  .header-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-jp);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    min-width: 120px;
+    height: 34px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .header-cta-primary {
+    background: var(--color-gold);
+    color: var(--color-bg);
+    border: 1px solid var(--color-gold);
+  }
+  .header-cta-primary:hover {
+    background: transparent;
+    color: var(--color-gold);
+  }
+  .header-cta {
+    background: transparent;
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+  }
+  .header-cta:hover {
+    background: var(--color-gold);
+    color: var(--color-bg);
+  }
+  .header-cta-salon {
+    background: linear-gradient(135deg, rgba(196, 162, 101, 0.18) 0%, rgba(196, 162, 101, 0.06) 100%);
+    border: 1px solid rgba(196, 162, 101, 0.55);
+    box-shadow: 0 0 14px rgba(196, 162, 101, 0.12), inset 0 0 14px rgba(196, 162, 101, 0.04);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .header-cta-salon:hover {
+    background: linear-gradient(135deg, rgba(196, 162, 101, 0.28) 0%, rgba(196, 162, 101, 0.14) 100%);
+    border-color: rgba(196, 162, 101, 0.9);
+    box-shadow: 0 0 22px rgba(196, 162, 101, 0.22), inset 0 0 18px rgba(196, 162, 101, 0.08);
+    color: var(--color-gold);
+  }
+  @media (min-width: 1024px) {
+    .header-cta,
+    .header-cta-primary {
+      font-size: 13px;
+      padding: 9px 22px;
+      min-width: 140px;
+      height: 38px;
+    }
+  }
+  @media (max-width: 767px) {
+    .header-nav .header-cta,
+    .header-nav .header-cta-primary {
+      display: none;
+    }
+  }
+
+  /* Language switcher */
+  .lang-switcher { position: relative; }
+  .lang-current {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 2px;
+  }
+  .lang-globe { width: 13px; height: 13px; flex-shrink: 0; }
+  .lang-caret { width: 9px; height: 9px; flex-shrink: 0; transition: transform 0.2s ease; }
+  .lang-switcher.open .lang-caret { transform: rotate(180deg); }
+  .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: rgba(15, 15, 15, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(196, 162, 101, 0.2);
+    min-width: 72px;
+    z-index: 200;
+  }
+  .lang-switcher.open .lang-dropdown { display: block; }
+  .lang-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .lang-dropdown a:hover { color: var(--color-gold); }
+
+  /* TOPへ戻るリンク（商品一覧ページはLPのセクションアンカーを持たないため簡易ナビにしている） */
+  .header-back-link {
+    display: none;
+    font-family: var(--font-en);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--color-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    margin-right: 8px;
+  }
+  @media (min-width: 768px) {
+    .header-back-link { display: inline-flex; align-items: center; }
+  }
+  @media (min-width: 1024px) {
+    .header-back-link { font-size: 13px; }
+  }
+  .header-back-link:hover { color: var(--color-gold); }
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 6px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: var(--color-gold);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  @media (min-width: 768px) {
+    .hamburger { display: none; }
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 98;
+    background: rgba(11, 11, 11, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 100px 36px 48px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu-link {
+    font-family: var(--font-en);
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--color-gray);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .mobile-menu-link:hover { color: var(--color-gold); }
+  .mobile-menu-cta { margin-top: 36px; align-self: flex-start; }
+
+  /* ---------- Hero / Page intro ---------- */
+  .page-intro {
+    padding: 110px 0 90px;
+    text-align: center;
+    position: relative;
+  }
+  .eyebrow {
+    font-family: var(--font-en);
+    font-size: 12px;
+    letter-spacing: 0.42em;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+  .page-title {
+    font-family: var(--font-jp);
+    font-weight: 500;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    letter-spacing: 0.16em;
+    color: var(--color-white);
+    margin-bottom: 30px;
+  }
+  .divider {
+    width: 1px;
+    height: 56px;
+    background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+    margin: 0 auto 30px;
+  }
+  .divider-h {
+    width: 60px;
+    height: 1px;
+    background: var(--color-gold);
+    margin: 0 auto;
+    opacity: 0.6;
+  }
+  .page-lede {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--color-gray);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    line-height: 2.1;
+  }
+
+  /* ---------- Product Grid ---------- */
+  .products-section {
+    padding: 20px 0 130px;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+  }
+  .product-card {
+    background: var(--color-bg-light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: background .5s ease;
+  }
+  .product-card:hover {
+    background: #141414;
+  }
+  .card-media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 44px;
+    transition: transform .9s cubic-bezier(.19,1,.22,1);
+    mix-blend-mode: normal;
+  }
+  .product-card:hover .card-media img {
+    transform: scale(1.045);
+  }
+  .card-tag {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    padding: 6px 12px;
+    background: rgba(11,11,11,0.7);
+  }
+  .card-body {
+    padding: 44px 44px 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+  }
+  .card-name-en {
+    font-family: var(--font-en);
+    font-size: 13px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 14px;
+  }
+  .card-name-jp {
+    font-family: var(--font-jp);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .card-desc {
+    color: var(--color-gray);
+    font-size: 13.5px;
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+    margin-bottom: 26px;
+    flex: 1;
+  }
+  .card-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+  }
+  .card-spec {
+    font-family: var(--font-en);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-dark);
+  }
+  .card-spec-sep {
+    width: 1px;
+    height: 12px;
+    background: var(--color-border);
+  }
+  .card-price {
+    font-family: var(--font-en);
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: var(--color-white);
+  }
+  .card-price span {
+    font-size: 11px;
+    color: var(--color-gray-dark);
+    letter-spacing: 0.06em;
+    margin-left: 4px;
+  }
+
+  .card-cta {
+    display: inline-block;
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    border: 1px solid var(--color-gold);
+    padding: 17px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s ease;
+    z-index: 1;
+  }
+  .card-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s cubic-bezier(.19,1,.22,1);
+    z-index: -1;
+  }
+  .card-cta:hover {
+    color: var(--color-bg);
+  }
+  .card-cta:hover::before {
+    transform: scaleX(1);
+  }
+  /* ---------- Inquiry section ---------- */
+  .inquiry-section {
+    padding: 100px 0 120px;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+  }
+  .inquiry-eyebrow {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .inquiry-title {
+    font-family: var(--font-jp);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--color-white);
+    letter-spacing: 0.1em;
+    margin-bottom: 22px;
+  }
+  .inquiry-lede {
+    max-width: 480px;
+    margin: 0 auto 42px;
+    color: var(--color-gray);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 2;
+  }
+  .form-cta {
+    display: inline-block;
+    font-family: var(--font-en);
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-bg);
+    background: var(--color-gold);
+    padding: 20px 52px;
+    position: relative;
+    transition: background .45s ease, color .45s ease, letter-spacing .45s ease;
+    border: 1px solid var(--color-gold);
+  }
+  .form-cta:hover {
+    background: transparent;
+    color: var(--color-gold);
+    letter-spacing: 0.3em;
+  }
+
+  /* ---------- Footer (LP本体と共通) ---------- */
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .footer p {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-gray-dark);
+  }
+  .footer .footer-privacy {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-family: var(--font-en);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--color-gray-dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+    padding-bottom: 2px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .product-grid { grid-template-columns: 1fr; }
+    .page-intro { padding: 90px 0 70px; }
+    .card-body { padding: 38px 30px 34px; }
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 0 20px; }
+    .page-intro { padding: 70px 0 56px; }
+    .card-media img { padding: 30px; }
+    .card-body { padding: 32px 24px 30px; }
+    .form-cta { padding: 18px 36px; width: 100%; }
+    .inquiry-section { padding: 80px 0 90px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="../index.html" class="header-logo">
+    <img src="../../images/noirica-logo.png" alt="NOIRICA">
+  </a>
+  <div class="header-nav">
+    <a href="../index.html" class="header-back-link">← TOPへ戻る</a>
+    <a href="../distributor/" class="header-cta header-cta-salon">サロン・SPA関係者</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="header-cta">お問い合わせ</a>
+    <div class="lang-switcher">
+      <button class="lang-current" aria-haspopup="true" aria-expanded="false" aria-label="言語切り替え">
+        <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path
+            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+        <span>JP</span>
+        <svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+      <div class="lang-dropdown">
+        <a href="../../en/index.html">EN</a>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="../index.html" class="mobile-menu-link">← TOPへ戻る</a>
+  <a href="../distributor/" class="header-cta header-cta-salon mobile-menu-cta">サロン・SPA関係者</a>
+</div>
+
+<main>
+
+  <section class="page-intro">
+    <div class="wrap">
+      <p class="eyebrow fade-up">Shop</p>
+      <div class="divider fade-up delay-1"></div>
+      <h1 class="page-title fade-up delay-1">商品一覧</h1>
+      <div class="divider-h fade-up delay-2" style="margin-bottom: 30px;"></div>
+      <p class="page-lede fade-up delay-2">
+        北海道の大地に眠る、稀少な黒珪石（ブラックシリカ）。<br class="br-pc">
+        その静かな力を、毎日のケアに取り入れやすい2つのサイズでお届けします。
+      </p>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="wrap">
+      <div class="product-grid">
+
+        <!-- Product 1: Home Care -->
+        <article class="product-card fade-up">
+          <div class="card-media">
+            <span class="card-tag">Home Care</span>
+            <img src="../../images/product-mini.png" alt="NOIRICA Home Care 100g パッケージ写真">
+          </div>
+          <div class="card-body">
+            <p class="card-name-en">Noirica Home Care</p>
+            <h2 class="card-name-jp">ホームケア</h2>
+            <p class="card-desc">
+              まずは気軽に試したい方へ。100gの手に取りやすいサイズで、<br>
+              上ノ国産シリカブラックのミネラルの力を、毎日の洗顔やパックでじっくりご体感いただけます。
+            </p>
+            <div class="card-meta">
+              <span class="card-spec">100g</span>
+              <span class="card-spec-sep"></span>
+              <span class="card-price">¥4,290<span>（税込）</span></span>
+            </div>
+            <a class="card-cta" href="#">決済ページへ進む</a>
+          </div>
+        </article>
+
+        <!-- Product 2: Professional -->
+        <article class="product-card fade-up delay-1">
+          <div class="card-media">
+            <span class="card-tag">Professional</span>
+            <img src="../../images/product-big.png" alt="NOIRICA Professional 800g パッケージ写真">
+          </div>
+          <div class="card-body">
+            <p class="card-name-en">Noirica Professional</p>
+            <h2 class="card-name-jp">プロフェッショナル</h2>
+            <p class="card-desc">
+              顔だけでなく全身に、毎日たっぷりと。800gの大容量サイズなら、<br>
+              洗顔からボディ、バスタイムまで惜しみなく使い切れます。ご家族でのシェアにもおすすめです。
+            </p>
+            <div class="card-meta">
+              <span class="card-spec">800g</span>
+              <span class="card-spec-sep"></span>
+              <span class="card-price">¥24,200<span>（税込）</span></span>
+            </div>
+            <a class="card-cta" href="#">決済ページへ進む</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="inquiry-section" id="inquiry">
+    <div class="wrap">
+      <p class="inquiry-eyebrow fade-up">Contact</p>
+      <h2 class="inquiry-title fade-up delay-1">ご購入に関するお問い合わせ</h2>
+      <p class="inquiry-lede fade-up delay-1">
+        ご購入・お取り扱いに関するご相談は
+        下記フォームより承っております。
+      </p>
+      <a class="form-cta fade-up delay-2" href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform" target="_blank" rel="noopener noreferrer">
+        お問い合わせフォームへ
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a href="../privacy.html" class="footer-privacy">Privacy Policy</a>
+    <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var targets = document.querySelectorAll('.fade-up');
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    targets.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+<script>
+  // Header background on scroll
+  var header = document.querySelector('.header');
+  var lastHeaderBg = '';
+  window.addEventListener('scroll', function () {
+    var newBg = window.scrollY > 50 ? 'rgba(11, 11, 11, 0.95)' : 'rgba(11, 11, 11, 0.85)';
+    if (newBg !== lastHeaderBg) {
+      header.style.background = newBg;
+      lastHeaderBg = newBg;
+    }
+  }, { passive: true });
+</script>
+
+<script>
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      menu.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var switchers = document.querySelectorAll('.lang-switcher');
+    switchers.forEach(function (sw) {
+      var btn = sw.querySelector('.lang-current');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = sw.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });
+    document.addEventListener('click', function () {
+      switchers.forEach(function (sw) {
+        sw.classList.remove('open');
+        var btn = sw.querySelector('.lang-current');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
