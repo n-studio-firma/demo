@@ -368,8 +368,12 @@
     height: 100%;
     object-fit: contain;
     padding: 44px;
-    transition: transform .9s cubic-bezier(.19,1,.22,1);
+    opacity: 0;
+    transition: opacity .6s ease, transform .9s cubic-bezier(.19,1,.22,1);
     mix-blend-mode: normal;
+  }
+  .card-media img.is-loaded {
+    opacity: 1;
   }
   .product-card:hover .card-media img {
     transform: scale(1.045);
@@ -515,21 +519,20 @@
   }
   .form-cta {
     display: inline-block;
-    font-family: var(--font-en);
+    font-family: var(--font-jp);
     font-size: 12px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
     color: var(--color-bg);
     background: var(--color-gold);
-    padding: 20px 52px;
-    position: relative;
-    transition: background .45s ease, color .45s ease, letter-spacing .45s ease;
     border: 1px solid var(--color-gold);
+    padding: 12px 36px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
   .form-cta:hover {
-    background: transparent;
+    background: #111111;
     color: var(--color-gold);
-    letter-spacing: 0.3em;
   }
 
   /* ---------- Footer (LP本体と共通) ---------- */
@@ -568,7 +571,6 @@
     .page-intro { padding: 70px 0 56px; }
     .card-media img { padding: 30px; }
     .card-body { padding: 32px 24px 30px; }
-    .form-cta { padding: 18px 36px; width: 100%; }
     .inquiry-section { padding: 80px 0 90px; }
   }
 </style>
@@ -636,7 +638,7 @@
         <article class="product-card fade-up">
           <div class="card-media">
             <span class="card-tag">Home Care</span>
-            <img src="../../images/product-mini.png" alt="NOIRICA Home Care 100g パッケージ写真">
+            <img src="../../images/product-mini.webp" alt="NOIRICA Home Care 100g パッケージ写真">
           </div>
           <div class="card-body">
             <p class="card-name-en">Noirica Home Care</p>
@@ -658,7 +660,7 @@
         <article class="product-card fade-up delay-1">
           <div class="card-media">
             <span class="card-tag">Professional</span>
-            <img src="../../images/product-big.png" alt="NOIRICA Professional 800g パッケージ写真">
+            <img src="../../images/product-big.webp" alt="NOIRICA Professional 800g パッケージ写真">
           </div>
           <div class="card-body">
             <p class="card-name-en">Noirica Professional</p>
@@ -719,6 +721,21 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
     targets.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+<script>
+  // 商品画像は読み込み完了時にふわっとフェードイン（読み込み待ちのポップインを防ぐ）
+  (function () {
+    document.querySelectorAll('.card-media img').forEach(function (img) {
+      function reveal() { img.classList.add('is-loaded'); }
+      if (img.complete && img.naturalWidth > 0) {
+        reveal();
+      } else {
+        img.addEventListener('load', reveal);
+        img.addEventListener('error', reveal);
+      }
+    });
   })();
 </script>
 
