@@ -667,15 +667,8 @@
         min-height: 660px;
       }
 
-      .hero-image {
-        background-image: url('../images/hero-main-visual-mb.png');
-        background-size: 135% auto;
-        background-position: center -180px;
-        background-repeat: no-repeat;
-      }
-
       .hero-image img {
-        display: none;
+        transform: translateY(-180px) scale(1.35);
       }
 
       .hero::before {
@@ -3973,14 +3966,7 @@
             "priceCurrency": "JPY",
             "availability": "https://schema.org/InStock"
           }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "120",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -4083,7 +4069,10 @@
     <section class="hero" id="hero">
       <!-- 背景画像レイヤー -->
       <div class="hero-image">
-        <img src="../images/hero-main-visual.png" alt="NOIRICA メインビジュアル" fetchpriority="high" loading="eager">
+        <picture>
+          <source media="(max-width: 767px)" srcset="../images/hero-main-visual-mb.png">
+          <img src="../images/hero-main-visual.png" alt="NOIRICA メインビジュアル" fetchpriority="high" loading="eager">
+        </picture>
       </div>
 
       <!-- モバイル用オーバーレイ（全面暗幕） -->
