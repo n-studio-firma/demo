@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>返品・交換・キャンセルポリシー | NOIRICA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Shippori+Mincho:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --color-bg: #0B0B0B;
+      --color-bg-light: #111111;
+      --color-gold: #C4A265;
+      --color-white: #FFFFFF;
+      --color-text: #E8E8E8;
+      --color-gray: #888888;
+      --color-gray-dark: #666666;
+      --color-border: #222222;
+      --font-en: 'Cinzel', serif;
+      --font-jp: 'Shippori Mincho', serif;
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-jp);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.9;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      border-bottom: 1px solid rgba(196,162,101,0.15);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .header-back {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--color-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .header-back:hover { color: var(--color-gold); }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== PAGE TITLE ===== */
+    .page-title-wrap {
+      padding: 80px 0 64px;
+      text-align: center;
+      border-bottom: 1px solid rgba(196,162,101,0.1);
+    }
+    .page-label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+    .page-title {
+      font-family: var(--font-jp);
+      font-size: 26px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--color-white);
+    }
+    .page-date {
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-top: 16px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      padding: 64px 0 100px;
+    }
+
+    .content section {
+      margin-bottom: 52px;
+    }
+
+    .content h2 {
+      font-family: var(--font-jp);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(196,162,101,0.2);
+    }
+
+    .content p {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 2.1;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+    .content ul li {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 2.1;
+      letter-spacing: 0.5px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .content ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+    }
+
+    .content a {
+      color: var(--color-gold);
+      text-underline-offset: 3px;
+    }
+
+    .intro-note {
+      background: var(--color-bg-light);
+      border-left: 2px solid rgba(196,162,101,0.4);
+      padding: 20px 24px;
+      margin-bottom: 52px;
+      font-size: 13px;
+      color: var(--color-gray);
+      line-height: 2;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .site-footer p {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gray-dark);
+    }
+
+    /* ===== MOBILE FIXED CTA BAR ===== */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 0;
+      padding-bottom: env(safe-area-inset-bottom);
+      border-top: 1px solid rgba(196, 162, 101, 0.2);
+      gap: 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-cta-bar.show { transform: translateY(0); }
+    .mobile-cta-bar a {
+      flex: 1;
+      height: 48px;
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .mobile-cta-bar .cta-buy {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    .mobile-cta-bar .cta-salon {
+      background: var(--color-bg-light);
+      color: var(--color-white);
+      border-left: 1px solid var(--color-gold);
+    }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      <img src="../images/noirica-logo.png" alt="NOIRICA">
+    </a>
+    <a href="index.html" class="header-back">← BACK TO TOP</a>
+  </header>
+
+  <div class="container">
+
+    <div class="page-title-wrap">
+      <p class="page-label">Legal</p>
+      <h1 class="page-title">返品・交換・キャンセルポリシー</h1>
+      <p class="page-date">制定日：2026年7月25日</p>
+    </div>
+
+    <div class="content">
+
+      <div class="intro-note">
+        NOIRICA（株式会社LiNOCENCE）でお買い上げいただいた商品の返品・交換・キャンセルについては、以下のとおり定めます。ご注文前に必ずご確認ください。
+      </div>
+
+      <section>
+        <h2>第1条 お客様のご都合による返品・交換について</h2>
+        <p>本商品は化粧品であり、品質および衛生管理の観点から、お客様のご都合（イメージと違った、間違えて注文した、不要になった等）による返品・交換はお受けできません。開封・未開封を問わず、返品・交換の対象外となります。</p>
+        <p>商品の内容量・使用方法・成分等につきましては、商品ページおよびFAQをご確認のうえ、ご注文いただきますようお願いいたします。ご不明な点がございましたら、ご注文前にお気軽にお問い合わせください。</p>
+      </section>
+
+      <section>
+        <h2>第2条 返品・交換をお受けする場合</h2>
+        <p>以下のいずれかに該当する場合は、返品・交換または返金の対応をいたします。この場合の送料・返送料は当社が負担いたします。</p>
+        <ul>
+          <li>商品に破損、汚損、または品質上の不良があった場合</li>
+          <li>ご注文いただいた商品と異なる商品が届いた場合</li>
+          <li>ご注文数量と異なる数量が届いた場合</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>第3条 返品・交換のお手続き</h2>
+        <p>前条に該当する場合は、商品到着後7日以内に、下記の内容を添えてメールにてご連絡ください。</p>
+        <ul>
+          <li>ご注文者様のお名前</li>
+          <li>ご注文番号（決済完了メールに記載）</li>
+          <li>該当商品名</li>
+          <li>不良・破損箇所がわかる写真（可能な範囲で結構です）</li>
+        </ul>
+        <p>ご連絡先：misaki@linocence.com</p>
+        <p>内容を確認のうえ、返送方法をご案内いたします。ご連絡前に商品を返送された場合、対応いたしかねる場合がございます。</p>
+        <p>なお、商品到着後8日を過ぎたご連絡につきましては、対応いたしかねますのであらかじめご了承ください。</p>
+      </section>
+
+      <section>
+        <h2>第4条 返金について</h2>
+        <p>返金対応となる場合は、原則としてご注文時にご利用いただいたクレジットカードへの返金処理をもって行います。</p>
+        <p>返金処理は、当社にて返品商品を確認後、7営業日以内に実施いたします。お客様のカードへの実際の反映時期は、ご利用のカード会社の締め日・処理状況により異なりますので、詳細はカード会社へお問い合わせください。</p>
+      </section>
+
+      <section>
+        <h2>第5条 ご注文のキャンセルについて</h2>
+        <p>ご注文完了（決済完了）後は、原則としてお客様のご都合によるキャンセルはお受けできません。</p>
+        <p>ただし、ご注文内容の誤り（数量・お届け先等）については、発送準備が始まる前に限り、修正対応できる場合がございます。お気づきの際は速やかにメールにてご連絡ください。</p>
+        <p>なお、すでに発送手配が完了している場合は、内容の修正・キャンセルいずれも対応いたしかねます。</p>
+      </section>
+
+      <section>
+        <h2>第6条 お届け先不明・長期不在による返送について</h2>
+        <p>住所の記載間違い、または長期のご不在により商品が当社に返送された場合、再発送にかかる送料は実費にてお客様のご負担となります。</p>
+        <p>返送後7日以内にご連絡がない場合、ご注文はキャンセル扱いとし、商品代金から往復送料の実費を差し引いた金額を返金いたします。</p>
+      </section>
+
+      <section>
+        <h2>第7条 本ポリシーの変更</h2>
+        <p>本ポリシーの内容は、法令の改正やサービス内容の変更に伴い、予告なく変更する場合があります。変更後のポリシーは、当ページに掲載した時点で効力を生じるものとします。ただし、変更前にご注文いただいた商品については、ご注文時点のポリシーが適用されます。</p>
+      </section>
+
+      <section>
+        <h2>第8条 お問い合わせ</h2>
+        <p>株式会社LiNOCENCE（NOIRICA）<br>
+        〒616-0026 京都府京都市西京区嵐山薬師下町25-13<br>
+        メール：misaki@linocence.com</p>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ============ MOBILE FIXED CTA BAR ============ -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="shop/index.html" class="cta-buy">購入はこちら</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="cta-salon">お問い合わせ</a>
+  </div>
+
+  <script>
+    const mobileCta = document.getElementById('mobileCta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        mobileCta.classList.add('show');
+      } else {
+        mobileCta.classList.remove('show');
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記 | NOIRICA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Shippori+Mincho:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --color-bg: #0B0B0B;
+      --color-bg-light: #111111;
+      --color-gold: #C4A265;
+      --color-white: #FFFFFF;
+      --color-text: #E8E8E8;
+      --color-gray: #888888;
+      --color-gray-dark: #666666;
+      --color-border: #222222;
+      --font-en: 'Cinzel', serif;
+      --font-jp: 'Shippori Mincho', serif;
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-jp);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.9;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      border-bottom: 1px solid rgba(196,162,101,0.15);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .header-back {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--color-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .header-back:hover { color: var(--color-gold); }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== PAGE TITLE ===== */
+    .page-title-wrap {
+      padding: 80px 0 64px;
+      text-align: center;
+      border-bottom: 1px solid rgba(196,162,101,0.1);
+    }
+    .page-label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+    .page-title {
+      font-family: var(--font-jp);
+      font-size: 26px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--color-white);
+    }
+    .page-date {
+      font-size: 12px;
+      color: var(--color-gray);
+      margin-top: 16px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      padding: 64px 0 100px;
+    }
+
+    .content section {
+      margin-bottom: 40px;
+    }
+
+    .content h2 {
+      font-family: var(--font-jp);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-gold);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .content p {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 2.1;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    .content ul li {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 2.1;
+      letter-spacing: 0.5px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .content ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+    }
+
+    .content a {
+      color: var(--color-gold);
+      text-underline-offset: 3px;
+    }
+
+    .field-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .field-row:last-child { border-bottom: none; }
+    .field-label {
+      flex: 0 0 180px;
+      font-size: 13px;
+      color: var(--color-gold);
+      letter-spacing: 1px;
+    }
+    .field-value {
+      flex: 1 1 300px;
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 2;
+    }
+    .field-value small {
+      display: block;
+      color: var(--color-gray);
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.9;
+    }
+
+    .intro-note {
+      background: var(--color-bg-light);
+      border-left: 2px solid rgba(196,162,101,0.4);
+      padding: 20px 24px;
+      margin-bottom: 52px;
+      font-size: 13px;
+      color: var(--color-gray);
+      line-height: 2;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .site-footer p {
+      font-family: var(--font-en);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--color-gray-dark);
+    }
+
+    /* ===== MOBILE FIXED CTA BAR ===== */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 0;
+      padding-bottom: env(safe-area-inset-bottom);
+      border-top: 1px solid rgba(196, 162, 101, 0.2);
+      gap: 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-cta-bar.show { transform: translateY(0); }
+    .mobile-cta-bar a {
+      flex: 1;
+      height: 48px;
+      font-family: var(--font-jp);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .mobile-cta-bar .cta-buy {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+    .mobile-cta-bar .cta-salon {
+      background: var(--color-bg-light);
+      color: var(--color-white);
+      border-left: 1px solid var(--color-gold);
+    }
+    @media (max-width: 767px) {
+      .mobile-cta-bar { display: flex; }
+      .field-row { flex-direction: column; gap: 4px; }
+      .field-label { flex: none; }
+      .field-value { flex: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="header-logo">
+      <img src="../images/noirica-logo.png" alt="NOIRICA">
+    </a>
+    <a href="index.html" class="header-back">← BACK TO TOP</a>
+  </header>
+
+  <div class="container">
+
+    <div class="page-title-wrap">
+      <p class="page-label">Legal</p>
+      <h1 class="page-title">特定商取引法に基づく表記</h1>
+      <p class="page-date">最終更新日：2026年7月25日</p>
+    </div>
+
+    <div class="content">
+
+      <div class="intro-note">
+        「特定商取引に関する法律」第11条に基づき、以下のとおり表示いたします。
+      </div>
+
+      <section>
+        <div class="field-row">
+          <div class="field-label">販売業者</div>
+          <div class="field-value">株式会社LiNOCENCE</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">運営統括責任者</div>
+          <div class="field-value">戸田 美咲</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">所在地</div>
+          <div class="field-value">〒616-0026 京都府京都市西京区嵐山薬師下町25-13</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">電話番号</div>
+          <div class="field-value">
+            090-9055-2537
+            <small>受付時間：平日10:00〜17:00（土日祝・年末年始を除く）<br>
+              お問い合わせはメールにて承っております。お電話をご希望の場合も、まずはメールにてご一報いただけますと幸いです。</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">メールアドレス</div>
+          <div class="field-value">misaki@linocence.com</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">ホームページURL</div>
+          <div class="field-value"><a href="https://noirica.jp/" target="_blank" rel="noopener noreferrer">https://noirica.jp/</a></div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">販売価格</div>
+          <div class="field-value">
+            各商品ページに表示された価格（消費税込）によります。
+            <small>
+              ・NOIRICA Silica Black Ritual Clay 100g（ホームケア）：4,290円（税込）<br>
+              ・NOIRICA Silica Black Ritual Clay 800g（プロフェッショナル）：24,200円（税込）
+            </small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">商品代金以外の必要料金</div>
+          <div class="field-value">
+            送料：全国一律880円（税込）（北海道・沖縄・離島を除く）／北海道・沖縄・離島 1,100円（税込）<br>
+            決済手数料：無料
+            <small>
+              ご住所の記載間違いや長期のご不在により商品が当社に返送された場合の再発送送料（実費）は、お客様のご負担となります。詳細は<a href="return-policy.html">返品・交換・キャンセルポリシー</a>をご確認ください。上記以外の費用は発生いたしません。
+            </small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">支払方法</div>
+          <div class="field-value">
+            クレジットカード決済（Visa／Mastercard／American Express／JCB、Apple Pay等のタップ決済を含む）
+            <small>決済はStripe, Inc.の決済システムを利用しています。当社がクレジットカード情報を保持することはありません。</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">支払時期</div>
+          <div class="field-value">
+            ご注文確定時に決済が行われます。
+            <small>実際のご請求時期は、ご利用のカード会社の締め日・支払日により異なります。</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">商品の引渡し時期</div>
+          <div class="field-value">
+            ご注文確認後、5営業日以内に発送いたします。
+            <small>土日祝・年末年始は営業日に含みません。在庫状況等により発送が遅れる場合は、メールにてご連絡いたします。</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">返品・交換について<br>（返品特約）</div>
+          <div class="field-value">
+            商品の性質上（化粧品）、お客様のご都合による返品・交換はお受けできません。商品に不良・破損があった場合、またはご注文と異なる商品が届いた場合に限り、商品到着後7日以内にメールにてご連絡いただければ、弊社送料負担にて交換または返金対応をいたします。
+            <small>詳細は<a href="return-policy.html">返品・交換・キャンセルポリシー</a>をご確認ください。</small>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">販売数量</div>
+          <div class="field-value">在庫状況により、お一人様あたりの購入数を制限させていただく場合があります。</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">引渡し不能時の対応</div>
+          <div class="field-value">在庫切れ等により商品をお届けできない場合は、決済金額の全額を返金いたします。</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ============ MOBILE FIXED CTA BAR ============ -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="shop/index.html" class="cta-buy">購入はこちら</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSiuN4OnWYCEPf87vNQ2W1vSm3R48LoWdwjeePbIFSA2a5A/viewform"
+      target="_blank" rel="noopener noreferrer" class="cta-salon">お問い合わせ</a>
+  </div>
+
+  <script>
+    const mobileCta = document.getElementById('mobileCta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        mobileCta.classList.add('show');
+      } else {
+        mobileCta.classList.remove('show');
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

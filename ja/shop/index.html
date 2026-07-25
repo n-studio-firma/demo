@@ -555,6 +555,23 @@
     letter-spacing: 0.05em;
   }
 
+  .card-legal-note {
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--color-gray-dark);
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+    text-align: left;
+  }
+  .card-legal-note a {
+    color: var(--color-gray);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .card-legal-note a:hover {
+    color: var(--color-gold);
+  }
+
   /* ---------- Footer (LP本体と共通) ---------- */
   .footer {
     text-align: center;
@@ -569,7 +586,7 @@
   }
   .footer .footer-privacy {
     display: inline-block;
-    margin-bottom: 12px;
+    margin: 0 12px 12px;
     font-family: var(--font-en);
     font-size: 10px;
     letter-spacing: 2px;
@@ -672,6 +689,7 @@
               <span class="card-price">¥4,290<span>（税込）</span></span>
             </div>
             <a class="card-cta" href="https://buy.stripe.com/8x29AV1wFgzp9qS5Z43Nm01" target="_blank" rel="noopener noreferrer">決済ページへ進む</a>
+            <p class="card-legal-note">ご購入前に<a href="../tokushoho.html">特定商取引法に基づく表記</a>・<a href="../return-policy.html">返品・交換・キャンセルポリシー</a>をご確認ください。</p>
           </div>
         </article>
 
@@ -694,6 +712,7 @@
               <span class="card-price">¥24,200<span>（税込）</span></span>
             </div>
             <a class="card-cta" href="https://buy.stripe.com/bJefZj4IR3MDgTk2MS3Nm03" target="_blank" rel="noopener noreferrer">決済ページへ進む</a>
+            <p class="card-legal-note">ご購入前に<a href="../tokushoho.html">特定商取引法に基づく表記</a>・<a href="../return-policy.html">返品・交換・キャンセルポリシー</a>をご確認ください。</p>
           </div>
         </article>
 
@@ -707,6 +726,8 @@
 <footer class="footer">
   <div class="wrap">
     <a href="../privacy.html" class="footer-privacy">Privacy Policy</a>
+    <a href="../tokushoho.html" class="footer-privacy">特定商取引法に基づく表記</a>
+    <a href="../return-policy.html" class="footer-privacy">返品・交換・キャンセルポリシー</a>
     <p>&copy; 2026 NOIRICA. All Rights Reserved.</p>
   </div>
 </footer>
